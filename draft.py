@@ -1,46 +1,64 @@
+'''
+TabbedPanel
+============
+
+Test of the widget TabbedPanel.
+'''
+
 from kivy.app import App
-from kivy.uix.widget import Widget
-from kivy.uix.button import Button
-from kivy.uix.boxlayout import BoxLayout
-from kivy.properties import ListProperty
+from kivy.uix.tabbedpanel import TabbedPanel
+from kivy.lang import Builder
+Builder.load_string("""
+
+<Test>:
+
+    size_hint: .5, .5
+    pos_hint: {'center_x': .5, 'center_y': .5}
+    do_default_tab: False
+
+    TabbedPanelItem:
+        text: 'Profile'
+       # background_color: 1,1,1,1
+        Label:
+            text: 'Profile Information'
+    TabbedPanelItem:
+        text: 'Following'
+       # background_color: 1,1,1,1
+        BoxLayout:
+            Label:
+                text: 'Second tab content area'
+            Button:
+                text: 'Button that does nothing'
+    TabbedPanelItem:
+        text: 'Listings'
+        #background_color: 1,1,1,1
+        RstDocument:
+            text:
+                '\\n'.join(("This is an example", "-----------",
+                "You are in the third tab."))
 
 
-class RootWidget(BoxLayout):
-
-    def __init__(self, **kwargs):
-        super(RootWidget, self).__init__(**kwargs)
-        self.add_widget(Button(text='btn 1'))
-        cb = CustomBtn()
-        cb.bind(pressed=self.btn_pressed)
-        self.add_widget(cb)
-        self.add_widget(Button(text='btn 2'))
-
-    def btn_pressed(self, instance, pos):
-        print('pos: printed from root widget: {pos}'.format(pos=pos))
+<TabbedPanelStrip>
+    canvas:
+        Color:
+            rgba: (0, 1, 0, 1) # green
+        Rectangle:
+            size: self.size
+            pos: self.pos
+""")
 
 
-class CustomBtn(Widget):
-    pressed = ListProperty([0, 0])
+class Test(TabbedPanel):
 
-    def on_touch_down(self, touch):
-        if self.collide_point(*touch.pos):
-            self.pressed = touch.pos
-            # we consumed the touch. return False here to propagate
-            # the touch further to the children.
-            return True
-        return super(CustomBtn, self).on_touch_down(touch)
-
-    def on_pressed(self, instance, pos):
-        print('pressed at {pos}'.format(pos=pos))
+    pass
 
 
-
-
-class TestApp(App):
+class TabbedPanelApp(App):
 
     def build(self):
-        return RootWidget()
+
+        return Test()
 
 
 if __name__ == '__main__':
-    TestApp().run()
+    TabbedPanelApp().run()
