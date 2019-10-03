@@ -4,7 +4,7 @@ from kivy.uix.button import Button
 from kivy.uix.boxlayout import BoxLayout
 from kivy.properties import ListProperty
 
-#testing Benji
+#outside commit1
 class RootWidget(BoxLayout):
 
     def __init__(self, **kwargs):
