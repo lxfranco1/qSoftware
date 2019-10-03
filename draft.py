@@ -6,7 +6,7 @@ from kivy.properties import ListProperty
 
 
 class RootWidget(BoxLayout):
-#words
+#words,uasgfyus
     def __init__(self, **kwargs):
         super(RootWidget, self).__init__(**kwargs)
         self.add_widget(Button(text='btn 1'))
