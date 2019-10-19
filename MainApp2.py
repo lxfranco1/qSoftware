@@ -18,31 +18,40 @@ Builder.load_string('''
     
 <RootWidget>:
     carousel: carousel
+
+# everything under this actually applies to the tabbed pannel   
     do_default_tab: False
     orientation: "vertical"
     tab_pos: 'top_mid' #the tab orientation
     tab_height: 40
-    tab_width: 250
+    tab_width: 150
         
+# this allows you to scroll to the left or right and get to the next tab
     Carousel:
         on_index: root.on_index(*args)
         id: carousel
         Button:
             text: 'Slide One Information'
-            tab: tab1
-            
+            tab: tab1     
+            GridLayout:
+                Label:
+                    text: 'Testing Stuff For this stuff now'     
         Button:
             text: 'Slide Two Information'
             tab:tab2
         Button:
             text: 'Slide Three Information'
             tab: tab3
+        Button:
+            text: 'Slide Four Information'
+            tab: tab4
 
-
+# This is the tabbed panels part
     CustomWidthTabb:
         id: tab1
         text: 'Home'
         slide: 0
+        
     CustomWidthTabb:
         id: tab2
         text: 'Trending'
@@ -51,9 +60,13 @@ Builder.load_string('''
         id: tab3
         text: 'Nearby'
         slide: 2
-
+    CustomWidthTabb:
+        id: tab4
+        text: 'Profile'
+        slide: 3
 
 ''')
+
 
 class RootWidget(TabbedPanel):
 
@@ -72,11 +85,11 @@ class RootWidget(TabbedPanel):
         self.carousel.index = header.slide
 
 
-class MainApp(App):
+class Main2App(App):
 
     def build(self):
         return RootWidget()
 
 
-if __name__ == '__main__':
-    MainApp().run()
+sample_app = Main2App()
+sample_app.run()
