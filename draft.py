@@ -4,7 +4,9 @@ from kivy.uix.button import Button
 from kivy.uix.boxlayout import BoxLayout
 from kivy.properties import ListProperty
 
-#outside commit
+# outside commit testing Benji
+
+
 class RootWidget(BoxLayout):
 
     def __init__(self, **kwargs):
@@ -32,8 +34,6 @@ class CustomBtn(Widget):
 
     def on_pressed(self, instance, pos):
         print('pressed at {pos}'.format(pos=pos))
-
-
 
 
 class TestApp(App):
