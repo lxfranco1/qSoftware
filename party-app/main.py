@@ -1,7 +1,7 @@
 from kivy.app import App
 from kivymd.theming import ThemeManager
 
-
+#Testing signed commits
 class MainApp(App):
     theme_cls = ThemeManager()
 
@@ -22,6 +22,6 @@ class MainApp(App):
         button.icon = 'eye' if button.icon == 'eye-off' else 'eye-off'
 
         #app.theme_cls.primary_palette = "BlueGray"
- 
+    
 
 MainApp().run()
