@@ -84,12 +84,11 @@ BoxLayout:
                             pos_hint: {'center_x': .5, 'center_y': .5}
 
                             MDRoundFlatButton:
-                                text: "Press to logout?"
+                                text: "logout"
                                 icon: 'plus'
                                 on_release:
-                                    print(firebase_login_screen.refresh_token_file)
-
-
+                                    root.parent.transition = SlideTransition(direction="left")
+                                    screen_manager.current = "firebase_login_screen"
 
                 MDBottomNavigationItem:
                     name: 'main2'
