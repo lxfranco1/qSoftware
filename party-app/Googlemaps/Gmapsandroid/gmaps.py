@@ -6,6 +6,9 @@ from kivy.lang import Builder
 from kivy.properties import NumericProperty
 from gmaps import GMap, run_on_ui_thread
 
+
+
+#commit
 gmap_kv = '''
 <Toolbar@BoxLayout>:
     size_hint_y: None
