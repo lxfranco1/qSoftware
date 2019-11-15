@@ -16,7 +16,7 @@ BoxLayout:
                 Rectangle:
                     size: self.size
                     #pos: self.pos
-                    #source: "assets/pure_lust.jpg"
+                    source: "assets/pure_lust.jpg"
 
             id: firebase_login_screen
             name: "firebase_login_screen"
@@ -93,9 +93,14 @@ BoxLayout:
 
                             MDRoundFlatButton:
                                 text: "Press to logout?"
+                                text: "logout"
                                 icon: 'plus'
                                 on_release:
                                     print(firebase_login_screen.refresh_token_file)
+
+
+                                    root.parent.transition = SlideTransition(direction="left")
+                                    screen_manager.current = "firebase_login_screen"
 
 
 
