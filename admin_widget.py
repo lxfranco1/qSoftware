@@ -1,5 +1,4 @@
 # Download the helper library from https://www.twilio.com/docs/python/install
-from twilio.rest import Client
 
 
 from kivy.uix.textinput import TextInput
