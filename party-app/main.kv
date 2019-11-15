@@ -16,7 +16,7 @@ BoxLayout:
                 Rectangle:
                     size: self.size
                     #pos: self.pos
-                    source: "assets/pure_lust.jpg"
+                    #source: "assets/pure_lust.jpg"
 
             id: firebase_login_screen
             name: "firebase_login_screen"
@@ -72,10 +72,18 @@ BoxLayout:
                         Rectangle:
                             #pos: self.pos
                             size: self.size
-                            source: "assets/pure_lust.jpg"
+                            #source: "assets/orange.jpg"
+
 
                     ScrollView:
-                        BoxLayout:
+
+
+                        GridLayout:
+                            rows:2
+                            cols:2
+                            padding:100
+                            spacing:100
+
 
                             orientation: 'vertical'
                             size_hint_y: None
@@ -83,12 +91,14 @@ BoxLayout:
                             spacing: dp(10)
                             pos_hint: {'center_x': .5, 'center_y': .5}
 
-                            MDRoundFlatButton:
-                                text: "logout"
-                                icon: 'plus'
-                                on_release:
-                                    root.parent.transition = SlideTransition(direction="left")
-                                    screen_manager.current = "firebase_login_screen"
+                            #MDRoundFlatButton:
+                             #   text: "Press to logout?"
+                              #  icon: 'plus'
+                               # on_release:
+                                #    print(firebase_login_screen.refresh_token_file)
+
+
+
 
                 MDBottomNavigationItem:
                     name: 'main2'
@@ -98,7 +108,7 @@ BoxLayout:
                         Rectangle:
                             #pos: self.pos
                             size: self.size
-                            source: "assets/pure_lust.jpg"
+                            #source: "assets/pure_lust.jpg"
 
                     BoxLayout:
                         orientation: 'vertical'
@@ -116,7 +126,7 @@ BoxLayout:
                         Rectangle:
                             #pos: self.pos
                             size: self.size
-                            source: "assets/pure_lust.jpg"
+                            #source: "assets/pure_lust.jpg"
 
                     BoxLayout:
                         orientation: 'vertical'
@@ -126,6 +136,7 @@ BoxLayout:
                         pos_hint: {'center_x': .5, 'center_y': .5}
 
                 MDBottomNavigationItem:
+
                     name: 'main4'
                     text: 'Profile'
                     icon: 'account'
@@ -133,11 +144,62 @@ BoxLayout:
                         Rectangle:
                             #pos: self.pos
                             size: self.size
-                            source: "assets/pure_lust.jpg"
+                            #source: "assets/orange.jpg"
 
-                    BoxLayout:
+                    GridLayout:
+                        rows:5
+                        cols:2
+
                         orientation: 'vertical'
-                        size_hint_y: None
+                        size_hint_y: 1
                         height: self.minimum_height
                         spacing: dp(10)
-                        pos_hint: {'center_x': .5, 'center_y': .5}
+
+
+                        #Error arises when using kivy image icon function
+                        #Will be solved by next increment
+                        Label:
+                            text:'>USER PROFILE IMAGE HERE<'
+                            size: 100, 100
+                            #source: "assets/background.png"
+                            color: 0,0,0,1
+
+                        Label:#Left intentionally blank to move onto next row
+
+                        Button:
+                            text:'Search Users'
+                            color: 0,0,0,1
+                            size:100,100
+                            #background_normal: ''
+                            #background_color: 0, 0, 0, 0
+                        Button:
+                            text:'Notifications'
+                            color: 0,0,0,1
+                            #background_normal: ''
+                            #background_color: 0, 0, 0, 0
+
+                        Button:
+                            padding_y:100
+                            text:'Change Password'
+                            color: 0,0,0,1
+                            #background_normal: ''
+                            #background_color: 0, 0, 0, 0
+
+                        Button:
+                            text:'Change Username'
+                            color:0,0,0,1
+                            #background_normal: ''
+                            #background_color: 0, 0, 0, 0
+                        Button:
+                            text:'Clear Searches'
+                            color:0,0,0,1
+                            #background_normal: ''
+                            #background_color: 0, 0, 0, 0
+
+                        Button:
+                            text:'Test Exit'
+                            color:0,0,0,1
+                            background_normal: ''
+                            #background_color: 0, 0, 0, 0
+                            on_press:
+                                background_normal: ''
