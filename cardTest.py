@@ -11,20 +11,16 @@ Builder.load_string("""
 <ExampleCardPost@BoxLayout>:
     orientation: 'vertical'
     spacing: dp(5)
-
     MDToolbar:
         id: toolbar
         title: app.title
         left_action_items: [['menu', lambda x: None]]
         elevation: 10
         md_bg_color: app.theme_cls.primary_color
-
-
     ScrollView:
         id: scroll
         size_hint: 1, 1
         do_scroll_x: False
-
         GridLayout:
             id: grid_card
             cols: 1
@@ -95,32 +91,6 @@ class Example(App):
                     MDCardPost(text_post=all_events[key]['description'], name_data = all_events[key]['user'] + "\n" + all_events[key]['date'],
                                path_to_avatar = 'party-app/assets/defaultProfile.jpg', right_menu = menu_items,
                                swipe=True, callback=callback))
-
-
-            # instance_grid_card.add_widget(
-            #     MDCardPost(text_post='Card with text',
-            #                swipe=True, callback=callback))
-            # instance_grid_card.add_widget(
-            #     MDCardPost(
-            #         right_menu=menu_items, swipe=True,
-            #         text_post='Card with a button to open the menu MDDropDown',
-            #         callback=callback))
-            # instance_grid_card.add_widget(
-            #     MDCardPost(
-            #         likes_stars=True, callback=callback, swipe=True,
-            #         text_post='Card with asterisks for voting.'))
-            #
-            # instance_grid_card.add_widget(
-            #     MDCardPost(
-            #         source="./assets/kitten-1049129_1280.jpg",
-            #         tile_text="Little Baby",
-            #         tile_font_style="H5",
-            #         text_post="This is my favorite cat. He's only six months "
-            #                   "old. He loves milk and steals sausages :) "
-            #                   "And he likes to play in the garden.",
-            #         with_image=True, swipe=True, callback=callback,
-            #         buttons=buttons))
-
 
 if __name__ == "__main__":
     Example().run()
