@@ -151,24 +151,55 @@ BoxLayout:
                         cols:2
 
                         orientation: 'vertical'
-                        size_hint_y: None
+                        size_hint_y: 1
                         height: self.minimum_height
                         spacing: dp(10)
-                        pos_hint: {'center_x': .5, 'center_y': .9}
 
+
+                        #Error arises when using kivy image icon function
+                        #Will be solved by next increment
                         Label:
-                            text:'Username'
+                            text:'>USER PROFILE IMAGE HERE<'
+                            size: 100, 100
+                            #source: "assets/background.png"
                             color: 0,0,0,1
-                        Label:
-                            text:'Something'
+
+                        Label:#Left intentionally blank to move onto next row
+
+                        Button:
+                            text:'Search Users'
                             color: 0,0,0,1
-                        Label:
-                        Label:
-                        Label:
+                            size:100,100
+                            #background_normal: ''
+                            #background_color: 0, 0, 0, 0
+                        Button:
+                            text:'Notifications'
+                            color: 0,0,0,1
+                            #background_normal: ''
+                            #background_color: 0, 0, 0, 0
+
+                        Button:
                             padding_y:100
-                            text:'Mark'
+                            text:'Change Password'
                             color: 0,0,0,1
-                        Image:
-                            size_hint: None, None
-                            size: 24, 24
-                            source: "assets/background.png"
+                            #background_normal: ''
+                            #background_color: 0, 0, 0, 0
+
+                        Button:
+                            text:'Change Username'
+                            color:0,0,0,1
+                            #background_normal: ''
+                            #background_color: 0, 0, 0, 0
+                        Button:
+                            text:'Clear Searches'
+                            color:0,0,0,1
+                            #background_normal: ''
+                            #background_color: 0, 0, 0, 0
+
+                        Button:
+                            text:'Test Exit'
+                            color:0,0,0,1
+                            background_normal: ''
+                            #background_color: 0, 0, 0, 0
+                            on_press:
+                                background_normal: ''
