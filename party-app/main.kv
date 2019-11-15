@@ -136,7 +136,7 @@ BoxLayout:
                         pos_hint: {'center_x': .5, 'center_y': .5}
 
                 MDBottomNavigationItem:
-                #Big change
+
                     name: 'main4'
                     text: 'Profile'
                     icon: 'account'
@@ -144,7 +144,7 @@ BoxLayout:
                         Rectangle:
                             #pos: self.pos
                             size: self.size
-                            #source: "assets/pure_lust.jpg"
+                            #source: "assets/orange.jpg"
 
                     GridLayout:
                         rows:5
@@ -154,19 +154,21 @@ BoxLayout:
                         size_hint_y: None
                         height: self.minimum_height
                         spacing: dp(10)
-                        pos_hint: {'center_x': .5, 'center_y': .5}
+                        pos_hint: {'center_x': .5, 'center_y': .9}
 
                         Label:
-                            text:'Word'
+                            text:'Username'
                             color: 0,0,0,1
                         Label:
                             text:'Something'
                             color: 0,0,0,1
-
+                        Label:
+                        Label:
                         Label:
                             padding_y:100
                             text:'Mark'
                             color: 0,0,0,1
                         Image:
-                            source: "assets/orange.jpg"
-                            size: self.texture_size
+                            size_hint: None, None
+                            size: 24, 24
+                            source: "assets/background.png"
