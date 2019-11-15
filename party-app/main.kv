@@ -16,7 +16,7 @@ BoxLayout:
                 Rectangle:
                     size: self.size
                     #pos: self.pos
-                    source: "assets/pure_lust.jpg"
+                    #source: "assets/pure_lust.jpg"
 
             id: firebase_login_screen
             name: "firebase_login_screen"
@@ -72,10 +72,18 @@ BoxLayout:
                         Rectangle:
                             #pos: self.pos
                             size: self.size
-                            source: "assets/pure_lust.jpg"
+                            #source: "assets/orange.jpg"
+
 
                     ScrollView:
-                        BoxLayout:
+
+
+                        GridLayout:
+                            rows:2
+                            cols:2
+                            padding:100
+                            spacing:100
+
 
                             orientation: 'vertical'
                             size_hint_y: None
@@ -83,11 +91,12 @@ BoxLayout:
                             spacing: dp(10)
                             pos_hint: {'center_x': .5, 'center_y': .5}
 
-                            MDRoundFlatButton:
-                                text: "Press to logout?"
-                                icon: 'plus'
-                                on_release:
-                                    print(firebase_login_screen.refresh_token_file)
+                            #MDRoundFlatButton:
+                             #   text: "Press to logout?"
+                              #  icon: 'plus'
+                               # on_release:
+                                #    print(firebase_login_screen.refresh_token_file)
+
 
 
 
@@ -99,7 +108,7 @@ BoxLayout:
                         Rectangle:
                             #pos: self.pos
                             size: self.size
-                            source: "assets/pure_lust.jpg"
+                            #source: "assets/pure_lust.jpg"
 
                     BoxLayout:
                         orientation: 'vertical'
@@ -117,7 +126,7 @@ BoxLayout:
                         Rectangle:
                             #pos: self.pos
                             size: self.size
-                            source: "assets/pure_lust.jpg"
+                            #source: "assets/pure_lust.jpg"
 
                     BoxLayout:
                         orientation: 'vertical'
@@ -127,6 +136,7 @@ BoxLayout:
                         pos_hint: {'center_x': .5, 'center_y': .5}
 
                 MDBottomNavigationItem:
+
                     name: 'main4'
                     text: 'Profile'
                     icon: 'account'
@@ -134,11 +144,31 @@ BoxLayout:
                         Rectangle:
                             #pos: self.pos
                             size: self.size
-                            source: "assets/pure_lust.jpg"
+                            #source: "assets/orange.jpg"
 
-                    BoxLayout:
+                    GridLayout:
+                        rows:5
+                        cols:2
+
                         orientation: 'vertical'
                         size_hint_y: None
                         height: self.minimum_height
                         spacing: dp(10)
-                        pos_hint: {'center_x': .5, 'center_y': .5}
+                        pos_hint: {'center_x': .5, 'center_y': .9}
+
+                        Label:
+                            text:'Username'
+                            color: 0,0,0,1
+                        Label:
+                            text:'Something'
+                            color: 0,0,0,1
+                        Label:
+                        Label:
+                        Label:
+                            padding_y:100
+                            text:'Mark'
+                            color: 0,0,0,1
+                        Image:
+                            size_hint: None, None
+                            size: 24, 24
+                            source: "assets/background.png"
