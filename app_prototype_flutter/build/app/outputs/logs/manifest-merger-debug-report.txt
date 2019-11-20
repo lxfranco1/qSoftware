@@ -1,0 +1,440 @@
+-- Merging decision tree log ---
+manifest
+ADDED from /home/artemis/StudioProjects/qSoftware_1/app_prototype_flutter/android/app/src/main/AndroidManifest.xml:1:1-33:12
+INJECTED from /home/artemis/StudioProjects/qSoftware_1/app_prototype_flutter/android/app/src/main/AndroidManifest.xml:1:1-33:12
+INJECTED from /home/artemis/StudioProjects/qSoftware_1/app_prototype_flutter/android/app/src/main/AndroidManifest.xml:1:1-33:12
+INJECTED from /home/artemis/StudioProjects/qSoftware_1/app_prototype_flutter/android/app/src/main/AndroidManifest.xml:1:1-33:12
+MERGED from /home/artemis/StudioProjects/qSoftware_1/app_prototype_flutter/android/app/src/main/AndroidManifest.xml:1:1-33:12
+MERGED from [com.google.firebase:firebase-analytics:17.2.0] /home/artemis/.gradle/caches/transforms-1/files-1.1/firebase-analytics-17.2.0.aar/3185c3c98e4c666166a05429f3ca17bf/AndroidManifest.xml:2:1-9:12
+MERGED from [:firebase_auth] /home/artemis/StudioProjects/qSoftware_1/app_prototype_flutter/build/firebase_auth/intermediates/merged_manifests/debug/processDebugManifest/merged/AndroidManifest.xml:2:1-15:12
+MERGED from [:firebase_core] /home/artemis/StudioProjects/qSoftware_1/app_prototype_flutter/build/firebase_core/intermediates/merged_manifests/debug/processDebugManifest/merged/AndroidManifest.xml:2:1-15:12
+MERGED from [com.google.android.gms:play-services-measurement:17.2.0] /home/artemis/.gradle/caches/transforms-1/files-1.1/play-services-measurement-17.2.0.aar/b7a7ffa94fc47141782485928c3300e7/AndroidManifest.xml:17:1-55:12
+MERGED from [com.google.android.gms:play-services-measurement-api:17.2.0] /home/artemis/.gradle/caches/transforms-1/files-1.1/play-services-measurement-api-17.2.0.aar/8d8516a15cb63cbd4f15a8df2ce53e29/AndroidManifest.xml:17:1-36:12
+MERGED from [com.google.android.gms:play-services-measurement-sdk:17.2.0] /home/artemis/.gradle/caches/transforms-1/files-1.1/play-services-measurement-sdk-17.2.0.aar/f764364898ff346917c629d9a0a7153d/AndroidManifest.xml:17:1-25:12
+MERGED from [com.google.firebase:firebase-auth:17.0.0] /home/artemis/.gradle/caches/transforms-1/files-1.1/jetified-firebase-auth-17.0.0.aar/ba8415adb7b05185af9d751ab3f10dfc/AndroidManifest.xml:17:1-42:12
+MERGED from [com.google.firebase:firebase-iid:19.0.0] /home/artemis/.gradle/caches/transforms-1/files-1.1/firebase-iid-19.0.0.aar/ca3a030133847c98e2c08e8ac898fd7b/AndroidManifest.xml:17:1-47:12
+MERGED from [com.google.firebase:firebase-auth-interop:17.0.0] /home/artemis/.gradle/caches/transforms-1/files-1.1/jetified-firebase-auth-interop-17.0.0.aar/8b9474d7ca5a1730e0ff01a104ec0147/AndroidManifest.xml:2:1-10:12
+MERGED from [com.google.firebase:firebase-common:19.0.0] /home/artemis/.gradle/caches/transforms-1/files-1.1/firebase-common-19.0.0.aar/50a9059f90b40e442a2604c53fecab15/AndroidManifest.xml:2:1-19:12
+MERGED from [com.google.android.gms:play-services-measurement-impl:17.2.0] /home/artemis/.gradle/caches/transforms-1/files-1.1/play-services-measurement-impl-17.2.0.aar/6ad41f2c59c1f661dd21dad70074f4ae/AndroidManifest.xml:17:1-40:12
+MERGED from [com.google.android.gms:play-services-stats:17.0.0] /home/artemis/.gradle/caches/transforms-1/files-1.1/play-services-stats-17.0.0.aar/e8036b31a787794760d54621fe18dc87/AndroidManifest.xml:2:1-9:12
+MERGED from [com.google.android.gms:play-services-measurement-sdk-api:17.2.0] /home/artemis/.gradle/caches/transforms-1/files-1.1/play-services-measurement-sdk-api-17.2.0.aar/d6094e6eb8e664f226ef055c00dead27/AndroidManifest.xml:17:1-27:12
+MERGED from [com.google.android.gms:play-services-measurement-base:17.2.0] /home/artemis/.gradle/caches/transforms-1/files-1.1/play-services-measurement-base-17.2.0.aar/8994e1114e2e2988863398d6a16553a6/AndroidManifest.xml:2:1-9:12
+MERGED from [com.google.android.gms:play-services-flags:16.0.1] /home/artemis/.gradle/caches/transforms-1/files-1.1/play-services-flags-16.0.1.aar/265457f480d68c97084bcbc84dbed4e2/AndroidManifest.xml:17:1-22:12
+MERGED from [com.google.firebase:firebase-iid-interop:17.0.0] /home/artemis/.gradle/caches/transforms-1/files-1.1/firebase-iid-interop-17.0.0.aar/7d5534f3b203100d4599f683f8d7b0fe/AndroidManifest.xml:2:1-10:12
+MERGED from [com.google.android.gms:play-services-base:17.0.0] /home/artemis/.gradle/caches/transforms-1/files-1.1/play-services-base-17.0.0.aar/b05e86b6d1d6674e485bbead3a665f46/AndroidManifest.xml:17:1-29:12
+MERGED from [com.google.android.gms:play-services-tasks:17.0.0] /home/artemis/.gradle/caches/transforms-1/files-1.1/play-services-tasks-17.0.0.aar/aba37d0cf8fd4c1f100661685a28aad9/AndroidManifest.xml:2:1-9:12
+MERGED from [com.google.firebase:firebase-measurement-connector:18.0.0] /home/artemis/.gradle/caches/transforms-1/files-1.1/firebase-measurement-connector-18.0.0.aar/381597e1ad95fc53b64051de8b28e721/AndroidManifest.xml:17:1-25:12
+MERGED from [com.google.android.gms:play-services-ads-identifier:17.0.0] /home/artemis/.gradle/caches/transforms-1/files-1.1/play-services-ads-identifier-17.0.0.aar/b5d8d0cc50d35f19e5f538cbe851a440/AndroidManifest.xml:17:1-24:12
+MERGED from [com.google.android.gms:play-services-basement:17.0.0] /home/artemis/.gradle/caches/transforms-1/files-1.1/jetified-play-services-basement-17.0.0.aar/61b84dabbd6b6e8803f5c21b42ba61f7/AndroidManifest.xml:17:1-28:12
+MERGED from [androidx.fragment:fragment:1.0.0] /home/artemis/.gradle/caches/transforms-1/files-1.1/fragment-1.0.0.aar/39f24bd2dad96ca5d46cc4d5d48eeef5/AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.legacy:legacy-support-core-ui:1.0.0] /home/artemis/.gradle/caches/transforms-1/files-1.1/legacy-support-core-ui-1.0.0.aar/ad08db8bcccfac9aa63a79b278676ed6/AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.legacy:legacy-support-core-utils:1.0.0] /home/artemis/.gradle/caches/transforms-1/files-1.1/legacy-support-core-utils-1.0.0.aar/06e9c12fe4c89602644c8648dcd9c144/AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.loader:loader:1.0.0] /home/artemis/.gradle/caches/transforms-1/files-1.1/loader-1.0.0.aar/3b635f646b4633b93faf4b9764d67fc7/AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.viewpager:viewpager:1.0.0] /home/artemis/.gradle/caches/transforms-1/files-1.1/viewpager-1.0.0.aar/b72bbc35b69551e243d576cfd89dd608/AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.coordinatorlayout:coordinatorlayout:1.0.0] /home/artemis/.gradle/caches/transforms-1/files-1.1/coordinatorlayout-1.0.0.aar/74ac16ea792d6afc8183000da8e57adf/AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.drawerlayout:drawerlayout:1.0.0] /home/artemis/.gradle/caches/transforms-1/files-1.1/drawerlayout-1.0.0.aar/6a7f6c37421ce8e68a79832f4562fb21/AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.slidingpanelayout:slidingpanelayout:1.0.0] /home/artemis/.gradle/caches/transforms-1/files-1.1/slidingpanelayout-1.0.0.aar/b56a881722bacc8493c2d8a8fc696fbd/AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.customview:customview:1.0.0] /home/artemis/.gradle/caches/transforms-1/files-1.1/customview-1.0.0.aar/21b7beae76a880e53226a2b51cd0b340/AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.swiperefreshlayout:swiperefreshlayout:1.0.0] /home/artemis/.gradle/caches/transforms-1/files-1.1/swiperefreshlayout-1.0.0.aar/94f31eebc354e787b9cf27ea0e3e1415/AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.asynclayoutinflater:asynclayoutinflater:1.0.0] /home/artemis/.gradle/caches/transforms-1/files-1.1/asynclayoutinflater-1.0.0.aar/c1bda7a51f0db98871fd27856ed8f6df/AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.core:core:1.0.0] /home/artemis/.gradle/caches/transforms-1/files-1.1/core-1.0.0.aar/822ca61845f4192414679087f2b886f7/AndroidManifest.xml:17:1-24:12
+MERGED from [androidx.lifecycle:lifecycle-runtime:2.0.0] /home/artemis/.gradle/caches/transforms-1/files-1.1/lifecycle-runtime-2.0.0.aar/ea2e7a764abef9007c48b82efd465273/AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.lifecycle:lifecycle-livedata:2.0.0] /home/artemis/.gradle/caches/transforms-1/files-1.1/lifecycle-livedata-2.0.0.aar/0fc7a471a4079dd35ebd3185341c3322/AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.lifecycle:lifecycle-livedata-core:2.0.0] /home/artemis/.gradle/caches/transforms-1/files-1.1/lifecycle-livedata-core-2.0.0.aar/ce424d27017e957d51c04f4a5a6de1a8/AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.versionedparcelable:versionedparcelable:1.0.0] /home/artemis/.gradle/caches/transforms-1/files-1.1/versionedparcelable-1.0.0.aar/b589cb3293fc37b321a368d569b383e4/AndroidManifest.xml:17:1-25:12
+MERGED from [androidx.arch.core:core-runtime:2.0.0] /home/artemis/.gradle/caches/transforms-1/files-1.1/core-runtime-2.0.0.aar/2d207f6f8d2b03fb976d669754c28c79/AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.documentfile:documentfile:1.0.0] /home/artemis/.gradle/caches/transforms-1/files-1.1/documentfile-1.0.0.aar/26f3e3d6f854ec1c33b1152b1dc8cf2f/AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.localbroadcastmanager:localbroadcastmanager:1.0.0] /home/artemis/.gradle/caches/transforms-1/files-1.1/localbroadcastmanager-1.0.0.aar/8fafd2aba17753f050d19bb6e5852074/AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.print:print:1.0.0] /home/artemis/.gradle/caches/transforms-1/files-1.1/print-1.0.0.aar/fd15927d445c74290ad2b9e2f882c722/AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.lifecycle:lifecycle-viewmodel:2.0.0] /home/artemis/.gradle/caches/transforms-1/files-1.1/lifecycle-viewmodel-2.0.0.aar/ce5c4b3943230cf902d3331e3a40349e/AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.interpolator:interpolator:1.0.0] /home/artemis/.gradle/caches/transforms-1/files-1.1/interpolator-1.0.0.aar/582994955f9109c585dc0e213953f5f4/AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.cursoradapter:cursoradapter:1.0.0] /home/artemis/.gradle/caches/transforms-1/files-1.1/cursoradapter-1.0.0.aar/1dcfd056bf4790e703e035b2b96d934d/AndroidManifest.xml:17:1-22:12
+INJECTED from /home/artemis/StudioProjects/qSoftware_1/app_prototype_flutter/android/app/src/debug/AndroidManifest.xml:1:1-7:12
+INJECTED from /home/artemis/StudioProjects/qSoftware_1/app_prototype_flutter/android/app/src/debug/AndroidManifest.xml:1:1-7:12
+INJECTED from /home/artemis/StudioProjects/qSoftware_1/app_prototype_flutter/android/app/src/debug/AndroidManifest.xml:1:1-7:12
+	package
+		ADDED from /home/artemis/StudioProjects/qSoftware_1/app_prototype_flutter/android/app/src/main/AndroidManifest.xml:2:5-48
+		INJECTED from /home/artemis/StudioProjects/qSoftware_1/app_prototype_flutter/android/app/src/main/AndroidManifest.xml
+		INJECTED from /home/artemis/StudioProjects/qSoftware_1/app_prototype_flutter/android/app/src/debug/AndroidManifest.xml
+	android:versionName
+		INJECTED from /home/artemis/StudioProjects/qSoftware_1/app_prototype_flutter/android/app/src/main/AndroidManifest.xml
+		ADDED from /home/artemis/StudioProjects/qSoftware_1/app_prototype_flutter/android/app/src/main/AndroidManifest.xml:1:1-33:12
+		INJECTED from /home/artemis/StudioProjects/qSoftware_1/app_prototype_flutter/android/app/src/debug/AndroidManifest.xml
+	android:versionCode
+		INJECTED from /home/artemis/StudioProjects/qSoftware_1/app_prototype_flutter/android/app/src/main/AndroidManifest.xml
+		ADDED from /home/artemis/StudioProjects/qSoftware_1/app_prototype_flutter/android/app/src/main/AndroidManifest.xml:1:1-33:12
+		INJECTED from /home/artemis/StudioProjects/qSoftware_1/app_prototype_flutter/android/app/src/debug/AndroidManifest.xml
+	xmlns:android
+		ADDED from /home/artemis/StudioProjects/qSoftware_1/app_prototype_flutter/android/app/src/main/AndroidManifest.xml:1:11-69
+application
+ADDED from /home/artemis/StudioProjects/qSoftware_1/app_prototype_flutter/android/app/src/main/AndroidManifest.xml:9:5-32:19
+MERGED from [com.google.firebase:firebase-analytics:17.2.0] /home/artemis/.gradle/caches/transforms-1/files-1.1/firebase-analytics-17.2.0.aar/3185c3c98e4c666166a05429f3ca17bf/AndroidManifest.xml:7:5-20
+MERGED from [com.google.firebase:firebase-analytics:17.2.0] /home/artemis/.gradle/caches/transforms-1/files-1.1/firebase-analytics-17.2.0.aar/3185c3c98e4c666166a05429f3ca17bf/AndroidManifest.xml:7:5-20
+MERGED from [:firebase_auth] /home/artemis/StudioProjects/qSoftware_1/app_prototype_flutter/build/firebase_auth/intermediates/merged_manifests/debug/processDebugManifest/merged/AndroidManifest.xml:7:5-13:19
+MERGED from [:firebase_auth] /home/artemis/StudioProjects/qSoftware_1/app_prototype_flutter/build/firebase_auth/intermediates/merged_manifests/debug/processDebugManifest/merged/AndroidManifest.xml:7:5-13:19
+MERGED from [:firebase_core] /home/artemis/StudioProjects/qSoftware_1/app_prototype_flutter/build/firebase_core/intermediates/merged_manifests/debug/processDebugManifest/merged/AndroidManifest.xml:7:5-13:19
+MERGED from [:firebase_core] /home/artemis/StudioProjects/qSoftware_1/app_prototype_flutter/build/firebase_core/intermediates/merged_manifests/debug/processDebugManifest/merged/AndroidManifest.xml:7:5-13:19
+MERGED from [com.google.android.gms:play-services-measurement:17.2.0] /home/artemis/.gradle/caches/transforms-1/files-1.1/play-services-measurement-17.2.0.aar/b7a7ffa94fc47141782485928c3300e7/AndroidManifest.xml:28:5-53:19
+MERGED from [com.google.android.gms:play-services-measurement:17.2.0] /home/artemis/.gradle/caches/transforms-1/files-1.1/play-services-measurement-17.2.0.aar/b7a7ffa94fc47141782485928c3300e7/AndroidManifest.xml:28:5-53:19
+MERGED from [com.google.android.gms:play-services-measurement-api:17.2.0] /home/artemis/.gradle/caches/transforms-1/files-1.1/play-services-measurement-api-17.2.0.aar/8d8516a15cb63cbd4f15a8df2ce53e29/AndroidManifest.xml:26:5-34:19
+MERGED from [com.google.android.gms:play-services-measurement-api:17.2.0] /home/artemis/.gradle/caches/transforms-1/files-1.1/play-services-measurement-api-17.2.0.aar/8d8516a15cb63cbd4f15a8df2ce53e29/AndroidManifest.xml:26:5-34:19
+MERGED from [com.google.android.gms:play-services-measurement-sdk:17.2.0] /home/artemis/.gradle/caches/transforms-1/files-1.1/play-services-measurement-sdk-17.2.0.aar/f764364898ff346917c629d9a0a7153d/AndroidManifest.xml:22:5-23:19
+MERGED from [com.google.android.gms:play-services-measurement-sdk:17.2.0] /home/artemis/.gradle/caches/transforms-1/files-1.1/play-services-measurement-sdk-17.2.0.aar/f764364898ff346917c629d9a0a7153d/AndroidManifest.xml:22:5-23:19
+MERGED from [com.google.firebase:firebase-auth:17.0.0] /home/artemis/.gradle/caches/transforms-1/files-1.1/jetified-firebase-auth-17.0.0.aar/ba8415adb7b05185af9d751ab3f10dfc/AndroidManifest.xml:23:5-40:19
+MERGED from [com.google.firebase:firebase-auth:17.0.0] /home/artemis/.gradle/caches/transforms-1/files-1.1/jetified-firebase-auth-17.0.0.aar/ba8415adb7b05185af9d751ab3f10dfc/AndroidManifest.xml:23:5-40:19
+MERGED from [com.google.firebase:firebase-iid:19.0.0] /home/artemis/.gradle/caches/transforms-1/files-1.1/firebase-iid-19.0.0.aar/ca3a030133847c98e2c08e8ac898fd7b/AndroidManifest.xml:28:5-45:19
+MERGED from [com.google.firebase:firebase-iid:19.0.0] /home/artemis/.gradle/caches/transforms-1/files-1.1/firebase-iid-19.0.0.aar/ca3a030133847c98e2c08e8ac898fd7b/AndroidManifest.xml:28:5-45:19
+MERGED from [com.google.firebase:firebase-auth-interop:17.0.0] /home/artemis/.gradle/caches/transforms-1/files-1.1/jetified-firebase-auth-interop-17.0.0.aar/8b9474d7ca5a1730e0ff01a104ec0147/AndroidManifest.xml:7:5-8:19
+MERGED from [com.google.firebase:firebase-auth-interop:17.0.0] /home/artemis/.gradle/caches/transforms-1/files-1.1/jetified-firebase-auth-interop-17.0.0.aar/8b9474d7ca5a1730e0ff01a104ec0147/AndroidManifest.xml:7:5-8:19
+MERGED from [com.google.firebase:firebase-common:19.0.0] /home/artemis/.gradle/caches/transforms-1/files-1.1/firebase-common-19.0.0.aar/50a9059f90b40e442a2604c53fecab15/AndroidManifest.xml:11:5-17:19
+MERGED from [com.google.firebase:firebase-common:19.0.0] /home/artemis/.gradle/caches/transforms-1/files-1.1/firebase-common-19.0.0.aar/50a9059f90b40e442a2604c53fecab15/AndroidManifest.xml:11:5-17:19
+MERGED from [com.google.android.gms:play-services-measurement-impl:17.2.0] /home/artemis/.gradle/caches/transforms-1/files-1.1/play-services-measurement-impl-17.2.0.aar/6ad41f2c59c1f661dd21dad70074f4ae/AndroidManifest.xml:28:5-38:19
+MERGED from [com.google.android.gms:play-services-measurement-impl:17.2.0] /home/artemis/.gradle/caches/transforms-1/files-1.1/play-services-measurement-impl-17.2.0.aar/6ad41f2c59c1f661dd21dad70074f4ae/AndroidManifest.xml:28:5-38:19
+MERGED from [com.google.android.gms:play-services-stats:17.0.0] /home/artemis/.gradle/caches/transforms-1/files-1.1/play-services-stats-17.0.0.aar/e8036b31a787794760d54621fe18dc87/AndroidManifest.xml:7:5-20
+MERGED from [com.google.android.gms:play-services-stats:17.0.0] /home/artemis/.gradle/caches/transforms-1/files-1.1/play-services-stats-17.0.0.aar/e8036b31a787794760d54621fe18dc87/AndroidManifest.xml:7:5-20
+MERGED from [com.google.android.gms:play-services-measurement-base:17.2.0] /home/artemis/.gradle/caches/transforms-1/files-1.1/play-services-measurement-base-17.2.0.aar/8994e1114e2e2988863398d6a16553a6/AndroidManifest.xml:7:5-20
+MERGED from [com.google.android.gms:play-services-measurement-base:17.2.0] /home/artemis/.gradle/caches/transforms-1/files-1.1/play-services-measurement-base-17.2.0.aar/8994e1114e2e2988863398d6a16553a6/AndroidManifest.xml:7:5-20
+MERGED from [com.google.firebase:firebase-iid-interop:17.0.0] /home/artemis/.gradle/caches/transforms-1/files-1.1/firebase-iid-interop-17.0.0.aar/7d5534f3b203100d4599f683f8d7b0fe/AndroidManifest.xml:7:5-8:19
+MERGED from [com.google.firebase:firebase-iid-interop:17.0.0] /home/artemis/.gradle/caches/transforms-1/files-1.1/firebase-iid-interop-17.0.0.aar/7d5534f3b203100d4599f683f8d7b0fe/AndroidManifest.xml:7:5-8:19
+MERGED from [com.google.android.gms:play-services-base:17.0.0] /home/artemis/.gradle/caches/transforms-1/files-1.1/play-services-base-17.0.0.aar/b05e86b6d1d6674e485bbead3a665f46/AndroidManifest.xml:22:5-27:19
+MERGED from [com.google.android.gms:play-services-base:17.0.0] /home/artemis/.gradle/caches/transforms-1/files-1.1/play-services-base-17.0.0.aar/b05e86b6d1d6674e485bbead3a665f46/AndroidManifest.xml:22:5-27:19
+MERGED from [com.google.android.gms:play-services-tasks:17.0.0] /home/artemis/.gradle/caches/transforms-1/files-1.1/play-services-tasks-17.0.0.aar/aba37d0cf8fd4c1f100661685a28aad9/AndroidManifest.xml:7:5-20
+MERGED from [com.google.android.gms:play-services-tasks:17.0.0] /home/artemis/.gradle/caches/transforms-1/files-1.1/play-services-tasks-17.0.0.aar/aba37d0cf8fd4c1f100661685a28aad9/AndroidManifest.xml:7:5-20
+MERGED from [com.google.firebase:firebase-measurement-connector:18.0.0] /home/artemis/.gradle/caches/transforms-1/files-1.1/firebase-measurement-connector-18.0.0.aar/381597e1ad95fc53b64051de8b28e721/AndroidManifest.xml:22:5-23:19
+MERGED from [com.google.firebase:firebase-measurement-connector:18.0.0] /home/artemis/.gradle/caches/transforms-1/files-1.1/firebase-measurement-connector-18.0.0.aar/381597e1ad95fc53b64051de8b28e721/AndroidManifest.xml:22:5-23:19
+MERGED from [com.google.android.gms:play-services-ads-identifier:17.0.0] /home/artemis/.gradle/caches/transforms-1/files-1.1/play-services-ads-identifier-17.0.0.aar/b5d8d0cc50d35f19e5f538cbe851a440/AndroidManifest.xml:22:5-20
+MERGED from [com.google.android.gms:play-services-ads-identifier:17.0.0] /home/artemis/.gradle/caches/transforms-1/files-1.1/play-services-ads-identifier-17.0.0.aar/b5d8d0cc50d35f19e5f538cbe851a440/AndroidManifest.xml:22:5-20
+MERGED from [com.google.android.gms:play-services-basement:17.0.0] /home/artemis/.gradle/caches/transforms-1/files-1.1/jetified-play-services-basement-17.0.0.aar/61b84dabbd6b6e8803f5c21b42ba61f7/AndroidManifest.xml:22:5-26:19
+MERGED from [com.google.android.gms:play-services-basement:17.0.0] /home/artemis/.gradle/caches/transforms-1/files-1.1/jetified-play-services-basement-17.0.0.aar/61b84dabbd6b6e8803f5c21b42ba61f7/AndroidManifest.xml:22:5-26:19
+MERGED from [androidx.core:core:1.0.0] /home/artemis/.gradle/caches/transforms-1/files-1.1/core-1.0.0.aar/822ca61845f4192414679087f2b886f7/AndroidManifest.xml:22:5-89
+MERGED from [androidx.core:core:1.0.0] /home/artemis/.gradle/caches/transforms-1/files-1.1/core-1.0.0.aar/822ca61845f4192414679087f2b886f7/AndroidManifest.xml:22:5-89
+MERGED from [androidx.versionedparcelable:versionedparcelable:1.0.0] /home/artemis/.gradle/caches/transforms-1/files-1.1/versionedparcelable-1.0.0.aar/b589cb3293fc37b321a368d569b383e4/AndroidManifest.xml:22:5-23:19
+MERGED from [androidx.versionedparcelable:versionedparcelable:1.0.0] /home/artemis/.gradle/caches/transforms-1/files-1.1/versionedparcelable-1.0.0.aar/b589cb3293fc37b321a368d569b383e4/AndroidManifest.xml:22:5-23:19
+	android:appComponentFactory
+		ADDED from [androidx.core:core:1.0.0] /home/artemis/.gradle/caches/transforms-1/files-1.1/core-1.0.0.aar/822ca61845f4192414679087f2b886f7/AndroidManifest.xml:22:18-86
+	android:label
+		ADDED from /home/artemis/StudioProjects/qSoftware_1/app_prototype_flutter/android/app/src/main/AndroidManifest.xml:11:9-46
+	android:icon
+		ADDED from /home/artemis/StudioProjects/qSoftware_1/app_prototype_flutter/android/app/src/main/AndroidManifest.xml:12:9-43
+	android:name
+		ADDED from /home/artemis/StudioProjects/qSoftware_1/app_prototype_flutter/android/app/src/main/AndroidManifest.xml:10:9-57
+activity#com.example.app_prototype_flutter.MainActivity
+ADDED from /home/artemis/StudioProjects/qSoftware_1/app_prototype_flutter/android/app/src/main/AndroidManifest.xml:13:9-31:20
+	android:launchMode
+		ADDED from /home/artemis/StudioProjects/qSoftware_1/app_prototype_flutter/android/app/src/main/AndroidManifest.xml:15:13-43
+	android:hardwareAccelerated
+		ADDED from /home/artemis/StudioProjects/qSoftware_1/app_prototype_flutter/android/app/src/main/AndroidManifest.xml:18:13-47
+	android:windowSoftInputMode
+		ADDED from /home/artemis/StudioProjects/qSoftware_1/app_prototype_flutter/android/app/src/main/AndroidManifest.xml:19:13-55
+	android:configChanges
+		ADDED from /home/artemis/StudioProjects/qSoftware_1/app_prototype_flutter/android/app/src/main/AndroidManifest.xml:17:13-144
+	android:theme
+		ADDED from /home/artemis/StudioProjects/qSoftware_1/app_prototype_flutter/android/app/src/main/AndroidManifest.xml:16:13-47
+	android:name
+		ADDED from /home/artemis/StudioProjects/qSoftware_1/app_prototype_flutter/android/app/src/main/AndroidManifest.xml:14:13-41
+meta-data#io.flutter.app.android.SplashScreenUntilFirstFrame
+ADDED from /home/artemis/StudioProjects/qSoftware_1/app_prototype_flutter/android/app/src/main/AndroidManifest.xml:24:13-26:40
+	android:value
+		ADDED from /home/artemis/StudioProjects/qSoftware_1/app_prototype_flutter/android/app/src/main/AndroidManifest.xml:26:17-37
+	android:name
+		ADDED from /home/artemis/StudioProjects/qSoftware_1/app_prototype_flutter/android/app/src/main/AndroidManifest.xml:25:17-82
+intent-filter#action:name:android.intent.action.MAIN+category:name:android.intent.category.LAUNCHER
+ADDED from /home/artemis/StudioProjects/qSoftware_1/app_prototype_flutter/android/app/src/main/AndroidManifest.xml:27:13-30:29
+action#android.intent.action.MAIN
+ADDED from /home/artemis/StudioProjects/qSoftware_1/app_prototype_flutter/android/app/src/main/AndroidManifest.xml:28:17-68
+	android:name
+		ADDED from /home/artemis/StudioProjects/qSoftware_1/app_prototype_flutter/android/app/src/main/AndroidManifest.xml:28:25-66
+category#android.intent.category.LAUNCHER
+ADDED from /home/artemis/StudioProjects/qSoftware_1/app_prototype_flutter/android/app/src/main/AndroidManifest.xml:29:17-76
+	android:name
+		ADDED from /home/artemis/StudioProjects/qSoftware_1/app_prototype_flutter/android/app/src/main/AndroidManifest.xml:29:27-74
+uses-sdk
+INJECTED from /home/artemis/StudioProjects/qSoftware_1/app_prototype_flutter/android/app/src/main/AndroidManifest.xml reason: use-sdk injection requested
+INJECTED from /home/artemis/StudioProjects/qSoftware_1/app_prototype_flutter/android/app/src/main/AndroidManifest.xml
+INJECTED from /home/artemis/StudioProjects/qSoftware_1/app_prototype_flutter/android/app/src/main/AndroidManifest.xml
+MERGED from [com.google.firebase:firebase-analytics:17.2.0] /home/artemis/.gradle/caches/transforms-1/files-1.1/firebase-analytics-17.2.0.aar/3185c3c98e4c666166a05429f3ca17bf/AndroidManifest.xml:5:5-44
+MERGED from [com.google.firebase:firebase-analytics:17.2.0] /home/artemis/.gradle/caches/transforms-1/files-1.1/firebase-analytics-17.2.0.aar/3185c3c98e4c666166a05429f3ca17bf/AndroidManifest.xml:5:5-44
+MERGED from [:firebase_auth] /home/artemis/StudioProjects/qSoftware_1/app_prototype_flutter/build/firebase_auth/intermediates/merged_manifests/debug/processDebugManifest/merged/AndroidManifest.xml:5:5-44
+MERGED from [:firebase_auth] /home/artemis/StudioProjects/qSoftware_1/app_prototype_flutter/build/firebase_auth/intermediates/merged_manifests/debug/processDebugManifest/merged/AndroidManifest.xml:5:5-44
+MERGED from [:firebase_core] /home/artemis/StudioProjects/qSoftware_1/app_prototype_flutter/build/firebase_core/intermediates/merged_manifests/debug/processDebugManifest/merged/AndroidManifest.xml:5:5-44
+MERGED from [:firebase_core] /home/artemis/StudioProjects/qSoftware_1/app_prototype_flutter/build/firebase_core/intermediates/merged_manifests/debug/processDebugManifest/merged/AndroidManifest.xml:5:5-44
+MERGED from [com.google.android.gms:play-services-measurement:17.2.0] /home/artemis/.gradle/caches/transforms-1/files-1.1/play-services-measurement-17.2.0.aar/b7a7ffa94fc47141782485928c3300e7/AndroidManifest.xml:20:5-44
+MERGED from [com.google.android.gms:play-services-measurement:17.2.0] /home/artemis/.gradle/caches/transforms-1/files-1.1/play-services-measurement-17.2.0.aar/b7a7ffa94fc47141782485928c3300e7/AndroidManifest.xml:20:5-44
+MERGED from [com.google.android.gms:play-services-measurement-api:17.2.0] /home/artemis/.gradle/caches/transforms-1/files-1.1/play-services-measurement-api-17.2.0.aar/8d8516a15cb63cbd4f15a8df2ce53e29/AndroidManifest.xml:20:5-44
+MERGED from [com.google.android.gms:play-services-measurement-api:17.2.0] /home/artemis/.gradle/caches/transforms-1/files-1.1/play-services-measurement-api-17.2.0.aar/8d8516a15cb63cbd4f15a8df2ce53e29/AndroidManifest.xml:20:5-44
+MERGED from [com.google.android.gms:play-services-measurement-sdk:17.2.0] /home/artemis/.gradle/caches/transforms-1/files-1.1/play-services-measurement-sdk-17.2.0.aar/f764364898ff346917c629d9a0a7153d/AndroidManifest.xml:20:5-44
+MERGED from [com.google.android.gms:play-services-measurement-sdk:17.2.0] /home/artemis/.gradle/caches/transforms-1/files-1.1/play-services-measurement-sdk-17.2.0.aar/f764364898ff346917c629d9a0a7153d/AndroidManifest.xml:20:5-44
+MERGED from [com.google.firebase:firebase-auth:17.0.0] /home/artemis/.gradle/caches/transforms-1/files-1.1/jetified-firebase-auth-17.0.0.aar/ba8415adb7b05185af9d751ab3f10dfc/AndroidManifest.xml:21:5-44
+MERGED from [com.google.firebase:firebase-auth:17.0.0] /home/artemis/.gradle/caches/transforms-1/files-1.1/jetified-firebase-auth-17.0.0.aar/ba8415adb7b05185af9d751ab3f10dfc/AndroidManifest.xml:21:5-44
+MERGED from [com.google.firebase:firebase-iid:19.0.0] /home/artemis/.gradle/caches/transforms-1/files-1.1/firebase-iid-19.0.0.aar/ca3a030133847c98e2c08e8ac898fd7b/AndroidManifest.xml:20:5-44
+MERGED from [com.google.firebase:firebase-iid:19.0.0] /home/artemis/.gradle/caches/transforms-1/files-1.1/firebase-iid-19.0.0.aar/ca3a030133847c98e2c08e8ac898fd7b/AndroidManifest.xml:20:5-44
+MERGED from [com.google.firebase:firebase-auth-interop:17.0.0] /home/artemis/.gradle/caches/transforms-1/files-1.1/jetified-firebase-auth-interop-17.0.0.aar/8b9474d7ca5a1730e0ff01a104ec0147/AndroidManifest.xml:5:5-44
+MERGED from [com.google.firebase:firebase-auth-interop:17.0.0] /home/artemis/.gradle/caches/transforms-1/files-1.1/jetified-firebase-auth-interop-17.0.0.aar/8b9474d7ca5a1730e0ff01a104ec0147/AndroidManifest.xml:5:5-44
+MERGED from [com.google.firebase:firebase-common:19.0.0] /home/artemis/.gradle/caches/transforms-1/files-1.1/firebase-common-19.0.0.aar/50a9059f90b40e442a2604c53fecab15/AndroidManifest.xml:6:5-8:41
+MERGED from [com.google.firebase:firebase-common:19.0.0] /home/artemis/.gradle/caches/transforms-1/files-1.1/firebase-common-19.0.0.aar/50a9059f90b40e442a2604c53fecab15/AndroidManifest.xml:6:5-8:41
+MERGED from [com.google.android.gms:play-services-measurement-impl:17.2.0] /home/artemis/.gradle/caches/transforms-1/files-1.1/play-services-measurement-impl-17.2.0.aar/6ad41f2c59c1f661dd21dad70074f4ae/AndroidManifest.xml:20:5-44
+MERGED from [com.google.android.gms:play-services-measurement-impl:17.2.0] /home/artemis/.gradle/caches/transforms-1/files-1.1/play-services-measurement-impl-17.2.0.aar/6ad41f2c59c1f661dd21dad70074f4ae/AndroidManifest.xml:20:5-44
+MERGED from [com.google.android.gms:play-services-stats:17.0.0] /home/artemis/.gradle/caches/transforms-1/files-1.1/play-services-stats-17.0.0.aar/e8036b31a787794760d54621fe18dc87/AndroidManifest.xml:5:5-44
+MERGED from [com.google.android.gms:play-services-stats:17.0.0] /home/artemis/.gradle/caches/transforms-1/files-1.1/play-services-stats-17.0.0.aar/e8036b31a787794760d54621fe18dc87/AndroidManifest.xml:5:5-44
+MERGED from [com.google.android.gms:play-services-measurement-sdk-api:17.2.0] /home/artemis/.gradle/caches/transforms-1/files-1.1/play-services-measurement-sdk-api-17.2.0.aar/d6094e6eb8e664f226ef055c00dead27/AndroidManifest.xml:20:5-44
+MERGED from [com.google.android.gms:play-services-measurement-sdk-api:17.2.0] /home/artemis/.gradle/caches/transforms-1/files-1.1/play-services-measurement-sdk-api-17.2.0.aar/d6094e6eb8e664f226ef055c00dead27/AndroidManifest.xml:20:5-44
+MERGED from [com.google.android.gms:play-services-measurement-base:17.2.0] /home/artemis/.gradle/caches/transforms-1/files-1.1/play-services-measurement-base-17.2.0.aar/8994e1114e2e2988863398d6a16553a6/AndroidManifest.xml:5:5-44
+MERGED from [com.google.android.gms:play-services-measurement-base:17.2.0] /home/artemis/.gradle/caches/transforms-1/files-1.1/play-services-measurement-base-17.2.0.aar/8994e1114e2e2988863398d6a16553a6/AndroidManifest.xml:5:5-44
+MERGED from [com.google.android.gms:play-services-flags:16.0.1] /home/artemis/.gradle/caches/transforms-1/files-1.1/play-services-flags-16.0.1.aar/265457f480d68c97084bcbc84dbed4e2/AndroidManifest.xml:20:5-44
+MERGED from [com.google.android.gms:play-services-flags:16.0.1] /home/artemis/.gradle/caches/transforms-1/files-1.1/play-services-flags-16.0.1.aar/265457f480d68c97084bcbc84dbed4e2/AndroidManifest.xml:20:5-44
+MERGED from [com.google.firebase:firebase-iid-interop:17.0.0] /home/artemis/.gradle/caches/transforms-1/files-1.1/firebase-iid-interop-17.0.0.aar/7d5534f3b203100d4599f683f8d7b0fe/AndroidManifest.xml:5:5-44
+MERGED from [com.google.firebase:firebase-iid-interop:17.0.0] /home/artemis/.gradle/caches/transforms-1/files-1.1/firebase-iid-interop-17.0.0.aar/7d5534f3b203100d4599f683f8d7b0fe/AndroidManifest.xml:5:5-44
+MERGED from [com.google.android.gms:play-services-base:17.0.0] /home/artemis/.gradle/caches/transforms-1/files-1.1/play-services-base-17.0.0.aar/b05e86b6d1d6674e485bbead3a665f46/AndroidManifest.xml:20:5-44
+MERGED from [com.google.android.gms:play-services-base:17.0.0] /home/artemis/.gradle/caches/transforms-1/files-1.1/play-services-base-17.0.0.aar/b05e86b6d1d6674e485bbead3a665f46/AndroidManifest.xml:20:5-44
+MERGED from [com.google.android.gms:play-services-tasks:17.0.0] /home/artemis/.gradle/caches/transforms-1/files-1.1/play-services-tasks-17.0.0.aar/aba37d0cf8fd4c1f100661685a28aad9/AndroidManifest.xml:5:5-44
+MERGED from [com.google.android.gms:play-services-tasks:17.0.0] /home/artemis/.gradle/caches/transforms-1/files-1.1/play-services-tasks-17.0.0.aar/aba37d0cf8fd4c1f100661685a28aad9/AndroidManifest.xml:5:5-44
+MERGED from [com.google.firebase:firebase-measurement-connector:18.0.0] /home/artemis/.gradle/caches/transforms-1/files-1.1/firebase-measurement-connector-18.0.0.aar/381597e1ad95fc53b64051de8b28e721/AndroidManifest.xml:20:5-44
+MERGED from [com.google.firebase:firebase-measurement-connector:18.0.0] /home/artemis/.gradle/caches/transforms-1/files-1.1/firebase-measurement-connector-18.0.0.aar/381597e1ad95fc53b64051de8b28e721/AndroidManifest.xml:20:5-44
+MERGED from [com.google.android.gms:play-services-ads-identifier:17.0.0] /home/artemis/.gradle/caches/transforms-1/files-1.1/play-services-ads-identifier-17.0.0.aar/b5d8d0cc50d35f19e5f538cbe851a440/AndroidManifest.xml:20:5-44
+MERGED from [com.google.android.gms:play-services-ads-identifier:17.0.0] /home/artemis/.gradle/caches/transforms-1/files-1.1/play-services-ads-identifier-17.0.0.aar/b5d8d0cc50d35f19e5f538cbe851a440/AndroidManifest.xml:20:5-44
+MERGED from [com.google.android.gms:play-services-basement:17.0.0] /home/artemis/.gradle/caches/transforms-1/files-1.1/jetified-play-services-basement-17.0.0.aar/61b84dabbd6b6e8803f5c21b42ba61f7/AndroidManifest.xml:20:5-44
+MERGED from [com.google.android.gms:play-services-basement:17.0.0] /home/artemis/.gradle/caches/transforms-1/files-1.1/jetified-play-services-basement-17.0.0.aar/61b84dabbd6b6e8803f5c21b42ba61f7/AndroidManifest.xml:20:5-44
+MERGED from [androidx.fragment:fragment:1.0.0] /home/artemis/.gradle/caches/transforms-1/files-1.1/fragment-1.0.0.aar/39f24bd2dad96ca5d46cc4d5d48eeef5/AndroidManifest.xml:20:5-44
+MERGED from [androidx.fragment:fragment:1.0.0] /home/artemis/.gradle/caches/transforms-1/files-1.1/fragment-1.0.0.aar/39f24bd2dad96ca5d46cc4d5d48eeef5/AndroidManifest.xml:20:5-44
+MERGED from [androidx.legacy:legacy-support-core-ui:1.0.0] /home/artemis/.gradle/caches/transforms-1/files-1.1/legacy-support-core-ui-1.0.0.aar/ad08db8bcccfac9aa63a79b278676ed6/AndroidManifest.xml:20:5-44
+MERGED from [androidx.legacy:legacy-support-core-ui:1.0.0] /home/artemis/.gradle/caches/transforms-1/files-1.1/legacy-support-core-ui-1.0.0.aar/ad08db8bcccfac9aa63a79b278676ed6/AndroidManifest.xml:20:5-44
+MERGED from [androidx.legacy:legacy-support-core-utils:1.0.0] /home/artemis/.gradle/caches/transforms-1/files-1.1/legacy-support-core-utils-1.0.0.aar/06e9c12fe4c89602644c8648dcd9c144/AndroidManifest.xml:20:5-44
+MERGED from [androidx.legacy:legacy-support-core-utils:1.0.0] /home/artemis/.gradle/caches/transforms-1/files-1.1/legacy-support-core-utils-1.0.0.aar/06e9c12fe4c89602644c8648dcd9c144/AndroidManifest.xml:20:5-44
+MERGED from [androidx.loader:loader:1.0.0] /home/artemis/.gradle/caches/transforms-1/files-1.1/loader-1.0.0.aar/3b635f646b4633b93faf4b9764d67fc7/AndroidManifest.xml:20:5-44
+MERGED from [androidx.loader:loader:1.0.0] /home/artemis/.gradle/caches/transforms-1/files-1.1/loader-1.0.0.aar/3b635f646b4633b93faf4b9764d67fc7/AndroidManifest.xml:20:5-44
+MERGED from [androidx.viewpager:viewpager:1.0.0] /home/artemis/.gradle/caches/transforms-1/files-1.1/viewpager-1.0.0.aar/b72bbc35b69551e243d576cfd89dd608/AndroidManifest.xml:20:5-44
+MERGED from [androidx.viewpager:viewpager:1.0.0] /home/artemis/.gradle/caches/transforms-1/files-1.1/viewpager-1.0.0.aar/b72bbc35b69551e243d576cfd89dd608/AndroidManifest.xml:20:5-44
+MERGED from [androidx.coordinatorlayout:coordinatorlayout:1.0.0] /home/artemis/.gradle/caches/transforms-1/files-1.1/coordinatorlayout-1.0.0.aar/74ac16ea792d6afc8183000da8e57adf/AndroidManifest.xml:20:5-44
+MERGED from [androidx.coordinatorlayout:coordinatorlayout:1.0.0] /home/artemis/.gradle/caches/transforms-1/files-1.1/coordinatorlayout-1.0.0.aar/74ac16ea792d6afc8183000da8e57adf/AndroidManifest.xml:20:5-44
+MERGED from [androidx.drawerlayout:drawerlayout:1.0.0] /home/artemis/.gradle/caches/transforms-1/files-1.1/drawerlayout-1.0.0.aar/6a7f6c37421ce8e68a79832f4562fb21/AndroidManifest.xml:20:5-44
+MERGED from [androidx.drawerlayout:drawerlayout:1.0.0] /home/artemis/.gradle/caches/transforms-1/files-1.1/drawerlayout-1.0.0.aar/6a7f6c37421ce8e68a79832f4562fb21/AndroidManifest.xml:20:5-44
+MERGED from [androidx.slidingpanelayout:slidingpanelayout:1.0.0] /home/artemis/.gradle/caches/transforms-1/files-1.1/slidingpanelayout-1.0.0.aar/b56a881722bacc8493c2d8a8fc696fbd/AndroidManifest.xml:20:5-44
+MERGED from [androidx.slidingpanelayout:slidingpanelayout:1.0.0] /home/artemis/.gradle/caches/transforms-1/files-1.1/slidingpanelayout-1.0.0.aar/b56a881722bacc8493c2d8a8fc696fbd/AndroidManifest.xml:20:5-44
+MERGED from [androidx.customview:customview:1.0.0] /home/artemis/.gradle/caches/transforms-1/files-1.1/customview-1.0.0.aar/21b7beae76a880e53226a2b51cd0b340/AndroidManifest.xml:20:5-44
+MERGED from [androidx.customview:customview:1.0.0] /home/artemis/.gradle/caches/transforms-1/files-1.1/customview-1.0.0.aar/21b7beae76a880e53226a2b51cd0b340/AndroidManifest.xml:20:5-44
+MERGED from [androidx.swiperefreshlayout:swiperefreshlayout:1.0.0] /home/artemis/.gradle/caches/transforms-1/files-1.1/swiperefreshlayout-1.0.0.aar/94f31eebc354e787b9cf27ea0e3e1415/AndroidManifest.xml:20:5-44
+MERGED from [androidx.swiperefreshlayout:swiperefreshlayout:1.0.0] /home/artemis/.gradle/caches/transforms-1/files-1.1/swiperefreshlayout-1.0.0.aar/94f31eebc354e787b9cf27ea0e3e1415/AndroidManifest.xml:20:5-44
+MERGED from [androidx.asynclayoutinflater:asynclayoutinflater:1.0.0] /home/artemis/.gradle/caches/transforms-1/files-1.1/asynclayoutinflater-1.0.0.aar/c1bda7a51f0db98871fd27856ed8f6df/AndroidManifest.xml:20:5-44
+MERGED from [androidx.asynclayoutinflater:asynclayoutinflater:1.0.0] /home/artemis/.gradle/caches/transforms-1/files-1.1/asynclayoutinflater-1.0.0.aar/c1bda7a51f0db98871fd27856ed8f6df/AndroidManifest.xml:20:5-44
+MERGED from [androidx.core:core:1.0.0] /home/artemis/.gradle/caches/transforms-1/files-1.1/core-1.0.0.aar/822ca61845f4192414679087f2b886f7/AndroidManifest.xml:20:5-44
+MERGED from [androidx.core:core:1.0.0] /home/artemis/.gradle/caches/transforms-1/files-1.1/core-1.0.0.aar/822ca61845f4192414679087f2b886f7/AndroidManifest.xml:20:5-44
+MERGED from [androidx.lifecycle:lifecycle-runtime:2.0.0] /home/artemis/.gradle/caches/transforms-1/files-1.1/lifecycle-runtime-2.0.0.aar/ea2e7a764abef9007c48b82efd465273/AndroidManifest.xml:20:5-44
+MERGED from [androidx.lifecycle:lifecycle-runtime:2.0.0] /home/artemis/.gradle/caches/transforms-1/files-1.1/lifecycle-runtime-2.0.0.aar/ea2e7a764abef9007c48b82efd465273/AndroidManifest.xml:20:5-44
+MERGED from [androidx.lifecycle:lifecycle-livedata:2.0.0] /home/artemis/.gradle/caches/transforms-1/files-1.1/lifecycle-livedata-2.0.0.aar/0fc7a471a4079dd35ebd3185341c3322/AndroidManifest.xml:20:5-44
+MERGED from [androidx.lifecycle:lifecycle-livedata:2.0.0] /home/artemis/.gradle/caches/transforms-1/files-1.1/lifecycle-livedata-2.0.0.aar/0fc7a471a4079dd35ebd3185341c3322/AndroidManifest.xml:20:5-44
+MERGED from [androidx.lifecycle:lifecycle-livedata-core:2.0.0] /home/artemis/.gradle/caches/transforms-1/files-1.1/lifecycle-livedata-core-2.0.0.aar/ce424d27017e957d51c04f4a5a6de1a8/AndroidManifest.xml:20:5-44
+MERGED from [androidx.lifecycle:lifecycle-livedata-core:2.0.0] /home/artemis/.gradle/caches/transforms-1/files-1.1/lifecycle-livedata-core-2.0.0.aar/ce424d27017e957d51c04f4a5a6de1a8/AndroidManifest.xml:20:5-44
+MERGED from [androidx.versionedparcelable:versionedparcelable:1.0.0] /home/artemis/.gradle/caches/transforms-1/files-1.1/versionedparcelable-1.0.0.aar/b589cb3293fc37b321a368d569b383e4/AndroidManifest.xml:20:5-44
+MERGED from [androidx.versionedparcelable:versionedparcelable:1.0.0] /home/artemis/.gradle/caches/transforms-1/files-1.1/versionedparcelable-1.0.0.aar/b589cb3293fc37b321a368d569b383e4/AndroidManifest.xml:20:5-44
+MERGED from [androidx.arch.core:core-runtime:2.0.0] /home/artemis/.gradle/caches/transforms-1/files-1.1/core-runtime-2.0.0.aar/2d207f6f8d2b03fb976d669754c28c79/AndroidManifest.xml:20:5-44
+MERGED from [androidx.arch.core:core-runtime:2.0.0] /home/artemis/.gradle/caches/transforms-1/files-1.1/core-runtime-2.0.0.aar/2d207f6f8d2b03fb976d669754c28c79/AndroidManifest.xml:20:5-44
+MERGED from [androidx.documentfile:documentfile:1.0.0] /home/artemis/.gradle/caches/transforms-1/files-1.1/documentfile-1.0.0.aar/26f3e3d6f854ec1c33b1152b1dc8cf2f/AndroidManifest.xml:20:5-44
+MERGED from [androidx.documentfile:documentfile:1.0.0] /home/artemis/.gradle/caches/transforms-1/files-1.1/documentfile-1.0.0.aar/26f3e3d6f854ec1c33b1152b1dc8cf2f/AndroidManifest.xml:20:5-44
+MERGED from [androidx.localbroadcastmanager:localbroadcastmanager:1.0.0] /home/artemis/.gradle/caches/transforms-1/files-1.1/localbroadcastmanager-1.0.0.aar/8fafd2aba17753f050d19bb6e5852074/AndroidManifest.xml:20:5-44
+MERGED from [androidx.localbroadcastmanager:localbroadcastmanager:1.0.0] /home/artemis/.gradle/caches/transforms-1/files-1.1/localbroadcastmanager-1.0.0.aar/8fafd2aba17753f050d19bb6e5852074/AndroidManifest.xml:20:5-44
+MERGED from [androidx.print:print:1.0.0] /home/artemis/.gradle/caches/transforms-1/files-1.1/print-1.0.0.aar/fd15927d445c74290ad2b9e2f882c722/AndroidManifest.xml:20:5-44
+MERGED from [androidx.print:print:1.0.0] /home/artemis/.gradle/caches/transforms-1/files-1.1/print-1.0.0.aar/fd15927d445c74290ad2b9e2f882c722/AndroidManifest.xml:20:5-44
+MERGED from [androidx.lifecycle:lifecycle-viewmodel:2.0.0] /home/artemis/.gradle/caches/transforms-1/files-1.1/lifecycle-viewmodel-2.0.0.aar/ce5c4b3943230cf902d3331e3a40349e/AndroidManifest.xml:20:5-44
+MERGED from [androidx.lifecycle:lifecycle-viewmodel:2.0.0] /home/artemis/.gradle/caches/transforms-1/files-1.1/lifecycle-viewmodel-2.0.0.aar/ce5c4b3943230cf902d3331e3a40349e/AndroidManifest.xml:20:5-44
+MERGED from [androidx.interpolator:interpolator:1.0.0] /home/artemis/.gradle/caches/transforms-1/files-1.1/interpolator-1.0.0.aar/582994955f9109c585dc0e213953f5f4/AndroidManifest.xml:20:5-44
+MERGED from [androidx.interpolator:interpolator:1.0.0] /home/artemis/.gradle/caches/transforms-1/files-1.1/interpolator-1.0.0.aar/582994955f9109c585dc0e213953f5f4/AndroidManifest.xml:20:5-44
+MERGED from [androidx.cursoradapter:cursoradapter:1.0.0] /home/artemis/.gradle/caches/transforms-1/files-1.1/cursoradapter-1.0.0.aar/1dcfd056bf4790e703e035b2b96d934d/AndroidManifest.xml:20:5-44
+MERGED from [androidx.cursoradapter:cursoradapter:1.0.0] /home/artemis/.gradle/caches/transforms-1/files-1.1/cursoradapter-1.0.0.aar/1dcfd056bf4790e703e035b2b96d934d/AndroidManifest.xml:20:5-44
+INJECTED from /home/artemis/StudioProjects/qSoftware_1/app_prototype_flutter/android/app/src/debug/AndroidManifest.xml
+INJECTED from /home/artemis/StudioProjects/qSoftware_1/app_prototype_flutter/android/app/src/debug/AndroidManifest.xml
+	android:targetSdkVersion
+		INJECTED from /home/artemis/StudioProjects/qSoftware_1/app_prototype_flutter/android/app/src/main/AndroidManifest.xml
+		INJECTED from /home/artemis/StudioProjects/qSoftware_1/app_prototype_flutter/android/app/src/debug/AndroidManifest.xml
+	android:minSdkVersion
+		INJECTED from /home/artemis/StudioProjects/qSoftware_1/app_prototype_flutter/android/app/src/main/AndroidManifest.xml
+		INJECTED from /home/artemis/StudioProjects/qSoftware_1/app_prototype_flutter/android/app/src/debug/AndroidManifest.xml
+uses-permission#android.permission.INTERNET
+ADDED from /home/artemis/StudioProjects/qSoftware_1/app_prototype_flutter/android/app/src/debug/AndroidManifest.xml:6:5-66
+MERGED from [com.google.android.gms:play-services-measurement:17.2.0] /home/artemis/.gradle/caches/transforms-1/files-1.1/play-services-measurement-17.2.0.aar/b7a7ffa94fc47141782485928c3300e7/AndroidManifest.xml:23:5-67
+MERGED from [com.google.android.gms:play-services-measurement:17.2.0] /home/artemis/.gradle/caches/transforms-1/files-1.1/play-services-measurement-17.2.0.aar/b7a7ffa94fc47141782485928c3300e7/AndroidManifest.xml:23:5-67
+MERGED from [com.google.android.gms:play-services-measurement-api:17.2.0] /home/artemis/.gradle/caches/transforms-1/files-1.1/play-services-measurement-api-17.2.0.aar/8d8516a15cb63cbd4f15a8df2ce53e29/AndroidManifest.xml:22:5-67
+MERGED from [com.google.android.gms:play-services-measurement-api:17.2.0] /home/artemis/.gradle/caches/transforms-1/files-1.1/play-services-measurement-api-17.2.0.aar/8d8516a15cb63cbd4f15a8df2ce53e29/AndroidManifest.xml:22:5-67
+MERGED from [com.google.firebase:firebase-iid:19.0.0] /home/artemis/.gradle/caches/transforms-1/files-1.1/firebase-iid-19.0.0.aar/ca3a030133847c98e2c08e8ac898fd7b/AndroidManifest.xml:23:5-67
+MERGED from [com.google.firebase:firebase-iid:19.0.0] /home/artemis/.gradle/caches/transforms-1/files-1.1/firebase-iid-19.0.0.aar/ca3a030133847c98e2c08e8ac898fd7b/AndroidManifest.xml:23:5-67
+MERGED from [com.google.android.gms:play-services-measurement-impl:17.2.0] /home/artemis/.gradle/caches/transforms-1/files-1.1/play-services-measurement-impl-17.2.0.aar/6ad41f2c59c1f661dd21dad70074f4ae/AndroidManifest.xml:23:5-67
+MERGED from [com.google.android.gms:play-services-measurement-impl:17.2.0] /home/artemis/.gradle/caches/transforms-1/files-1.1/play-services-measurement-impl-17.2.0.aar/6ad41f2c59c1f661dd21dad70074f4ae/AndroidManifest.xml:23:5-67
+MERGED from [com.google.android.gms:play-services-measurement-sdk-api:17.2.0] /home/artemis/.gradle/caches/transforms-1/files-1.1/play-services-measurement-sdk-api-17.2.0.aar/d6094e6eb8e664f226ef055c00dead27/AndroidManifest.xml:23:5-67
+MERGED from [com.google.android.gms:play-services-measurement-sdk-api:17.2.0] /home/artemis/.gradle/caches/transforms-1/files-1.1/play-services-measurement-sdk-api-17.2.0.aar/d6094e6eb8e664f226ef055c00dead27/AndroidManifest.xml:23:5-67
+	android:name
+		ADDED from /home/artemis/StudioProjects/qSoftware_1/app_prototype_flutter/android/app/src/debug/AndroidManifest.xml:6:22-64
+service#com.google.firebase.components.ComponentDiscoveryService
+ADDED from [:firebase_auth] /home/artemis/StudioProjects/qSoftware_1/app_prototype_flutter/build/firebase_auth/intermediates/merged_manifests/debug/processDebugManifest/merged/AndroidManifest.xml:8:9-12:19
+MERGED from [:firebase_core] /home/artemis/StudioProjects/qSoftware_1/app_prototype_flutter/build/firebase_core/intermediates/merged_manifests/debug/processDebugManifest/merged/AndroidManifest.xml:8:9-12:19
+MERGED from [:firebase_core] /home/artemis/StudioProjects/qSoftware_1/app_prototype_flutter/build/firebase_core/intermediates/merged_manifests/debug/processDebugManifest/merged/AndroidManifest.xml:8:9-12:19
+MERGED from [com.google.android.gms:play-services-measurement-api:17.2.0] /home/artemis/.gradle/caches/transforms-1/files-1.1/play-services-measurement-api-17.2.0.aar/8d8516a15cb63cbd4f15a8df2ce53e29/AndroidManifest.xml:27:9-33:19
+MERGED from [com.google.android.gms:play-services-measurement-api:17.2.0] /home/artemis/.gradle/caches/transforms-1/files-1.1/play-services-measurement-api-17.2.0.aar/8d8516a15cb63cbd4f15a8df2ce53e29/AndroidManifest.xml:27:9-33:19
+MERGED from [com.google.firebase:firebase-auth:17.0.0] /home/artemis/.gradle/caches/transforms-1/files-1.1/jetified-firebase-auth-17.0.0.aar/ba8415adb7b05185af9d751ab3f10dfc/AndroidManifest.xml:33:9-39:19
+MERGED from [com.google.firebase:firebase-auth:17.0.0] /home/artemis/.gradle/caches/transforms-1/files-1.1/jetified-firebase-auth-17.0.0.aar/ba8415adb7b05185af9d751ab3f10dfc/AndroidManifest.xml:33:9-39:19
+MERGED from [com.google.firebase:firebase-iid:19.0.0] /home/artemis/.gradle/caches/transforms-1/files-1.1/firebase-iid-19.0.0.aar/ca3a030133847c98e2c08e8ac898fd7b/AndroidManifest.xml:29:9-35:19
+MERGED from [com.google.firebase:firebase-iid:19.0.0] /home/artemis/.gradle/caches/transforms-1/files-1.1/firebase-iid-19.0.0.aar/ca3a030133847c98e2c08e8ac898fd7b/AndroidManifest.xml:29:9-35:19
+	android:exported
+		ADDED from [com.google.android.gms:play-services-measurement-api:17.2.0] /home/artemis/.gradle/caches/transforms-1/files-1.1/play-services-measurement-api-17.2.0.aar/8d8516a15cb63cbd4f15a8df2ce53e29/AndroidManifest.xml:29:13-37
+	android:name
+		ADDED from [:firebase_auth] /home/artemis/StudioProjects/qSoftware_1/app_prototype_flutter/build/firebase_auth/intermediates/merged_manifests/debug/processDebugManifest/merged/AndroidManifest.xml:8:18-89
+meta-data#com.google.firebase.components:io.flutter.plugins.firebaseauth.FlutterFirebaseAppRegistrar
+ADDED from [:firebase_auth] /home/artemis/StudioProjects/qSoftware_1/app_prototype_flutter/build/firebase_auth/intermediates/merged_manifests/debug/processDebugManifest/merged/AndroidManifest.xml:9:13-11:85
+	android:value
+		ADDED from [:firebase_auth] /home/artemis/StudioProjects/qSoftware_1/app_prototype_flutter/build/firebase_auth/intermediates/merged_manifests/debug/processDebugManifest/merged/AndroidManifest.xml:11:17-82
+	android:name
+		ADDED from [:firebase_auth] /home/artemis/StudioProjects/qSoftware_1/app_prototype_flutter/build/firebase_auth/intermediates/merged_manifests/debug/processDebugManifest/merged/AndroidManifest.xml:10:17-122
+meta-data#com.google.firebase.components:io.flutter.plugins.firebase.core.FlutterFirebaseAppRegistrar
+ADDED from [:firebase_core] /home/artemis/StudioProjects/qSoftware_1/app_prototype_flutter/build/firebase_core/intermediates/merged_manifests/debug/processDebugManifest/merged/AndroidManifest.xml:9:13-11:85
+	android:value
+		ADDED from [:firebase_core] /home/artemis/StudioProjects/qSoftware_1/app_prototype_flutter/build/firebase_core/intermediates/merged_manifests/debug/processDebugManifest/merged/AndroidManifest.xml:11:17-82
+	android:name
+		ADDED from [:firebase_core] /home/artemis/StudioProjects/qSoftware_1/app_prototype_flutter/build/firebase_core/intermediates/merged_manifests/debug/processDebugManifest/merged/AndroidManifest.xml:10:17-123
+uses-permission#android.permission.ACCESS_NETWORK_STATE
+ADDED from [com.google.android.gms:play-services-measurement:17.2.0] /home/artemis/.gradle/caches/transforms-1/files-1.1/play-services-measurement-17.2.0.aar/b7a7ffa94fc47141782485928c3300e7/AndroidManifest.xml:24:5-79
+MERGED from [com.google.android.gms:play-services-measurement-api:17.2.0] /home/artemis/.gradle/caches/transforms-1/files-1.1/play-services-measurement-api-17.2.0.aar/8d8516a15cb63cbd4f15a8df2ce53e29/AndroidManifest.xml:23:5-79
+MERGED from [com.google.android.gms:play-services-measurement-api:17.2.0] /home/artemis/.gradle/caches/transforms-1/files-1.1/play-services-measurement-api-17.2.0.aar/8d8516a15cb63cbd4f15a8df2ce53e29/AndroidManifest.xml:23:5-79
+MERGED from [com.google.firebase:firebase-iid:19.0.0] /home/artemis/.gradle/caches/transforms-1/files-1.1/firebase-iid-19.0.0.aar/ca3a030133847c98e2c08e8ac898fd7b/AndroidManifest.xml:22:5-79
+MERGED from [com.google.firebase:firebase-iid:19.0.0] /home/artemis/.gradle/caches/transforms-1/files-1.1/firebase-iid-19.0.0.aar/ca3a030133847c98e2c08e8ac898fd7b/AndroidManifest.xml:22:5-79
+MERGED from [com.google.android.gms:play-services-measurement-impl:17.2.0] /home/artemis/.gradle/caches/transforms-1/files-1.1/play-services-measurement-impl-17.2.0.aar/6ad41f2c59c1f661dd21dad70074f4ae/AndroidManifest.xml:24:5-79
+MERGED from [com.google.android.gms:play-services-measurement-impl:17.2.0] /home/artemis/.gradle/caches/transforms-1/files-1.1/play-services-measurement-impl-17.2.0.aar/6ad41f2c59c1f661dd21dad70074f4ae/AndroidManifest.xml:24:5-79
+MERGED from [com.google.android.gms:play-services-measurement-sdk-api:17.2.0] /home/artemis/.gradle/caches/transforms-1/files-1.1/play-services-measurement-sdk-api-17.2.0.aar/d6094e6eb8e664f226ef055c00dead27/AndroidManifest.xml:24:5-79
+MERGED from [com.google.android.gms:play-services-measurement-sdk-api:17.2.0] /home/artemis/.gradle/caches/transforms-1/files-1.1/play-services-measurement-sdk-api-17.2.0.aar/d6094e6eb8e664f226ef055c00dead27/AndroidManifest.xml:24:5-79
+	android:name
+		ADDED from [com.google.android.gms:play-services-measurement:17.2.0] /home/artemis/.gradle/caches/transforms-1/files-1.1/play-services-measurement-17.2.0.aar/b7a7ffa94fc47141782485928c3300e7/AndroidManifest.xml:24:22-76
+uses-permission#android.permission.WAKE_LOCK
+ADDED from [com.google.android.gms:play-services-measurement:17.2.0] /home/artemis/.gradle/caches/transforms-1/files-1.1/play-services-measurement-17.2.0.aar/b7a7ffa94fc47141782485928c3300e7/AndroidManifest.xml:25:5-68
+MERGED from [com.google.android.gms:play-services-measurement-api:17.2.0] /home/artemis/.gradle/caches/transforms-1/files-1.1/play-services-measurement-api-17.2.0.aar/8d8516a15cb63cbd4f15a8df2ce53e29/AndroidManifest.xml:24:5-68
+MERGED from [com.google.android.gms:play-services-measurement-api:17.2.0] /home/artemis/.gradle/caches/transforms-1/files-1.1/play-services-measurement-api-17.2.0.aar/8d8516a15cb63cbd4f15a8df2ce53e29/AndroidManifest.xml:24:5-68
+MERGED from [com.google.firebase:firebase-iid:19.0.0] /home/artemis/.gradle/caches/transforms-1/files-1.1/firebase-iid-19.0.0.aar/ca3a030133847c98e2c08e8ac898fd7b/AndroidManifest.xml:24:5-68
+MERGED from [com.google.firebase:firebase-iid:19.0.0] /home/artemis/.gradle/caches/transforms-1/files-1.1/firebase-iid-19.0.0.aar/ca3a030133847c98e2c08e8ac898fd7b/AndroidManifest.xml:24:5-68
+MERGED from [com.google.android.gms:play-services-measurement-impl:17.2.0] /home/artemis/.gradle/caches/transforms-1/files-1.1/play-services-measurement-impl-17.2.0.aar/6ad41f2c59c1f661dd21dad70074f4ae/AndroidManifest.xml:25:5-68
+MERGED from [com.google.android.gms:play-services-measurement-impl:17.2.0] /home/artemis/.gradle/caches/transforms-1/files-1.1/play-services-measurement-impl-17.2.0.aar/6ad41f2c59c1f661dd21dad70074f4ae/AndroidManifest.xml:25:5-68
+MERGED from [com.google.android.gms:play-services-measurement-sdk-api:17.2.0] /home/artemis/.gradle/caches/transforms-1/files-1.1/play-services-measurement-sdk-api-17.2.0.aar/d6094e6eb8e664f226ef055c00dead27/AndroidManifest.xml:25:5-68
+MERGED from [com.google.android.gms:play-services-measurement-sdk-api:17.2.0] /home/artemis/.gradle/caches/transforms-1/files-1.1/play-services-measurement-sdk-api-17.2.0.aar/d6094e6eb8e664f226ef055c00dead27/AndroidManifest.xml:25:5-68
+	android:name
+		ADDED from [com.google.android.gms:play-services-measurement:17.2.0] /home/artemis/.gradle/caches/transforms-1/files-1.1/play-services-measurement-17.2.0.aar/b7a7ffa94fc47141782485928c3300e7/AndroidManifest.xml:25:22-65
+uses-permission#com.google.android.finsky.permission.BIND_GET_INSTALL_REFERRER_SERVICE
+ADDED from [com.google.android.gms:play-services-measurement:17.2.0] /home/artemis/.gradle/caches/transforms-1/files-1.1/play-services-measurement-17.2.0.aar/b7a7ffa94fc47141782485928c3300e7/AndroidManifest.xml:26:5-110
+MERGED from [com.google.android.gms:play-services-measurement-impl:17.2.0] /home/artemis/.gradle/caches/transforms-1/files-1.1/play-services-measurement-impl-17.2.0.aar/6ad41f2c59c1f661dd21dad70074f4ae/AndroidManifest.xml:26:5-110
+MERGED from [com.google.android.gms:play-services-measurement-impl:17.2.0] /home/artemis/.gradle/caches/transforms-1/files-1.1/play-services-measurement-impl-17.2.0.aar/6ad41f2c59c1f661dd21dad70074f4ae/AndroidManifest.xml:26:5-110
+	android:name
+		ADDED from [com.google.android.gms:play-services-measurement:17.2.0] /home/artemis/.gradle/caches/transforms-1/files-1.1/play-services-measurement-17.2.0.aar/b7a7ffa94fc47141782485928c3300e7/AndroidManifest.xml:26:22-107
+receiver#com.google.android.gms.measurement.AppMeasurementReceiver
+ADDED from [com.google.android.gms:play-services-measurement:17.2.0] /home/artemis/.gradle/caches/transforms-1/files-1.1/play-services-measurement-17.2.0.aar/b7a7ffa94fc47141782485928c3300e7/AndroidManifest.xml:29:9-33:20
+	android:enabled
+		ADDED from [com.google.android.gms:play-services-measurement:17.2.0] /home/artemis/.gradle/caches/transforms-1/files-1.1/play-services-measurement-17.2.0.aar/b7a7ffa94fc47141782485928c3300e7/AndroidManifest.xml:31:13-35
+	android:exported
+		ADDED from [com.google.android.gms:play-services-measurement:17.2.0] /home/artemis/.gradle/caches/transforms-1/files-1.1/play-services-measurement-17.2.0.aar/b7a7ffa94fc47141782485928c3300e7/AndroidManifest.xml:32:13-37
+	android:name
+		ADDED from [com.google.android.gms:play-services-measurement:17.2.0] /home/artemis/.gradle/caches/transforms-1/files-1.1/play-services-measurement-17.2.0.aar/b7a7ffa94fc47141782485928c3300e7/AndroidManifest.xml:30:13-85
+receiver#com.google.android.gms.measurement.AppMeasurementInstallReferrerReceiver
+ADDED from [com.google.android.gms:play-services-measurement:17.2.0] /home/artemis/.gradle/caches/transforms-1/files-1.1/play-services-measurement-17.2.0.aar/b7a7ffa94fc47141782485928c3300e7/AndroidManifest.xml:34:9-42:20
+MERGED from [com.google.android.gms:play-services-measurement-impl:17.2.0] /home/artemis/.gradle/caches/transforms-1/files-1.1/play-services-measurement-impl-17.2.0.aar/6ad41f2c59c1f661dd21dad70074f4ae/AndroidManifest.xml:29:9-37:20
+MERGED from [com.google.android.gms:play-services-measurement-impl:17.2.0] /home/artemis/.gradle/caches/transforms-1/files-1.1/play-services-measurement-impl-17.2.0.aar/6ad41f2c59c1f661dd21dad70074f4ae/AndroidManifest.xml:29:9-37:20
+	android:enabled
+		ADDED from [com.google.android.gms:play-services-measurement:17.2.0] /home/artemis/.gradle/caches/transforms-1/files-1.1/play-services-measurement-17.2.0.aar/b7a7ffa94fc47141782485928c3300e7/AndroidManifest.xml:36:13-35
+	android:exported
+		ADDED from [com.google.android.gms:play-services-measurement:17.2.0] /home/artemis/.gradle/caches/transforms-1/files-1.1/play-services-measurement-17.2.0.aar/b7a7ffa94fc47141782485928c3300e7/AndroidManifest.xml:37:13-36
+	android:permission
+		ADDED from [com.google.android.gms:play-services-measurement:17.2.0] /home/artemis/.gradle/caches/transforms-1/files-1.1/play-services-measurement-17.2.0.aar/b7a7ffa94fc47141782485928c3300e7/AndroidManifest.xml:38:13-69
+	android:name
+		ADDED from [com.google.android.gms:play-services-measurement:17.2.0] /home/artemis/.gradle/caches/transforms-1/files-1.1/play-services-measurement-17.2.0.aar/b7a7ffa94fc47141782485928c3300e7/AndroidManifest.xml:35:13-100
+intent-filter#action:name:com.android.vending.INSTALL_REFERRER
+ADDED from [com.google.android.gms:play-services-measurement:17.2.0] /home/artemis/.gradle/caches/transforms-1/files-1.1/play-services-measurement-17.2.0.aar/b7a7ffa94fc47141782485928c3300e7/AndroidManifest.xml:39:13-41:29
+action#com.android.vending.INSTALL_REFERRER
+ADDED from [com.google.android.gms:play-services-measurement:17.2.0] /home/artemis/.gradle/caches/transforms-1/files-1.1/play-services-measurement-17.2.0.aar/b7a7ffa94fc47141782485928c3300e7/AndroidManifest.xml:40:17-79
+	android:name
+		ADDED from [com.google.android.gms:play-services-measurement:17.2.0] /home/artemis/.gradle/caches/transforms-1/files-1.1/play-services-measurement-17.2.0.aar/b7a7ffa94fc47141782485928c3300e7/AndroidManifest.xml:40:25-76
+service#com.google.android.gms.measurement.AppMeasurementService
+ADDED from [com.google.android.gms:play-services-measurement:17.2.0] /home/artemis/.gradle/caches/transforms-1/files-1.1/play-services-measurement-17.2.0.aar/b7a7ffa94fc47141782485928c3300e7/AndroidManifest.xml:44:9-47:40
+	android:enabled
+		ADDED from [com.google.android.gms:play-services-measurement:17.2.0] /home/artemis/.gradle/caches/transforms-1/files-1.1/play-services-measurement-17.2.0.aar/b7a7ffa94fc47141782485928c3300e7/AndroidManifest.xml:46:13-35
+	android:exported
+		ADDED from [com.google.android.gms:play-services-measurement:17.2.0] /home/artemis/.gradle/caches/transforms-1/files-1.1/play-services-measurement-17.2.0.aar/b7a7ffa94fc47141782485928c3300e7/AndroidManifest.xml:47:13-37
+	android:name
+		ADDED from [com.google.android.gms:play-services-measurement:17.2.0] /home/artemis/.gradle/caches/transforms-1/files-1.1/play-services-measurement-17.2.0.aar/b7a7ffa94fc47141782485928c3300e7/AndroidManifest.xml:45:13-84
+service#com.google.android.gms.measurement.AppMeasurementJobService
+ADDED from [com.google.android.gms:play-services-measurement:17.2.0] /home/artemis/.gradle/caches/transforms-1/files-1.1/play-services-measurement-17.2.0.aar/b7a7ffa94fc47141782485928c3300e7/AndroidManifest.xml:48:9-52:72
+	android:enabled
+		ADDED from [com.google.android.gms:play-services-measurement:17.2.0] /home/artemis/.gradle/caches/transforms-1/files-1.1/play-services-measurement-17.2.0.aar/b7a7ffa94fc47141782485928c3300e7/AndroidManifest.xml:50:13-35
+	android:exported
+		ADDED from [com.google.android.gms:play-services-measurement:17.2.0] /home/artemis/.gradle/caches/transforms-1/files-1.1/play-services-measurement-17.2.0.aar/b7a7ffa94fc47141782485928c3300e7/AndroidManifest.xml:51:13-37
+	android:permission
+		ADDED from [com.google.android.gms:play-services-measurement:17.2.0] /home/artemis/.gradle/caches/transforms-1/files-1.1/play-services-measurement-17.2.0.aar/b7a7ffa94fc47141782485928c3300e7/AndroidManifest.xml:52:13-69
+	android:name
+		ADDED from [com.google.android.gms:play-services-measurement:17.2.0] /home/artemis/.gradle/caches/transforms-1/files-1.1/play-services-measurement-17.2.0.aar/b7a7ffa94fc47141782485928c3300e7/AndroidManifest.xml:49:13-87
+meta-data#com.google.firebase.components:com.google.firebase.analytics.connector.internal.AnalyticsConnectorRegistrar
+ADDED from [com.google.android.gms:play-services-measurement-api:17.2.0] /home/artemis/.gradle/caches/transforms-1/files-1.1/play-services-measurement-api-17.2.0.aar/8d8516a15cb63cbd4f15a8df2ce53e29/AndroidManifest.xml:30:13-32:85
+	android:value
+		ADDED from [com.google.android.gms:play-services-measurement-api:17.2.0] /home/artemis/.gradle/caches/transforms-1/files-1.1/play-services-measurement-api-17.2.0.aar/8d8516a15cb63cbd4f15a8df2ce53e29/AndroidManifest.xml:32:17-82
+	android:name
+		ADDED from [com.google.android.gms:play-services-measurement-api:17.2.0] /home/artemis/.gradle/caches/transforms-1/files-1.1/play-services-measurement-api-17.2.0.aar/8d8516a15cb63cbd4f15a8df2ce53e29/AndroidManifest.xml:31:17-139
+activity#com.google.firebase.auth.internal.FederatedSignInActivity
+ADDED from [com.google.firebase:firebase-auth:17.0.0] /home/artemis/.gradle/caches/transforms-1/files-1.1/jetified-firebase-auth-17.0.0.aar/ba8415adb7b05185af9d751ab3f10dfc/AndroidManifest.xml:24:9-31:50
+	android:excludeFromRecents
+		ADDED from [com.google.firebase:firebase-auth:17.0.0] /home/artemis/.gradle/caches/transforms-1/files-1.1/jetified-firebase-auth-17.0.0.aar/ba8415adb7b05185af9d751ab3f10dfc/AndroidManifest.xml:26:13-46
+	android:launchMode
+		ADDED from [com.google.firebase:firebase-auth:17.0.0] /home/artemis/.gradle/caches/transforms-1/files-1.1/jetified-firebase-auth-17.0.0.aar/ba8415adb7b05185af9d751ab3f10dfc/AndroidManifest.xml:28:13-44
+	android:exported
+		ADDED from [com.google.firebase:firebase-auth:17.0.0] /home/artemis/.gradle/caches/transforms-1/files-1.1/jetified-firebase-auth-17.0.0.aar/ba8415adb7b05185af9d751ab3f10dfc/AndroidManifest.xml:27:13-36
+	android:permission
+		ADDED from [com.google.firebase:firebase-auth:17.0.0] /home/artemis/.gradle/caches/transforms-1/files-1.1/jetified-firebase-auth-17.0.0.aar/ba8415adb7b05185af9d751ab3f10dfc/AndroidManifest.xml:29:13-102
+	android:theme
+		ADDED from [com.google.firebase:firebase-auth:17.0.0] /home/artemis/.gradle/caches/transforms-1/files-1.1/jetified-firebase-auth-17.0.0.aar/ba8415adb7b05185af9d751ab3f10dfc/AndroidManifest.xml:30:13-72
+	tools:replace
+		ADDED from [com.google.firebase:firebase-auth:17.0.0] /home/artemis/.gradle/caches/transforms-1/files-1.1/jetified-firebase-auth-17.0.0.aar/ba8415adb7b05185af9d751ab3f10dfc/AndroidManifest.xml:31:13-47
+	android:name
+		ADDED from [com.google.firebase:firebase-auth:17.0.0] /home/artemis/.gradle/caches/transforms-1/files-1.1/jetified-firebase-auth-17.0.0.aar/ba8415adb7b05185af9d751ab3f10dfc/AndroidManifest.xml:25:13-85
+meta-data#com.google.firebase.components:com.google.firebase.auth.FirebaseAuthRegistrar
+ADDED from [com.google.firebase:firebase-auth:17.0.0] /home/artemis/.gradle/caches/transforms-1/files-1.1/jetified-firebase-auth-17.0.0.aar/ba8415adb7b05185af9d751ab3f10dfc/AndroidManifest.xml:36:13-38:85
+	android:value
+		ADDED from [com.google.firebase:firebase-auth:17.0.0] /home/artemis/.gradle/caches/transforms-1/files-1.1/jetified-firebase-auth-17.0.0.aar/ba8415adb7b05185af9d751ab3f10dfc/AndroidManifest.xml:38:17-82
+	android:name
+		ADDED from [com.google.firebase:firebase-auth:17.0.0] /home/artemis/.gradle/caches/transforms-1/files-1.1/jetified-firebase-auth-17.0.0.aar/ba8415adb7b05185af9d751ab3f10dfc/AndroidManifest.xml:37:17-109
+uses-permission#com.google.android.c2dm.permission.RECEIVE
+ADDED from [com.google.firebase:firebase-iid:19.0.0] /home/artemis/.gradle/caches/transforms-1/files-1.1/firebase-iid-19.0.0.aar/ca3a030133847c98e2c08e8ac898fd7b/AndroidManifest.xml:26:5-82
+	android:name
+		ADDED from [com.google.firebase:firebase-iid:19.0.0] /home/artemis/.gradle/caches/transforms-1/files-1.1/firebase-iid-19.0.0.aar/ca3a030133847c98e2c08e8ac898fd7b/AndroidManifest.xml:26:22-79
+meta-data#com.google.firebase.components:com.google.firebase.iid.Registrar
+ADDED from [com.google.firebase:firebase-iid:19.0.0] /home/artemis/.gradle/caches/transforms-1/files-1.1/firebase-iid-19.0.0.aar/ca3a030133847c98e2c08e8ac898fd7b/AndroidManifest.xml:32:13-34:85
+	android:value
+		ADDED from [com.google.firebase:firebase-iid:19.0.0] /home/artemis/.gradle/caches/transforms-1/files-1.1/firebase-iid-19.0.0.aar/ca3a030133847c98e2c08e8ac898fd7b/AndroidManifest.xml:34:17-82
+	android:name
+		ADDED from [com.google.firebase:firebase-iid:19.0.0] /home/artemis/.gradle/caches/transforms-1/files-1.1/firebase-iid-19.0.0.aar/ca3a030133847c98e2c08e8ac898fd7b/AndroidManifest.xml:33:17-96
+receiver#com.google.firebase.iid.FirebaseInstanceIdReceiver
+ADDED from [com.google.firebase:firebase-iid:19.0.0] /home/artemis/.gradle/caches/transforms-1/files-1.1/firebase-iid-19.0.0.aar/ca3a030133847c98e2c08e8ac898fd7b/AndroidManifest.xml:37:9-44:20
+	android:exported
+		ADDED from [com.google.firebase:firebase-iid:19.0.0] /home/artemis/.gradle/caches/transforms-1/files-1.1/firebase-iid-19.0.0.aar/ca3a030133847c98e2c08e8ac898fd7b/AndroidManifest.xml:39:13-36
+	android:permission
+		ADDED from [com.google.firebase:firebase-iid:19.0.0] /home/artemis/.gradle/caches/transforms-1/files-1.1/firebase-iid-19.0.0.aar/ca3a030133847c98e2c08e8ac898fd7b/AndroidManifest.xml:40:13-73
+	android:name
+		ADDED from [com.google.firebase:firebase-iid:19.0.0] /home/artemis/.gradle/caches/transforms-1/files-1.1/firebase-iid-19.0.0.aar/ca3a030133847c98e2c08e8ac898fd7b/AndroidManifest.xml:38:13-78
+intent-filter#action:name:com.google.android.c2dm.intent.RECEIVE
+ADDED from [com.google.firebase:firebase-iid:19.0.0] /home/artemis/.gradle/caches/transforms-1/files-1.1/firebase-iid-19.0.0.aar/ca3a030133847c98e2c08e8ac898fd7b/AndroidManifest.xml:41:13-43:29
+action#com.google.android.c2dm.intent.RECEIVE
+ADDED from [com.google.firebase:firebase-iid:19.0.0] /home/artemis/.gradle/caches/transforms-1/files-1.1/firebase-iid-19.0.0.aar/ca3a030133847c98e2c08e8ac898fd7b/AndroidManifest.xml:42:17-81
+	android:name
+		ADDED from [com.google.firebase:firebase-iid:19.0.0] /home/artemis/.gradle/caches/transforms-1/files-1.1/firebase-iid-19.0.0.aar/ca3a030133847c98e2c08e8ac898fd7b/AndroidManifest.xml:42:25-78
+provider#com.google.firebase.provider.FirebaseInitProvider
+ADDED from [com.google.firebase:firebase-common:19.0.0] /home/artemis/.gradle/caches/transforms-1/files-1.1/firebase-common-19.0.0.aar/50a9059f90b40e442a2604c53fecab15/AndroidManifest.xml:12:9-16:39
+	android:authorities
+		ADDED from [com.google.firebase:firebase-common:19.0.0] /home/artemis/.gradle/caches/transforms-1/files-1.1/firebase-common-19.0.0.aar/50a9059f90b40e442a2604c53fecab15/AndroidManifest.xml:14:13-72
+	android:exported
+		ADDED from [com.google.firebase:firebase-common:19.0.0] /home/artemis/.gradle/caches/transforms-1/files-1.1/firebase-common-19.0.0.aar/50a9059f90b40e442a2604c53fecab15/AndroidManifest.xml:15:13-37
+	android:initOrder
+		ADDED from [com.google.firebase:firebase-common:19.0.0] /home/artemis/.gradle/caches/transforms-1/files-1.1/firebase-common-19.0.0.aar/50a9059f90b40e442a2604c53fecab15/AndroidManifest.xml:16:13-36
+	android:name
+		ADDED from [com.google.firebase:firebase-common:19.0.0] /home/artemis/.gradle/caches/transforms-1/files-1.1/firebase-common-19.0.0.aar/50a9059f90b40e442a2604c53fecab15/AndroidManifest.xml:13:13-77
+activity#com.google.android.gms.common.api.GoogleApiActivity
+ADDED from [com.google.android.gms:play-services-base:17.0.0] /home/artemis/.gradle/caches/transforms-1/files-1.1/play-services-base-17.0.0.aar/b05e86b6d1d6674e485bbead3a665f46/AndroidManifest.xml:23:9-26:75
+	android:exported
+		ADDED from [com.google.android.gms:play-services-base:17.0.0] /home/artemis/.gradle/caches/transforms-1/files-1.1/play-services-base-17.0.0.aar/b05e86b6d1d6674e485bbead3a665f46/AndroidManifest.xml:25:13-37
+	android:theme
+		ADDED from [com.google.android.gms:play-services-base:17.0.0] /home/artemis/.gradle/caches/transforms-1/files-1.1/play-services-base-17.0.0.aar/b05e86b6d1d6674e485bbead3a665f46/AndroidManifest.xml:26:13-72
+	android:name
+		ADDED from [com.google.android.gms:play-services-base:17.0.0] /home/artemis/.gradle/caches/transforms-1/files-1.1/play-services-base-17.0.0.aar/b05e86b6d1d6674e485bbead3a665f46/AndroidManifest.xml:24:13-79
+meta-data#com.google.android.gms.version
+ADDED from [com.google.android.gms:play-services-basement:17.0.0] /home/artemis/.gradle/caches/transforms-1/files-1.1/jetified-play-services-basement-17.0.0.aar/61b84dabbd6b6e8803f5c21b42ba61f7/AndroidManifest.xml:23:9-25:69
+	android:value
+		ADDED from [com.google.android.gms:play-services-basement:17.0.0] /home/artemis/.gradle/caches/transforms-1/files-1.1/jetified-play-services-basement-17.0.0.aar/61b84dabbd6b6e8803f5c21b42ba61f7/AndroidManifest.xml:25:13-66
+	android:name
+		ADDED from [com.google.android.gms:play-services-basement:17.0.0] /home/artemis/.gradle/caches/transforms-1/files-1.1/jetified-play-services-basement-17.0.0.aar/61b84dabbd6b6e8803f5c21b42ba61f7/AndroidManifest.xml:24:13-58
