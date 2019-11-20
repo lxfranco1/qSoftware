@@ -3,6 +3,7 @@ import 'package:app_prototype_flutter/views/first_view.dart';
 import 'package:app_prototype_flutter/views/sign_up_view.dart';
 import 'package:app_prototype_flutter/services/auth_service.dart';
 import 'package:app_prototype_flutter/views/home_view.dart';
+import 'package:app_prototype_flutter/widgets/provider_widget.dart';
 
 void main() => runApp(MyApp());
 
@@ -52,15 +53,3 @@ class HomeController extends StatelessWidget {
 }
 
 
-class Provider extends InheritedWidget {
-  final AuthService auth;
-  Provider({Key key, Widget child, this.auth,}) : super(key: key, child: child);
-
-  @override
-  bool updateShouldNotify(InheritedWidget oldWidget){
-    return true;
-  }
-
-  static Provider of(BuildContext context) => (context.inheritFromWidgetOfExactType(Provider)) as Provider;
-
-}

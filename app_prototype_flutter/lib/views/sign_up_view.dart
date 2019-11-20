@@ -1,5 +1,7 @@
 import 'dart:math';
-
+import 'package:app_prototype_flutter/widgets/provider_widget.dart';
+import 'package:app_prototype_flutter/main.dart';
+import 'package:app_prototype_flutter/services/auth_service.dart';
 import 'package:flutter/material.dart';
 import 'package:firebase_auth/firebase_auth.dart';
 import "package:auto_size_text/auto_size_text.dart";
@@ -35,6 +37,25 @@ class _SignUpViewState extends State<SignUpView> {
       setState(() {
         authFormType = AuthFormType.signIn;
       });
+    }
+  }
+
+  void submit() async {
+    final form = formKey.currentState;
+    form.save();
+    try{
+      final auth = Provider.of(context).auth;
+      if(authFormType == AuthFormType.signIn) {
+        String uid = await auth.signInWithEmailAndPassword(_email, _password);
+        print("Signed In with ID $uid");
+        Navigator.of(context).pushReplacementNamed('/home');
+      } else {
+        String uid = await auth.createUserWithEmailAndPassword(_email, _password, _name);
+        print("Signed Up with New ID $uid");
+        Navigator.of(context).pushReplacementNamed('/home');
+      }
+    } catch(e){
+      print(e);
     }
   }
 
@@ -120,6 +141,7 @@ class _SignUpViewState extends State<SignUpView> {
         style: TextStyle(fontSize: 22.0),
         decoration: buildSignUpInputDecoration("Password"),
         onSaved: (value) => _password = value,
+        obscureText: true,
       ),
     );
     textFields.add(SizedBox(height: 20,));
@@ -140,17 +162,35 @@ class _SignUpViewState extends State<SignUpView> {
   }
 
   List<Widget> buildButtons(){
-    String _switchButtonText, _newFormState;
+    String _switchButtonText, _newFormState, _submitButtonText;
 
     if(authFormType == AuthFormType.signIn){
       _switchButtonText = "Create New Account";
       _newFormState = "signUp";
+      _submitButtonText = "Sign In";
     } else{
       _switchButtonText = "Have an account? Sign In";
       _newFormState = "signIn";
+      _submitButtonText = "Sign Up";
     }
 
     return [
+      Container(
+        width: MediaQuery.of(context).size.width * 0.7,
+        child: RaisedButton(
+          shape: RoundedRectangleBorder(
+            borderRadius: BorderRadius.circular(30.0)),
+          color: Colors.white,
+          textColor: primaryColor,
+          child: Padding(
+            padding: const EdgeInsets.all(8.0),
+            child: Text(_submitButtonText, style: TextStyle(fontSize: 20.0, fontWeight: FontWeight.w300),),
+          ),
+
+          onPressed: submit
+        ),
+      ),
+
       FlatButton(
           child: Text(_switchButtonText, style: TextStyle(color: Colors.white),),
         onPressed: (){
@@ -159,4 +199,6 @@ class _SignUpViewState extends State<SignUpView> {
       )
     ];
   }
+
+
 }
