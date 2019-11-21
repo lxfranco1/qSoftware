@@ -1,4 +1,0 @@
-#Thu Nov 21 13:52:47 EST 2019
-base.0=/home/kronos/StudioProjects/qSoftware/app_prototype_flutter/build/app/intermediates/transforms/dexMerger/debug/0
-path.0=classes.dex
-renamed.0=classes.dex
