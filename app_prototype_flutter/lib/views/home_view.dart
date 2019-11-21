@@ -1,7 +1,7 @@
 import 'package:app_prototype_flutter/services/auth_service.dart';
 import 'package:flutter/material.dart';
 import 'package:app_prototype_flutter/widgets/provider_widget.dart';
-import 'package:app_prototype_flutter/views/tab_screen.dart';
+import 'package:app_prototype_flutter/views/tab_profile.dart';
 
 class Home extends StatefulWidget {
   @override
