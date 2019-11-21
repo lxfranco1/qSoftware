@@ -1,0 +1,20 @@
+<ExampleCardPost@BoxLayout>:
+    orientation: 'vertical'
+    spacing: dp(5)
+    MDToolbar:
+        id: toolbar
+        title: app.title
+        left_action_items: [['menu', lambda x: None]]
+        elevation: 10
+        md_bg_color: app.theme_cls.primary_color
+    ScrollView:
+        id: scroll
+        size_hint: 1, 1
+        do_scroll_x: False
+        GridLayout:
+            id: grid_card
+            cols: 1
+            spacing: dp(5)
+            padding: dp(5)
+            size_hint_y: None
+            height: self.minimum_height

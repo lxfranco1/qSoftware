@@ -3,218 +3,193 @@
 #:import utils kivy.utils
 
 
-BoxLayout:
-    orientation:'vertical'
+<ExampleCardPost>:
+    orientation: 'vertical'
+    spacing: dp(5)
+    ScrollView:
+        id: scroll
+        size_hint: 1, 1
+        do_scroll_x: False
+        GridLayout:
+            id: grid_card
+            cols: 1
+            spacing: dp(5)
+            padding: dp(5)
+            size_hint_y: None
+            height: self.minimum_height
+
+<MainLayout>
+    BoxLayout:
+        orientation:'vertical'
+
+        ScreenManager:
+            id: screen_manager
+
+            FirebaseLoginScreen:
+                canvas.before:
+                    Rectangle:
+                        size: self.size
+                        #pos: self.pos
+                        source: "assets/pure_lust.jpg"
+
+                id: firebase_login_screen
+                name: "firebase_login_screen"
+                web_api_key: "AIzaSyAhOVY1khHv6nLk5g9tmcMt6X5eIQZpk1I" # Found in Firebase -> Project Settings -> Web API Key
+                primary_color: utils.get_color_from_hex("#EE682A")
+                secondary_color: utils.get_color_from_hex("#060809")
+                tertiary_color: (.25, .25, .25, 1)
+                on_login_success:
+                    # Defining this function lets you program what to do when the
+                    # user has logged in (probably you'll want to change screens)!
+                    # Get the important user info
+                    app.user_localId = self.localId
+                    app.user_idToken = self.idToken
+                    screen_manager.current= "main"
+            Screen:
+                name: "main"
+
+                MDBottomNavigation:
+                    id: navBar
+                    title: 'Party App'
+                    md_bg_color: app.theme_cls.primary_color
+                    left_action_items: [['menu', lambda x: '']]
+
+                    MDBottomNavigationItem:
+                        name: 'main'
+                        text: 'Home'
+                        icon: 'web'
+                        canvas:
+                            Rectangle:
+                                #pos: self.pos
+                                size: self.size
+                                source: "assets/pure_lust.jpg"
+                        ScrollView:
+                            GridLayout:
+                                rows:2
+                                cols:2
+                                padding:100
+                                spacing:100
+                                orientation: 'vertical'
+                                size_hint_y: None
+                                height: self.minimum_height
+                                spacing: dp(10)
+                                pos_hint: {'center_x': .5, 'center_y': .5}
+
+                                MDRoundFlatButton:
+                                    text: "Press to logout?"
+                                    text: "logout"
+                                    icon: 'plus'
+                                    on_release:
+                                        print(firebase_login_screen.refresh_token_file)
 
 
-#STUFF
-    ScreenManager:
-        id: screen_manager
-
-        FirebaseLoginScreen:
-            canvas.before:
-                Rectangle:
-                    size: self.size
-                    #pos: self.pos
-                    source: "assets/pure_lust.jpg"
-
-            id: firebase_login_screen
-            name: "firebase_login_screen"
-            web_api_key: "AIzaSyAhOVY1khHv6nLk5g9tmcMt6X5eIQZpk1I" # Found in Firebase -> Project Settings -> Web API Key
-            primary_color: utils.get_color_from_hex("#EE682A")
-            secondary_color: utils.get_color_from_hex("#060809")
-            tertiary_color: (.25, .25, .25, 1)
-            on_login_success:
-                # Defining this function lets you program what to do when the
-                # user has logged in (probably you'll want to change screens)!
-                # Get the important user info
-                app.user_localId = self.localId
-                app.user_idToken = self.idToken
-                screen_manager.current= "main"
-
-#        Screen:
-#            name: "login"
-#            BoxLayout:
-#                orientation:'vertical'
-#                canvas:
-#                    Rectangle:
-#                        #pos: self.pos
-#                        size: self.size
-#                        source: "assets/pure_lust.jpg"
-#                AnchorLayout:
-#                    anchor_x: 'center'
-#                    anchor_y: 'top'
-#                    MDToolbar:
-#                        pos: 0, root.height - 60
-#                        id: toolbar
-#                        title: 'Login Page'
-#                        md_bg_color: app.theme_cls.primary_dark
-#                MDRoundFlatButton:
-#                    text: "Go to Main Page"
-#                   icon: 'plus'
-#                    on_release:
-#                       screen_manager.current = 'main'
-
-        Screen:
-            name: "main"
-
-            MDBottomNavigation:
-                id: navBar
-                title: 'Party App'
-                md_bg_color: app.theme_cls.primary_color
-                left_action_items: [['menu', lambda x: '']]
-
-                MDBottomNavigationItem:
-                    name: 'main'
-                    text: 'Home'
-                    icon: 'web'
-                    canvas:
-                        Rectangle:
-                            #pos: self.pos
-                            size: self.size
-                            source: "assets/pure_lust.jpg"
+                                        root.parent.transition = SlideTransition(direction="left")
+                                        screen_manager.current = "firebase_login_screen"
 
 
-                    ScrollView:
 
 
-                        GridLayout:
-                            rows:2
-                            cols:2
-                            padding:100
-                            spacing:100
+                    MDBottomNavigationItem:
+                        name: 'main2'
+                        text: 'Trending'
+                        icon: 'fire'
+                        on_tab_press: root.test()
+                        ExampleCardPost:
 
 
+
+                    MDBottomNavigationItem:
+                        name: 'main3'
+                        text: 'Nearby'
+                        icon: 'near-me'
+                        canvas:
+                            Rectangle:
+                                #pos: self.pos
+                                size: self.size
+                                source: "assets/pure_lust.jpg"
+
+                        BoxLayout:
                             orientation: 'vertical'
                             size_hint_y: None
                             height: self.minimum_height
                             spacing: dp(10)
                             pos_hint: {'center_x': .5, 'center_y': .5}
 
-                            MDRoundFlatButton:
-                                text: "Press to logout?"
-                                text: "logout"
-                                icon: 'plus'
-                                on_release:
-                                    print(firebase_login_screen.refresh_token_file)
+                    MDBottomNavigationItem:
+
+                        name: 'main4'
+                        text: 'Profile'
+                        icon: 'account'
+                        canvas:
+                            Rectangle:
+                                #pos: self.pos
+                                size: self.size
+                                source: "assets/pure_lust.jpg"
+
+                        GridLayout:
+                            rows:5
+                            cols:2
+
+                            orientation: 'vertical'
+                            size_hint_y: 1
+                            height: self.minimum_height
+                            spacing: dp(10)
 
 
-                                    root.parent.transition = SlideTransition(direction="left")
-                                    screen_manager.current = "firebase_login_screen"
+                            #Error arises when using kivy image icon function
+                            #Will be solved by next increment
+                            Label:
+                                text:'>USER PROFILE IMAGE HERE<'
+                                size: 100, 100
+                                #source: "assets/background.png"
+                                color: 0,0,0,1
 
+                            Label:#Left intentionally blank to move onto next row
 
-
-
-                MDBottomNavigationItem:
-                    name: 'main2'
-                    text: 'Trending'
-                    icon: 'fire'
-                    canvas:
-                        Rectangle:
-                            #pos: self.pos
-                            size: self.size
-                            source: "assets/pure_lust.jpg"
-
-                    BoxLayout:
-                        orientation: 'vertical'
-                        size_hint_y: None
-                        height: self.minimum_height
-                        spacing: dp(10)
-                        pos_hint: {'center_x': .5, 'center_y': .5}
-
-
-                MDBottomNavigationItem:
-                    name: 'main3'
-                    text: 'Nearby'
-                    icon: 'near-me'
-                    canvas:
-                        Rectangle:
-                            #pos: self.pos
-                            size: self.size
-                            source: "assets/pure_lust.jpg"
-
-                    BoxLayout:
-                        orientation: 'vertical'
-                        size_hint_y: None
-                        height: self.minimum_height
-                        spacing: dp(10)
-                        pos_hint: {'center_x': .5, 'center_y': .5}
-
-                MDBottomNavigationItem:
-
-                    name: 'main4'
-                    text: 'Profile'
-                    icon: 'account'
-                    canvas:
-                        Rectangle:
-                            #pos: self.pos
-                            size: self.size
-                            source: "assets/pure_lust.jpg"
-
-                    GridLayout:
-                        rows:5
-                        cols:2
-
-                        orientation: 'vertical'
-                        size_hint_y: 1
-                        height: self.minimum_height
-                        spacing: dp(10)
-
-
-                        #Error arises when using kivy image icon function
-                        #Will be solved by next increment
-                        Label:
-                            text:'>USER PROFILE IMAGE HERE<'
-                            size: 100, 100
-                            #source: "assets/background.png"
-                            color: 0,0,0,1
-
-                        Label:#Left intentionally blank to move onto next row
-
-                        Button:
-                            text:'Search Users'
-                            color: 0,0,0,1
-                            size:100,100
-                            background_normal: ''
-                            #background_color: 0, 0, 0, 0
-                            on_press:
+                            Button:
+                                text:'Search Users'
+                                color: 0,0,0,1
+                                size:100,100
                                 background_normal: ''
-                        Button:
-                            text:'Notifications'
-                            color: 0,0,0,1
-                            background_normal: ''
-                            #background_color: 0, 0, 0, 0
-                            on_press:
+                                #background_color: 0, 0, 0, 0
+                                on_press:
+                                    background_normal: ''
+                            Button:
+                                text:'Notifications'
+                                color: 0,0,0,1
                                 background_normal: ''
+                                #background_color: 0, 0, 0, 0
+                                on_press:
+                                    background_normal: ''
 
-                        Button:
-                            padding_y:100
-                            text:'Change Password'
-                            color: 0,0,0,1
-                            background_normal: ''
-                            #background_color: 0, 0, 0, 0
-                            on_press:
+                            Button:
+                                padding_y:100
+                                text:'Change Password'
+                                color: 0,0,0,1
                                 background_normal: ''
+                                #background_color: 0, 0, 0, 0
+                                on_press:
+                                    background_normal: ''
 
-                        Button:
-                            text:'Change Username'
-                            color:0,0,0,1
-                            background_normal: ''
-                            #background_color: 0, 0, 0, 0
-                            on_press:
+                            Button:
+                                text:'Change Username'
+                                color:0,0,0,1
                                 background_normal: ''
-                        Button:
-                            text:'Clear Searches'
-                            color:0,0,0,1
-                            background_normal: ''
-                            #background_color: 0, 0, 0, 0
-                            on_press:
+                                #background_color: 0, 0, 0, 0
+                                on_press:
+                                    background_normal: ''
+                            Button:
+                                text:'Clear Searches'
+                                color:0,0,0,1
                                 background_normal: ''
+                                #background_color: 0, 0, 0, 0
+                                on_press:
+                                    background_normal: ''
 
-                        Button:
-                            text:'Test Exit'
-                            color:0,0,0,1
-                            background_normal: ''
-                            #background_color: 0, 0, 0, 0
-                            on_press:
+                            Button:
+                                text:'Test Exit'
+                                color:0,0,0,1
                                 background_normal: ''
+                                #background_color: 0, 0, 0, 0
+                                on_press:
+                                    background_normal: ''
