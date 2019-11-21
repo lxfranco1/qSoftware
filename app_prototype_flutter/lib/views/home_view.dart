@@ -16,6 +16,7 @@ class First extends StatelessWidget {
                 AuthService auth = Provider.of(context).auth;
                 await auth.signOut();
                 print("Signed Out");
+                Navigator.of(context).pushReplacementNamed('/home');
               } catch(e){
                 print(e);
               }
