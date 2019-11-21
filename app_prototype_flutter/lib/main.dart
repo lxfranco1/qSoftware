@@ -11,26 +11,20 @@ class MyApp extends StatelessWidget {
   // This widget is the root of your application.
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(
-      title: 'Flutter Demo',
-      theme: ThemeData(
-        // This is the theme of your application.
-        //
-        // Try running your application with "flutter run". You'll see the
-        // application has a blue toolbar. Then, without quitting the app, try
-        // changing the primarySwatch below to Colors.green and then invoke
-        // "hot reload" (press "r" in the console where you ran "flutter run",
-        // or simply save your changes to "hot reload" in a Flutter IDE).
-        // Notice that the counter didn't reset back to zero; the application
-        // is not restarted.
-        primarySwatch: Colors.blue,
+    return Provider(
+      auth: AuthService(),
+      child: MaterialApp(
+        title: 'Flutter Demo',
+        theme: ThemeData(
+          primarySwatch: Colors.blue,
+        ),
+        home: HomeController(),
+        routes: <String, WidgetBuilder>{
+          '/home': (BuildContext context) => First(),
+          '/signUp': (BuildContext context) => SignUpView(authFormType: AuthFormType.signUp),
+          '/signIn': (BuildContext context) => SignUpView(authFormType: AuthFormType.signIn),
+        },
       ),
-      home: FirstView(),
-      routes: <String, WidgetBuilder>{
-        '/home': (BuildContext context) => HomeController(),
-        '/signUp': (BuildContext context) => SignUpView(authFormType: AuthFormType.signUp),
-        '/signIn': (BuildContext context) => SignUpView(authFormType: AuthFormType.signIn),
-      },
     );
   }
 }
@@ -44,7 +38,7 @@ class HomeController extends StatelessWidget {
       builder: (context, AsyncSnapshot<String> snapshot) {
         if (snapshot.connectionState == ConnectionState.active) {
           final bool signedIn = snapshot.hasData;
-          return signedIn ? MyHomePage() : FirstView();
+          return signedIn ? First() : FirstView();
         }
         return CircularProgressIndicator();
       },

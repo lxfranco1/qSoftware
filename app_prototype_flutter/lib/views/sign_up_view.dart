@@ -1,4 +1,3 @@
-import 'dart:math';
 import 'package:app_prototype_flutter/widgets/provider_widget.dart';
 import 'package:app_prototype_flutter/main.dart';
 import 'package:app_prototype_flutter/services/auth_service.dart';
@@ -41,8 +40,8 @@ class _SignUpViewState extends State<SignUpView> {
   }
 
   void submit() async {
-    final form = formKey.currentState;
-    form.save();
+
+    formKey.currentState.save();
     try{
       final auth = Provider.of(context).auth;
       if(authFormType == AuthFormType.signIn) {
@@ -71,22 +70,24 @@ class _SignUpViewState extends State<SignUpView> {
         color: primaryColor,
         height: _height,
         width: _width,
-        child: SafeArea(
-          child: Column(
-            children: <Widget>[
-              SizedBox(height: _height * 0.05),
-              buildHeaderText(),
-              SizedBox(height: _height * 0.05),
-              Padding(
-                padding: const EdgeInsets.all(20.0),
-                child: Form(
-                  key: formKey,
-                  child: Column(
-                    children: buildInputs() + buildButtons(),
+        child: SingleChildScrollView(
+          child: SafeArea(
+            child: Column(
+              children: <Widget>[
+                SizedBox(height: _height * 0.05),
+                buildHeaderText(),
+                SizedBox(height: _height * 0.05),
+                Padding(
+                  padding: const EdgeInsets.all(20.0),
+                  child: Form(
+                    key: formKey,
+                    child: Column(
+                      children: buildInputs() + buildButtons(),
+                    ),
                   ),
-                ),
-              )
-            ],
+                )
+              ],
+            ),
           ),
         ),
       ),
@@ -126,7 +127,7 @@ class _SignUpViewState extends State<SignUpView> {
       );
       textFields.add(SizedBox(height: 20,));
     }
-    
+
     // add email & password
     textFields.add(
       TextFormField(
