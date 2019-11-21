@@ -1,10 +1,10 @@
 {
     "logs": [
         {
-            "outputFile": "/home/artemis/StudioProjects/qSoftware_1/app_prototype_flutter/build/app/intermediates/incremental/mergeDebugResources/merged.dir/values-en-rIN/values-en-rIN.xml",
+            "outputFile": "/home/kronos/StudioProjects/qSoftware/app_prototype_flutter/build/app/intermediates/incremental/mergeDebugResources/merged.dir/values-en-rIN/values-en-rIN.xml",
             "map": [
                 {
-                    "source": "/home/artemis/.gradle/caches/transforms-1/files-1.1/core-1.0.0.aar/822ca61845f4192414679087f2b886f7/res/values-en-rIN/values-en-rIN.xml",
+                    "source": "/home/kronos/.gradle/caches/transforms-1/files-1.1/core-1.0.0.aar/2608f7e59c5aa201eb525545d27ee494/res/values-en-rIN/values-en-rIN.xml",
                     "from": {
                         "startLines": "2",
                         "startColumns": "4",

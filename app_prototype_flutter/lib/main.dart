@@ -38,7 +38,7 @@ class HomeController extends StatelessWidget {
       builder: (context, AsyncSnapshot<String> snapshot) {
         if (snapshot.connectionState == ConnectionState.active) {
           final bool signedIn = snapshot.hasData;
-          return signedIn ? First() : FirstView();
+          return signedIn ? Home() : FirstView();
         }
         return CircularProgressIndicator();
       },

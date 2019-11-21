@@ -1,27 +1,10 @@
 {
     "logs": [
         {
-            "outputFile": "/home/artemis/StudioProjects/qSoftware_1/app_prototype_flutter/build/app/intermediates/incremental/mergeDebugResources/merged.dir/values-is/values-is.xml",
+            "outputFile": "/home/kronos/StudioProjects/qSoftware/app_prototype_flutter/build/app/intermediates/incremental/mergeDebugResources/merged.dir/values-is/values-is.xml",
             "map": [
                 {
-                    "source": "/home/artemis/.gradle/caches/transforms-1/files-1.1/jetified-play-services-basement-17.0.0.aar/61b84dabbd6b6e8803f5c21b42ba61f7/res/values-is/values.xml",
-                    "from": {
-                        "startLines": "4",
-                        "startColumns": "0",
-                        "startOffsets": "247",
-                        "endColumns": "187",
-                        "endOffsets": "434"
-                    },
-                    "to": {
-                        "startLines": "10",
-                        "startColumns": "4",
-                        "startOffsets": "1237",
-                        "endColumns": "187",
-                        "endOffsets": "1420"
-                    }
-                },
-                {
-                    "source": "/home/artemis/.gradle/caches/transforms-1/files-1.1/play-services-base-17.0.0.aar/b05e86b6d1d6674e485bbead3a665f46/res/values-is/values.xml",
+                    "source": "/home/kronos/.gradle/caches/transforms-1/files-1.1/play-services-base-17.0.0.aar/df3e61a6933defe8aac8c148b814a496/res/values-is/values.xml",
                     "from": {
                         "startLines": "4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20",
                         "startColumns": "0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0",
@@ -38,7 +21,24 @@
                     }
                 },
                 {
-                    "source": "/home/artemis/.gradle/caches/transforms-1/files-1.1/core-1.0.0.aar/822ca61845f4192414679087f2b886f7/res/values-is/values-is.xml",
+                    "source": "/home/kronos/.gradle/caches/transforms-1/files-1.1/jetified-play-services-basement-17.0.0.aar/7a7043ce714502ff430745a52e62d457/res/values-is/values.xml",
+                    "from": {
+                        "startLines": "4",
+                        "startColumns": "0",
+                        "startOffsets": "247",
+                        "endColumns": "187",
+                        "endOffsets": "434"
+                    },
+                    "to": {
+                        "startLines": "10",
+                        "startColumns": "4",
+                        "startOffsets": "1237",
+                        "endColumns": "187",
+                        "endOffsets": "1420"
+                    }
+                },
+                {
+                    "source": "/home/kronos/.gradle/caches/transforms-1/files-1.1/core-1.0.0.aar/2608f7e59c5aa201eb525545d27ee494/res/values-is/values-is.xml",
                     "from": {
                         "startLines": "2",
                         "startColumns": "4",
