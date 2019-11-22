@@ -1,4 +1,5 @@
 import 'package:app_prototype_flutter/services/auth_service.dart';
+import 'package:app_prototype_flutter/views/tab_chat_view.dart';
 import 'package:flutter/material.dart';
 import 'package:app_prototype_flutter/widgets/provider_widget.dart';
 import 'package:app_prototype_flutter/views/tab_profile.dart';
@@ -14,7 +15,7 @@ class Home extends StatefulWidget {
 
 class _HomeState extends State<Home>{
   int _currentIndex = 0;
-  final List<Widget> _children = [HomeView(), Text('test1'), Text('Text3')];
+  final List<Widget> _children = [HomeView(), ChatView(), ProfileView()];
 
   @override
   Widget build(BuildContext context) {

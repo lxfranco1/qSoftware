@@ -1,3 +1,5 @@
+//import 'dart:html';
+import 'package:flutter_spinkit/flutter_spinkit.dart';
 import 'package:app_prototype_flutter/widgets/provider_widget.dart';
 import 'package:app_prototype_flutter/main.dart';
 import 'package:app_prototype_flutter/services/auth_service.dart';
@@ -7,7 +9,7 @@ import "package:auto_size_text/auto_size_text.dart";
 
 final primaryColor = const Color(0xFF75A2EA);
 
-enum AuthFormType {signIn, signUp, reset}
+enum AuthFormType {signIn, signUp, reset, anonymous}
 
 class SignUpView extends StatefulWidget {
   final AuthFormType authFormType;
@@ -54,14 +56,13 @@ class _SignUpViewState extends State<SignUpView> {
   void submit() async {
     if(validate()){
       try {
-        final auth = Provider
-            .of(context)
-            .auth;
+        final auth = Provider.of(context).auth;
         if (authFormType == AuthFormType.signIn) {
           String uid = await auth.signInWithEmailAndPassword(_email, _password);
           print("Signed In with ID $uid");
           Navigator.of(context).pushReplacementNamed('/home');
-        } else if(authFormType == AuthFormType.reset){
+        }
+        else if(authFormType == AuthFormType.reset){
           await auth.sendPasswordResetEmail(_email);
           print("Password reset email sent");
           _warning = "A password reset link has been sent to $_email";
@@ -82,43 +83,65 @@ class _SignUpViewState extends State<SignUpView> {
     }
   }
 
+
+  Future submitAnonymous() async{
+    final auth = Provider.of(context).auth;
+    await auth.signInAnonymously();
+    Navigator.of(context).pushReplacementNamed('/home');
+  }
+
   @override
   Widget build(BuildContext context) {
     final _width = MediaQuery.of(context).size.width;
     final _height = MediaQuery.of(context).size.height;
 
 
-
-    return Scaffold(
-      body: Container(
-        color: primaryColor,
-        height: _height,
-        width: _width,
-        child: SingleChildScrollView(
-          child: SafeArea(
-            child: Column(
-              children: <Widget>[
-                SizedBox(height: _height * 0.025),
-                showAlert(),
-                SizedBox(height: _height * 0.025),
-                buildHeaderText(),
-                SizedBox(height: _height * 0.05),
-                Padding(
-                  padding: const EdgeInsets.all(20.0),
-                  child: Form(
-                    key: formKey,
-                    child: Column(
-                      children: buildInputs() + buildButtons(),
+    if (authFormType == AuthFormType.anonymous) {
+      submitAnonymous();
+      return Scaffold(
+        backgroundColor: primaryColor,
+        body: Column(
+          mainAxisAlignment: MainAxisAlignment.center,
+          children: <Widget>[
+            SpinKitDoubleBounce(color: Colors.white,),
+            Text("Loading", style: TextStyle(color: Colors.white),)
+          ],
+        )
+      );
+    }
+    else {
+      return Scaffold(
+        body: Container(
+          color: primaryColor,
+          height: _height,
+          width: _width,
+          child: SingleChildScrollView(
+            child: SafeArea(
+              child: Column(
+                children: <Widget>[
+                  SizedBox(height: _height * 0.025),
+                  showAlert(),
+                  SizedBox(height: _height * 0.025),
+                  buildHeaderText(),
+                  SizedBox(height: _height * 0.05),
+                  Padding(
+                    padding: const EdgeInsets.all(20.0),
+                    child: Form(
+                      key: formKey,
+                      child: Column(
+                        children: buildInputs() + buildButtons(),
+                      ),
                     ),
-                  ),
-                )
-              ],
+                  )
+                ],
+              ),
             ),
           ),
         ),
-      ),
-    );
+      );
+    }
   }
+
 
   Widget showAlert(){
     if(_warning != null){

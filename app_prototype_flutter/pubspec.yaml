@@ -27,6 +27,7 @@ dependencies:
   auto_size_text: ^2.1.0
   cloud_firestore: ^0.12.10+2
   firebase_storage: ^3.0.8
+  flutter_spinkit: ^3.1.0
 
 
 dev_dependencies:
