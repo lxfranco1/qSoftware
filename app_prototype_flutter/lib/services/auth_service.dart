@@ -48,6 +48,11 @@ class AuthService{
   signOut(){
     return _firebaseAuth.signOut();
   }
+
+  //Reset Password
+  Future sendPasswordResetEmail(String email){
+    return _firebaseAuth.sendPasswordResetEmail(email: email);
+  }
 }
 
 class NameValidator {
