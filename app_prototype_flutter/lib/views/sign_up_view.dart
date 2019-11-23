@@ -90,6 +90,8 @@ class _SignUpViewState extends State<SignUpView> {
     Navigator.of(context).pushReplacementNamed('/home');
   }
 
+
+  //The Actual Page Code
   @override
   Widget build(BuildContext context) {
     final _width = MediaQuery.of(context).size.width;
@@ -133,6 +135,7 @@ class _SignUpViewState extends State<SignUpView> {
                       ),
                     ),
                   )
+                 // buildSocialIcons(),
                 ],
               ),
             ),
@@ -141,6 +144,9 @@ class _SignUpViewState extends State<SignUpView> {
       );
     }
   }
+
+
+
 
 
   Widget showAlert(){
@@ -325,5 +331,8 @@ class _SignUpViewState extends State<SignUpView> {
     );
   }
 
+  Widget buildSocialIcons(){
+
+  }
 
 }
