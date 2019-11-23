@@ -35,6 +35,12 @@ class _HomeState extends State<Home>{
                 print(e);
               }
             },
+          ),
+          IconButton(
+            icon: Icon(Icons.account_circle),
+            onPressed: ()  {
+              Navigator.of(context).pushNamed('/convertUser');
+            },
           )
         ],
       ),

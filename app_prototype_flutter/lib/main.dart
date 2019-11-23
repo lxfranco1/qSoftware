@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:app_prototype_flutter/views/first_view.dart';
 import 'package:app_prototype_flutter/views/sign_up_view.dart';
 import 'package:app_prototype_flutter/services/auth_service.dart';
-import 'package:app_prototype_flutter/views/home_view.dart';
+import 'package:app_prototype_flutter/views/navigation_view.dart';
 import 'package:app_prototype_flutter/widgets/provider_widget.dart';
 
 void main() => runApp(MyApp());
@@ -20,10 +20,11 @@ class MyApp extends StatelessWidget {
         ),
         home: HomeController(),
         routes: <String, WidgetBuilder>{
+          '/home': (BuildContext context) => HomeController(),
           '/signUp': (BuildContext context) => SignUpView(authFormType: AuthFormType.signUp),
           '/signIn': (BuildContext context) => SignUpView(authFormType: AuthFormType.signIn),
-          "/anonymousSignIn": (BuildContext context) => SignUpView(authFormType: AuthFormType.anonymous),
-          '/home': (BuildContext context) => HomeController(),
+          '/anonymousSignIn': (BuildContext context) => SignUpView(authFormType: AuthFormType.anonymous),
+          '/convertUser':(BuildContext context) => SignUpView(authFormType: AuthFormType.convert),
 
         },
       ),
