@@ -48,6 +48,9 @@ class _SignUpViewState extends State<SignUpView> {
 
   bool validate(){
     final form = formKey.currentState;
+    if(authFormType == AuthFormType.anonymous){
+      return true;
+    }
     form.save();
     if(form.validate()){
       form.save();
@@ -61,23 +64,41 @@ class _SignUpViewState extends State<SignUpView> {
     if(validate()){
       try {
         final auth = Provider.of(context).auth;
-        if (authFormType == AuthFormType.signIn) {
-          String uid = await auth.signInWithEmailAndPassword(_email, _password);
-          print("Signed In with ID $uid");
-          Navigator.of(context).pushReplacementNamed('/home');
+
+        switch(authFormType) {
+          case AuthFormType.signIn:
+            String uid = await auth.signInWithEmailAndPassword(
+                _email, _password);
+            //print("Signed In with ID $uid");
+            Navigator.of(context).pushReplacementNamed('/home');
+            break;
+
+          case AuthFormType.signUp:
+            await auth.createUserWithEmailAndPassword(
+                _email, _password, _name);
+            //print("Signed Up with New ID $uid");
+            Navigator.of(context).pushReplacementNamed('/home');
+            break;
+
+          case AuthFormType.reset:
+            await auth.sendPasswordResetEmail(_email);
+            //print("Password reset email sent");
+            _warning = "A password reset link has been sent to $_email";
+            authFormType = AuthFormType.signIn;
+            break;
+
+          case AuthFormType.anonymous:
+            await auth.signInAnonymously();
+            Navigator.of(context).pushReplacementNamed('/home');
+            break;
+
+          case AuthFormType.convert:
+            await auth.convertUserWithEmail(_email, _password, _name);
+            Navigator.of(context).pop();
+            //print("Comverting User");
+            break;
         }
-        else if(authFormType == AuthFormType.reset){
-          await auth.sendPasswordResetEmail(_email);
-          print("Password reset email sent");
-          _warning = "A password reset link has been sent to $_email";
-          authFormType = AuthFormType.signIn;
-        }
-        else {
-          String uid = await auth.createUserWithEmailAndPassword(
-              _email, _password, _name);
-          print("Signed Up with New ID $uid");
-          Navigator.of(context).pushReplacementNamed('/home');
-        }
+
       } catch (e) {
         setState(() {
           _warning = e.message;
@@ -88,11 +109,6 @@ class _SignUpViewState extends State<SignUpView> {
   }
 
 
-  Future submitAnonymous() async{
-    final auth = Provider.of(context).auth;
-    await auth.signInAnonymously();
-    Navigator.of(context).pushReplacementNamed('/home');
-  }
 
 
   //The Actual Page Code
@@ -103,7 +119,7 @@ class _SignUpViewState extends State<SignUpView> {
 
 
     if (authFormType == AuthFormType.anonymous) {
-      submitAnonymous();
+      submit();
       return Scaffold(
         backgroundColor: primaryColor,
         body: Column(
@@ -352,8 +368,14 @@ class _SignUpViewState extends State<SignUpView> {
             GoogleSignInButton(
               onPressed: () async {
                 try{
-                  await _auth.signInWithGoogle();
-                  Navigator.of(context).pushReplacementNamed('/home');
+                  if(authFormType == AuthFormType.convert){
+                    await _auth.convertWithGoogle();
+                    Navigator.of(context).pop();
+                  }
+                  else{
+                    await _auth.signInWithGoogle();
+                    Navigator.of(context).pushReplacementNamed('/home');
+                  }
                 }catch(e){
                   setState(() {
                     _warning = e.message;
