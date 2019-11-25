@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:app_prototype_flutter/Event.dart';
+import 'package:app_prototype_flutter/models/Event.dart';
 import 'package:intl/intl.dart';
 
 class HomeView extends StatelessWidget {
