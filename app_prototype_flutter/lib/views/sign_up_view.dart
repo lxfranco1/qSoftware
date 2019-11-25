@@ -343,13 +343,23 @@ class _SignUpViewState extends State<SignUpView> {
   }
 
   Widget buildSocialIcons(bool visible){
+    final _auth = Provider.of(context).auth;
     return Visibility(
         child: Column(
           children: <Widget>[
             Divider(color: Colors.white,),
             SizedBox(height: 10,),
             GoogleSignInButton(
-              onPressed: () {},
+              onPressed: () async {
+                try{
+                  await _auth.signInWithGoogle();
+                  Navigator.of(context).pushReplacementNamed('/home');
+                }catch(e){
+                  setState(() {
+                    _warning = e.message;
+                  });
+                }
+              },
             )
           ],
         ),
@@ -358,3 +368,5 @@ class _SignUpViewState extends State<SignUpView> {
   }
 
 }
+
+//391907510581-0ip1dufh6f5i6dpj1v66etdafebt12n6.apps.googleusercontent.com

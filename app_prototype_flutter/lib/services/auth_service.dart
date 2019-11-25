@@ -1,8 +1,8 @@
 import 'package:firebase_auth/firebase_auth.dart';
-
+import 'package:google_sign_in/google_sign_in.dart';
 class AuthService{
   final FirebaseAuth _firebaseAuth = FirebaseAuth.instance;
-
+  final GoogleSignIn _googleSignIn = GoogleSignIn();
   //check the login state
   // when the user loging in or out the state will change
   Stream<String> get onAuthStateChanged => _firebaseAuth.onAuthStateChanged.map(
@@ -55,9 +55,21 @@ class AuthService{
   }
 
   // Sign in Anonymously
-Future signInAnonymously(){
+  Future signInAnonymously(){
     return _firebaseAuth.signInAnonymously();
-}
+  }
+
+  //Google Sign In
+  Future<String> signInWithGoogle() async{
+    final GoogleSignInAccount account = await _googleSignIn.signIn();
+    final GoogleSignInAuthentication _googleAuth = await account.authentication;
+    final AuthCredential credential = GoogleAuthProvider.getCredential(
+        idToken: _googleAuth.idToken, 
+        accessToken: _googleAuth.accessToken
+    );
+    return (await _firebaseAuth.signInWithCredential(credential)).user.uid;
+  }
+
 }
 
 class NameValidator {
