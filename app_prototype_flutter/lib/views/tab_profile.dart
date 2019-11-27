@@ -1,4 +1,7 @@
 import 'package:app_prototype_flutter/views/navigation_view.dart';
+import 'package:app_prototype_flutter/services/auth_service.dart';
+import 'package:app_prototype_flutter/widgets/provider_widget.dart';
+
 import 'package:flutter/material.dart';
 
 
@@ -64,9 +67,8 @@ class SecondRoute extends StatelessWidget {
 //          },
 
           onPressed: () {
-            Navigator.push(
-              context,
-              MaterialPageRoute(builder: (context) => ProfileView()),);
+            // TODO: Make this go back to the Profile part of the page and not the home
+            Navigator.of(context).popUntil((route) => route.isFirst);
           },
           child: Text('Go back!'),
         ),
@@ -99,81 +101,160 @@ void main() {
 
 
 class ProfileView extends StatelessWidget {
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       body: SingleChildScrollView(
-        child: Column(
-          // mainAxisAlignment: MainAxisAlignment.center,
-          mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+        child: Padding(
+          padding: EdgeInsets.all(16.0),
+          child: Column(
+            // mainAxisAlignment: MainAxisAlignment.center,
+            mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+            children: <Widget>[
+              Padding(
+                padding: EdgeInsets.only(top: 16.0, bottom: 16.0),
+                child:
+                new MaterialButton(
+                  color: Colors.pinkAccent,
+                  highlightColor: Colors.orangeAccent,
+                  height: 75,
+                  minWidth: MediaQuery.of(context).size.width,
+                  elevation: 8,
+                  shape: RoundedRectangleBorder(
+                      borderRadius: BorderRadius.circular(10)),
+                  child:
+                    Text('Followers',
+                      style: new TextStyle(
+                          fontSize: 20.0,
+                          fontWeight: FontWeight.bold
+                      ),
+                    ),
 
-
-          children: <Widget>[
-
-            new MaterialButton(child:
-
-            Text('Followers', style: new TextStyle(fontSize: 20.0, fontWeight: FontWeight.bold),),
-
-
-              disabledColor: Colors.lightBlueAccent,
-              highlightColor: Colors.redAccent,
-              height: 100,
-              minWidth: 375,
-              elevation: 8,
-              shape: RoundedRectangleBorder(
-                  borderRadius: BorderRadius.circular(10)),
-              onPressed: () {
-                Navigator.push(
-                  context,
-                  MaterialPageRoute(builder: (context) => SecondRoute()),);
-              },
-//Testing
-            ),
-            new MaterialButton(
-              child: Text('Following', style: new TextStyle(fontSize: 20.0, fontWeight: FontWeight.bold)),
-              disabledColor: Colors.lightBlueAccent,
-              height: 100,
-              minWidth: 375,
-              elevation: 8,
-              shape: RoundedRectangleBorder(
-                  borderRadius: BorderRadius.circular(10)),
+                  onPressed: () {
+                    Navigator.push(
+                      context,
+                      MaterialPageRoute(builder: (context) => SecondRoute()),);
+                  },
+                ),
+              ),
 
 
 
-            ),
-            new MaterialButton(child: Text('Events', style: new TextStyle(fontSize: 20.0, fontWeight: FontWeight.bold),),
-              disabledColor: Colors.lightBlueAccent,
-              height: 100,
-              minWidth: 375,
-              elevation: 8,
-              shape: RoundedRectangleBorder(
-                  borderRadius: BorderRadius.circular(10)),
+              Padding(
+                padding: EdgeInsets.only(top: 16.0, bottom: 16.0),
+                child:
+                new MaterialButton(
+                  child: Text('Following', style: new TextStyle(fontSize: 20.0, fontWeight: FontWeight.bold)),
+                  disabledColor: Colors.lightBlueAccent,
+                  height: 75,
+                  minWidth: MediaQuery.of(context).size.width,
+                  elevation: 8,
+                  shape: RoundedRectangleBorder(
+                      borderRadius: BorderRadius.circular(10)),
+                ),
 
-              onPressed: () {
-                Navigator.push(
-                  context,
-                  MaterialPageRoute(builder: (context) => Home()),);
-              },
 
-            ),
-            new MaterialButton(child: Text('Settings', style: new TextStyle(fontSize: 20.0, fontWeight: FontWeight.bold),),
+              ),
 
-              disabledColor: Colors.lightBlueAccent,
-              height: 100,
-              minWidth: 375,
-              elevation: 8,
-              shape: RoundedRectangleBorder(
-                  borderRadius: BorderRadius.circular(10)),
-            ),
-            new MaterialButton(child: Text('Logout', style: new TextStyle(fontSize: 20.0, fontWeight: FontWeight.bold),),
-              disabledColor: Colors.lightBlueAccent,
-              height: 100,
-              minWidth: 375,
-              elevation: 8,
-              shape: RoundedRectangleBorder(
-                  borderRadius: BorderRadius.circular(10)),
-            ),
-          ],
+
+              Padding(
+                padding: EdgeInsets.only(top: 16.0, bottom: 16.0),
+                child:
+                new MaterialButton(
+
+                  disabledColor: Colors.lightBlueAccent,
+                  height: 75,
+                  minWidth: MediaQuery.of(context).size.width,
+                  elevation: 8,
+                  shape: RoundedRectangleBorder(
+                      borderRadius: BorderRadius.circular(10)),
+                  child: Text(
+                    'Events',
+                    style: new TextStyle(
+                        fontSize: 20.0,
+                        fontWeight: FontWeight.bold
+                    ),
+                  ),
+                  onPressed: () {
+                    Navigator.push(
+                      context,
+                      MaterialPageRoute(builder: (context) => Home()),);
+                  },
+
+                ),
+
+              ),
+
+
+
+              Padding(
+                padding: EdgeInsets.only(top: 16.0, bottom: 16.0),
+                child:
+                new MaterialButton(
+                  disabledColor: Colors.lightBlueAccent,
+                  height: 75,
+                  // the width of this button
+                  minWidth: MediaQuery.of(context).size.width,
+                  elevation: 8,
+                  shape: RoundedRectangleBorder(
+                      borderRadius: BorderRadius.circular(10)
+                  ),
+
+                  child: Text(
+                    'Settings',
+                    style: new TextStyle(
+                        fontSize: 20.0,
+                        fontWeight: FontWeight.bold
+                    ),
+                  ),
+                ),
+              ),
+
+
+
+
+
+
+
+
+
+              Padding(
+                padding: EdgeInsets.only(top: 16.0, bottom: 16.0),
+                child: new MaterialButton(
+
+                  disabledColor: Colors.lightBlueAccent,
+                  height: 75,
+                  minWidth: MediaQuery.of(context).size.width,
+                  elevation: 8,
+                  shape: RoundedRectangleBorder(
+                      borderRadius: BorderRadius.circular(10)
+                  ),
+
+                  child: Text(
+                    'Logout',
+                    style: new TextStyle(
+                        fontSize: 20.0,
+                        fontWeight: FontWeight.bold),
+                  ),
+
+                  onPressed: () async {
+                    try{
+                      AuthService auth = Provider.of(context).auth;
+                      await auth.signOut();
+                      print("Signed Out");
+                      Navigator.of(context).pushReplacementNamed('/home');
+                    } catch(e){
+                      print(e);
+                    }
+                  },
+
+                ),
+              ),
+
+
+            ],
+          ),
         ),
       ),
     );
