@@ -101,77 +101,81 @@ void main() {
 class ProfileView extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
-    return Column(
-     // mainAxisAlignment: MainAxisAlignment.center,
-      mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+    return Scaffold(
+      body: SingleChildScrollView(
+        child: Column(
+          // mainAxisAlignment: MainAxisAlignment.center,
+          mainAxisAlignment: MainAxisAlignment.spaceEvenly,
 
 
-      children: <Widget>[
+          children: <Widget>[
 
-        new MaterialButton(child:
+            new MaterialButton(child:
 
-        Text('Followers', style: new TextStyle(fontSize: 20.0, fontWeight: FontWeight.bold),),
-
-
-          disabledColor: Colors.lightBlueAccent,
-          highlightColor: Colors.redAccent,
-          height: 100,
-          minWidth: 375,
-          elevation: 8,
-          shape: RoundedRectangleBorder(
-              borderRadius: BorderRadius.circular(10)),
-    onPressed: () {
-    Navigator.push(
-    context,
-    MaterialPageRoute(builder: (context) => SecondRoute()),);
-                  },
-
-              ),
-        new MaterialButton(
-          child: Text('Following', style: new TextStyle(fontSize: 20.0, fontWeight: FontWeight.bold)),
-            disabledColor: Colors.lightBlueAccent,
-            height: 100,
-            minWidth: 375,
-            elevation: 8,
-          shape: RoundedRectangleBorder(
-              borderRadius: BorderRadius.circular(10)),
+            Text('Followers', style: new TextStyle(fontSize: 20.0, fontWeight: FontWeight.bold),),
 
 
+              disabledColor: Colors.lightBlueAccent,
+              highlightColor: Colors.redAccent,
+              height: 100,
+              minWidth: 375,
+              elevation: 8,
+              shape: RoundedRectangleBorder(
+                  borderRadius: BorderRadius.circular(10)),
+              onPressed: () {
+                Navigator.push(
+                  context,
+                  MaterialPageRoute(builder: (context) => SecondRoute()),);
+              },
 
+            ),
+            new MaterialButton(
+              child: Text('Following', style: new TextStyle(fontSize: 20.0, fontWeight: FontWeight.bold)),
+              disabledColor: Colors.lightBlueAccent,
+              height: 100,
+              minWidth: 375,
+              elevation: 8,
+              shape: RoundedRectangleBorder(
+                  borderRadius: BorderRadius.circular(10)),
+
+
+
+            ),
+            new MaterialButton(child: Text('Events', style: new TextStyle(fontSize: 20.0, fontWeight: FontWeight.bold),),
+              disabledColor: Colors.lightBlueAccent,
+              height: 100,
+              minWidth: 375,
+              elevation: 8,
+              shape: RoundedRectangleBorder(
+                  borderRadius: BorderRadius.circular(10)),
+
+              onPressed: () {
+                Navigator.push(
+                  context,
+                  MaterialPageRoute(builder: (context) => Home()),);
+              },
+
+            ),
+            new MaterialButton(child: Text('Settings', style: new TextStyle(fontSize: 20.0, fontWeight: FontWeight.bold),),
+
+              disabledColor: Colors.lightBlueAccent,
+              height: 100,
+              minWidth: 375,
+              elevation: 8,
+              shape: RoundedRectangleBorder(
+                  borderRadius: BorderRadius.circular(10)),
+            ),
+            new MaterialButton(child: Text('Logout', style: new TextStyle(fontSize: 20.0, fontWeight: FontWeight.bold),),
+              disabledColor: Colors.lightBlueAccent,
+              height: 100,
+              minWidth: 375,
+              elevation: 8,
+              shape: RoundedRectangleBorder(
+                  borderRadius: BorderRadius.circular(10)),
+            ),
+          ],
         ),
-        new MaterialButton(child: Text('Events', style: new TextStyle(fontSize: 20.0, fontWeight: FontWeight.bold),),
-            disabledColor: Colors.lightBlueAccent,
-            height: 100,
-            minWidth: 375,
-            elevation: 8,
-          shape: RoundedRectangleBorder(
-              borderRadius: BorderRadius.circular(10)),
-
-          onPressed: () {
-            Navigator.push(
-              context,
-              MaterialPageRoute(builder: (context) => Home()),);
-          },
-
-              ),
-        new MaterialButton(child: Text('Settings', style: new TextStyle(fontSize: 20.0, fontWeight: FontWeight.bold),),
-
-            disabledColor: Colors.lightBlueAccent,
-            height: 100,
-            minWidth: 375,
-            elevation: 8,
-          shape: RoundedRectangleBorder(
-              borderRadius: BorderRadius.circular(10)),
-              ),
-        new MaterialButton(child: Text('Logout', style: new TextStyle(fontSize: 20.0, fontWeight: FontWeight.bold),),
-            disabledColor: Colors.lightBlueAccent,
-            height: 100,
-            minWidth: 375,
-            elevation: 8,
-          shape: RoundedRectangleBorder(
-              borderRadius: BorderRadius.circular(10)),
-              ),
-      ],
+      ),
     );
   }
 }
