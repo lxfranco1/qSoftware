@@ -21,7 +21,7 @@ class _HomeState extends State<Home>{
 
   @override
   Widget build(BuildContext context) {
-    final newEvent = new Event(null, null, null, null, null, null);
+    final newEvent = new Event(null, null, 0.00, null, null, null);
 
     return  Scaffold(
       appBar: AppBar(

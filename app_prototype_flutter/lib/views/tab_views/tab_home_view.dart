@@ -49,7 +49,7 @@ class HomeView extends StatelessWidget {
                 child: Row(children: <Widget>[
                   Text(event.description),
                   Spacer(),
-                  Text("\$${event.price.toStringAsFixed(2)}", style: new TextStyle(fontSize: 20.0)),
+                  //Text("\$${event.price.toStringAsFixed(2)}", style: new TextStyle(fontSize: 20.0)),
                 ],),
               ),
               Padding(

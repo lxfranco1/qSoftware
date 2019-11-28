@@ -5,7 +5,6 @@ import 'second_view.dart';
 
 
 
-
 class NewTripFirstView extends StatelessWidget{
   final Event event;
   NewTripFirstView({Key key, @required this.event}) : super(key: key);
@@ -20,12 +19,13 @@ class NewTripFirstView extends StatelessWidget{
     _descriptionControler.text = event.description;
 
 
+
+
     return Scaffold(
       appBar: AppBar(
         title: Text('Create Event - Title'),
       ),
-      body: Center(
-        child: SingleChildScrollView(
+      body: SingleChildScrollView(
             child: Padding(
               padding: const EdgeInsets.all(16.0),
               child: Column(
@@ -69,7 +69,6 @@ class NewTripFirstView extends StatelessWidget{
                     ),
                   ),
 
-
                   Padding(
                     padding: const EdgeInsets.only(top: 16.0),
                     child: RaisedButton(
@@ -90,7 +89,6 @@ class NewTripFirstView extends StatelessWidget{
               ),
             )
         ),
-      )
     );
 
   }

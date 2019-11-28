@@ -2,11 +2,11 @@ import 'package:flutter/material.dart';
 import 'package:app_prototype_flutter/models/Event.dart';
 import 'package:cloud_firestore/cloud_firestore.dart';
 
-class NewEventPriceView extends StatelessWidget{
+class NewTripSubmitView extends StatelessWidget{
   final db = Firestore.instance;
 
   final Event event;
-  NewEventPriceView({Key key, @required this.event}) : super(key: key);
+  NewTripSubmitView({Key key, @required this.event}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
@@ -25,7 +25,11 @@ class NewEventPriceView extends StatelessWidget{
               child: Text("Finished", style: TextStyle(fontSize: 20.0),),
             ),
             Text("Title ${event.title}"),
-            Text("Date ${event.date}"),
+            Text("description ${event.description}"),
+            Text("price ${event.price}"),
+            Text("eventType ${event.eventType}"),
+            Text("date ${event.date}"),
+            Text("location ${event.location}"),
 
 
             RaisedButton(

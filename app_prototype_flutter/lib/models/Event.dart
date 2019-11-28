@@ -1,7 +1,7 @@
 class Event{
   String title;
   DateTime date;
-  double price;
+  double price = 0.00;
   String description;
   String eventType;
   Map<String, double> location;
