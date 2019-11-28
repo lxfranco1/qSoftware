@@ -1,10 +1,8 @@
-//import 'dart:html';
+
 import 'package:flutter_spinkit/flutter_spinkit.dart';
 import 'package:app_prototype_flutter/widgets/provider_widget.dart';
-import 'package:app_prototype_flutter/main.dart';
 import 'package:app_prototype_flutter/services/auth_service.dart';
 import 'package:flutter/material.dart';
-import 'package:firebase_auth/firebase_auth.dart';
 import "package:auto_size_text/auto_size_text.dart";
 import 'package:flutter_auth_buttons/flutter_auth_buttons.dart';
 

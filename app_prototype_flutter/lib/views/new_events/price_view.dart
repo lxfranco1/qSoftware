@@ -27,6 +27,7 @@ class NewEventPriceView extends StatelessWidget{
             Text("Title ${event.title}"),
             Text("Date ${event.date}"),
 
+
             RaisedButton(
               child: Text("Finished"),
               // Save Data to Firebase

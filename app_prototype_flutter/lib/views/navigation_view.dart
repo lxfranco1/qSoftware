@@ -2,7 +2,7 @@ import 'package:app_prototype_flutter/services/auth_service.dart';
 import 'package:app_prototype_flutter/views/tab_views/tab_chat_view.dart';
 import 'package:app_prototype_flutter/models/Event.dart';
 import 'package:flutter/material.dart';
-import 'package:app_prototype_flutter/views/new_events/title_view.dart';
+import 'package:app_prototype_flutter/views/new_events/first_view.dart';
 import 'package:app_prototype_flutter/widgets/provider_widget.dart';
 import 'package:app_prototype_flutter/views/tab_views/tab_profile.dart';
 import 'package:app_prototype_flutter/views/tab_views/tab_home_view.dart';
@@ -33,7 +33,7 @@ class _HomeState extends State<Home>{
             onPressed: ()  {
               Navigator.push(
                   context,
-                  MaterialPageRoute(builder: (context) => NewTripTitleView(event: newEvent,)),
+                  MaterialPageRoute(builder: (context) => NewTripFirstView(event: newEvent,)),
               );
             },
           ),
