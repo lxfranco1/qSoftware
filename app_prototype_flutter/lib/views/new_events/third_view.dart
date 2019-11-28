@@ -1,7 +1,7 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:app_prototype_flutter/models/Event.dart';
-import 'package:money_field/money_field.dart';
+
 import 'submit_view.dart';
 
 class NewTripThirdView extends StatelessWidget {
@@ -10,7 +10,6 @@ class NewTripThirdView extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    final _moneyFieldController = new MoneyFieldController();
 
     return  Scaffold(
       appBar: AppBar(

@@ -2,8 +2,6 @@ import 'package:flutter/material.dart';
 import 'package:app_prototype_flutter/models/Event.dart';
 import 'package:intl/intl.dart';
 import 'package:datetime_picker_formfield/datetime_picker_formfield.dart';
-
-import 'package:money_field/money_field.dart';
 import 'third_view.dart';
 
 

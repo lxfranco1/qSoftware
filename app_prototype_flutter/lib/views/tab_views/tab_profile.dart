@@ -150,7 +150,7 @@ class ProfileView extends StatelessWidget {
                 ),
               ),
 
-
+              //TODO: make it so that this button only show events created by user
               Padding(
                 padding: EdgeInsets.only(top: 16.0,),
                 child:

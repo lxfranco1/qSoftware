@@ -1,6 +1,8 @@
+import 'package:app_prototype_flutter/widgets/provider_widget.dart';
 import 'package:flutter/material.dart';
 import 'package:app_prototype_flutter/models/Event.dart';
 import 'package:cloud_firestore/cloud_firestore.dart';
+import 'package:app_prototype_flutter/services/auth_service.dart';
 
 class NewTripSubmitView extends StatelessWidget{
   final db = Firestore.instance;
@@ -33,28 +35,38 @@ class NewTripSubmitView extends StatelessWidget{
 
 
             RaisedButton(
-              child: Text("Finished"),
+              child: Text("Finished (Only Current User will see"),
               // Save Data to Firebase
               onPressed: () async {
-                // SAVEING DATA
-                await db.collection("events").add(
-                  event.toJson()
-                  /*
-                  {
-                    'title': event.title,
-                    'date': event.date,
-                    'price': event.price,
-                    'description': event.description,
-                    'eventType': event.eventType,
-                    'location': event.location,
-                  }
-                   */
+                final uid = await Provider.of(context).auth.getCurrentUID();
 
-                );
+                // SAVEING DATA
+                //await db.collection("events").add(event.toJson());
+
+                await db.collection("userData").document(uid).collection("events").add(event.toJson());
+
+
+                Navigator.of(context).popUntil((route) => route.isFirst);
+              },
+            ),
+
+
+            RaisedButton(
+              child: Text("Finished (Everyone Will See)"),
+              // Save Data to Firebase
+              onPressed: () async {
+                //final uid = await Provider.of(context).auth.getCurrentUID();
+
+                // SAVEING DATA
+                await db.collection("events").add(event.toJson());
+
+                //await db.collection("userData").document(uid).collection("events").add(event.toJson());
+
 
                 Navigator.of(context).popUntil((route) => route.isFirst);
               },
             )
+
           ],
         )
       )
