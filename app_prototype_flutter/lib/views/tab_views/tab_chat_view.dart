@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/foundation.dart';
-
 final ThemeData iOSTheme = new ThemeData(
   primarySwatch: Colors.red,
   primaryColor: Colors.grey[400],
@@ -15,15 +14,12 @@ final ThemeData androidTheme = new ThemeData(
 
 const String defaultUserName = "John Doe";
 
-void main() => runApp(new ChatView());
 
 class ChatView extends StatelessWidget {
+  @override
   Widget build(BuildContext ctx) {
     return new MaterialApp(
-      title: "Chat Application",
-      theme: defaultTargetPlatform == TargetPlatform.iOS
-          ? iOSTheme
-          : androidTheme,
+
       home: new Chat(),
     );
   }
@@ -42,11 +38,7 @@ class ChatWindow extends State<Chat> with TickerProviderStateMixin {
   @override
   Widget build(BuildContext ctx) {
     return new Scaffold(
-      appBar: new AppBar(
-        title: new Text("Chat Application"),
-        elevation:
-        Theme.of(ctx).platform == TargetPlatform.iOS ? 0.0 : 6.0,
-      ),
+
       body: new Column(children: <Widget>[
         new Flexible(
             child: new ListView.builder(
@@ -177,4 +169,3 @@ class Msg extends StatelessWidget {
     );
   }
 }
-
