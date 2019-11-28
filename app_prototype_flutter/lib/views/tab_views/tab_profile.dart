@@ -78,11 +78,6 @@ class SecondRoute extends StatelessWidget {
 }
 
 
-
-
-
-
-
 void main() {
   runApp(MaterialApp(
     title: 'Navigation Basics',
@@ -96,12 +91,7 @@ void main() {
 
 
 
-
-
-
-
 class ProfileView extends StatelessWidget {
-
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -113,22 +103,21 @@ class ProfileView extends StatelessWidget {
             mainAxisAlignment: MainAxisAlignment.spaceEvenly,
             children: <Widget>[
               Padding(
-                padding: EdgeInsets.only(top: 16.0, bottom: 16.0),
+                padding: EdgeInsets.only(top: 0.0,),
                 child:
                 new MaterialButton(
-                  color: Colors.pinkAccent,
-                  highlightColor: Colors.orangeAccent,
+                  color: Colors.blueAccent,
+                  highlightColor: Colors.blueGrey,
                   height: 75,
                   minWidth: MediaQuery.of(context).size.width,
                   elevation: 8,
                   shape: RoundedRectangleBorder(
-                      borderRadius: BorderRadius.circular(10)),
+                      borderRadius: BorderRadius.circular(10)
+                  ),
+
                   child:
-                    Text('Followers',
-                      style: new TextStyle(
-                          fontSize: 20.0,
-                          fontWeight: FontWeight.bold
-                      ),
+                    Text('Followers', style: new TextStyle(fontSize: 20.0,
+                        fontWeight: FontWeight.bold),
                     ),
 
                   onPressed: () {
@@ -142,39 +131,40 @@ class ProfileView extends StatelessWidget {
 
 
               Padding(
-                padding: EdgeInsets.only(top: 16.0, bottom: 16.0),
+                padding: EdgeInsets.only(top: 16.0,),
                 child:
                 new MaterialButton(
-                  child: Text('Following', style: new TextStyle(fontSize: 20.0, fontWeight: FontWeight.bold)),
-                  disabledColor: Colors.lightBlueAccent,
+                  color: Colors.blueAccent,
+                  highlightColor: Colors.blueGrey,
                   height: 75,
                   minWidth: MediaQuery.of(context).size.width,
                   elevation: 8,
                   shape: RoundedRectangleBorder(
-                      borderRadius: BorderRadius.circular(10)),
+                      borderRadius: BorderRadius.circular(10)
+                  ),
+                  child: Text('Following', style: new TextStyle(fontSize: 20.0,
+                      fontWeight: FontWeight.bold)),
+                  onPressed: (){
+
+                  },
                 ),
-
-
               ),
 
 
               Padding(
-                padding: EdgeInsets.only(top: 16.0, bottom: 16.0),
+                padding: EdgeInsets.only(top: 16.0,),
                 child:
                 new MaterialButton(
-
-                  disabledColor: Colors.lightBlueAccent,
+                  color: Colors.blueAccent,
+                  highlightColor: Colors.blueGrey,
                   height: 75,
                   minWidth: MediaQuery.of(context).size.width,
                   elevation: 8,
                   shape: RoundedRectangleBorder(
                       borderRadius: BorderRadius.circular(10)),
-                  child: Text(
-                    'Events',
-                    style: new TextStyle(
-                        fontSize: 20.0,
-                        fontWeight: FontWeight.bold
-                    ),
+                  child: Text('Events', style: new TextStyle(
+                      fontSize: 20.0,
+                      fontWeight: FontWeight.bold),
                   ),
                   onPressed: () {
                     Navigator.push(
@@ -189,10 +179,11 @@ class ProfileView extends StatelessWidget {
 
 
               Padding(
-                padding: EdgeInsets.only(top: 16.0, bottom: 16.0),
+                padding: EdgeInsets.only(top: 16.0,),
                 child:
                 new MaterialButton(
-                  disabledColor: Colors.lightBlueAccent,
+                  color: Colors.blueAccent,
+                  highlightColor: Colors.blueGrey,
                   height: 75,
                   // the width of this button
                   minWidth: MediaQuery.of(context).size.width,
@@ -201,29 +192,22 @@ class ProfileView extends StatelessWidget {
                       borderRadius: BorderRadius.circular(10)
                   ),
 
-                  child: Text(
-                    'Settings',
-                    style: new TextStyle(
-                        fontSize: 20.0,
-                        fontWeight: FontWeight.bold
-                    ),
+                  child: Text('Settings', style: new TextStyle(fontSize: 20.0,
+                      fontWeight: FontWeight.bold),
                   ),
+                  onPressed: (){
+
+                  },
                 ),
               ),
 
 
 
-
-
-
-
-
-
               Padding(
-                padding: EdgeInsets.only(top: 16.0, bottom: 16.0),
+                padding: EdgeInsets.only(top: 16.0),
                 child: new MaterialButton(
-
-                  disabledColor: Colors.lightBlueAccent,
+                  color: Colors.blueAccent,
+                  highlightColor: Colors.blueGrey,
                   height: 75,
                   minWidth: MediaQuery.of(context).size.width,
                   elevation: 8,
@@ -231,11 +215,8 @@ class ProfileView extends StatelessWidget {
                       borderRadius: BorderRadius.circular(10)
                   ),
 
-                  child: Text(
-                    'Logout',
-                    style: new TextStyle(
-                        fontSize: 20.0,
-                        fontWeight: FontWeight.bold),
+                  child: Text('Logout', style: new TextStyle(fontSize: 20.0,
+                      fontWeight: FontWeight.bold),
                   ),
 
                   onPressed: () async {
@@ -248,11 +229,8 @@ class ProfileView extends StatelessWidget {
                       print(e);
                     }
                   },
-
                 ),
               ),
-
-
             ],
           ),
         ),
