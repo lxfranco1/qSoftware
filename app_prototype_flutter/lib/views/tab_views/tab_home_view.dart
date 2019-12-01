@@ -2,7 +2,7 @@ import 'package:app_prototype_flutter/widgets/provider_widget.dart';
 import 'package:flutter/material.dart';
 import 'package:intl/intl.dart';
 import 'package:cloud_firestore/cloud_firestore.dart';
-import 'package:app_prototype_flutter/services/auth_service.dart';
+
 
 class HomeView extends StatelessWidget {
 
@@ -71,6 +71,7 @@ class HomeView extends StatelessWidget {
                   //Text("\$${event.price.toStringAsFixed(2)}", style: new TextStyle(fontSize: 20.0)),
                 ],),
               ),
+
 
               /*
               Padding(

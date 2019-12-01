@@ -2,7 +2,7 @@ import 'package:app_prototype_flutter/widgets/provider_widget.dart';
 import 'package:flutter/material.dart';
 import 'package:app_prototype_flutter/models/Event.dart';
 import 'package:cloud_firestore/cloud_firestore.dart';
-import 'package:app_prototype_flutter/services/auth_service.dart';
+
 
 class NewTripSubmitView extends StatelessWidget{
   final db = Firestore.instance;
