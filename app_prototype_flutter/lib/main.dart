@@ -6,7 +6,7 @@ import 'package:app_prototype_flutter/views/navigation_view.dart';
 import 'package:app_prototype_flutter/widgets/provider_widget.dart';
 
 void main() => runApp(MyApp());
-
+//test commit
 class MyApp extends StatelessWidget {
   // This widget is the root of your application.
   @override
