@@ -77,22 +77,22 @@ class _FlyerState extends State<Flyer> {
               child: TextSection("X people attending"),
             ),
 
-            Container(
-              padding: const EdgeInsets.fromLTRB(4.0, 14.0, 205, 4.0),
-              child: MaterialButton(
-                color: Colors.blueAccent,
-                highlightColor: Colors.blueGrey,
-                height: 48.0,
-                minWidth: 30.0,
-                elevation: 8,
-                shape: RoundedRectangleBorder(
-                    borderRadius: BorderRadius.circular(10)
-                ),
+              Container(
+                padding: const EdgeInsets.fromLTRB(4.0, 14.0, 205, 4.0),
+                child: MaterialButton(
+                  color: Colors.blueAccent,
+                  highlightColor: Colors.blueGrey,
+                  height: 48.0,
+                  minWidth: 30.0,
+                  elevation: 8,
+                  shape: RoundedRectangleBorder(
+                      borderRadius: BorderRadius.circular(10)
+                  ),
 
-                child:
-                Text('Attend Event', style: new TextStyle(fontSize: 20.0,
-                    fontWeight: FontWeight.bold),
-                ),
+                  child:
+                  Text('Attend Event', style: new TextStyle(fontSize: 20.0,
+                      fontWeight: FontWeight.bold),
+                  ),
 
                 onPressed: () {
 //                  Navigator.push(
