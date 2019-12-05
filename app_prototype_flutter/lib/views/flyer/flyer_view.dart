@@ -49,55 +49,55 @@ class _FlyerState extends State<Flyer> {
           title: const Text('Event'),
         ),
         body: Column(
-          mainAxisAlignment: MainAxisAlignment.start,
-          crossAxisAlignment: CrossAxisAlignment.stretch,
-          children: [
-            Container(
-              padding: const EdgeInsets.fromLTRB(4.0, 0.0, _hPad, 4.0),
-              child: TextSection(title),
-            ),
-            Container(
-              padding: const EdgeInsets.fromLTRB(4.0, 0.0, _hPad, 4.0),
-              child: TextSection(date),
-            ),
-            Container(
-              padding: const EdgeInsets.fromLTRB(4.0, 0.0, _hPad, 4.0),
-              child: TextSection(eventType),
-            ),
-            Container(
-              padding: const EdgeInsets.fromLTRB(4.0, 0.0, _hPad, 1.0),
-              child: TextSection(creatorsID),
-            ),
-            Container(
-              padding: const EdgeInsets.fromLTRB(4.0, 1.0, 275, 4.0),
-              child: MaterialButton(
-                color: Colors.blueAccent,
-                highlightColor: Colors.blueGrey,
-                height: 35,
-                minWidth: 80.0,
-                elevation: 8,
-                shape: RoundedRectangleBorder(
-                    borderRadius: BorderRadius.circular(10)
-                ),
-
-                child:
-                Text('Follow User', style: new TextStyle(fontSize: 15.0,
-                    fontWeight: FontWeight.bold),
-                ),
-
-                onPressed: () {
-                  //add to followed users here
-                },
+            mainAxisAlignment: MainAxisAlignment.start,
+            crossAxisAlignment: CrossAxisAlignment.stretch,
+            children: [
+              Container(
+                padding: const EdgeInsets.fromLTRB(4.0, 0.0, _hPad, 4.0),
+                child: TextSection(title),
               ),
-            ),
-            Container(
-              padding: const EdgeInsets.fromLTRB(4.0, 34.0, _hPad, 4.0),
-              child: TextSection("Descrption: \n" + description),
-            ),
-            Container(
-              padding: const EdgeInsets.fromLTRB(4.0, 14.0, _hPad, 4.0),
-              child: TextSection(widget.event.attendance.toString() +  " people attending"),
-            ),
+              Container(
+                padding: const EdgeInsets.fromLTRB(4.0, 0.0, _hPad, 4.0),
+                child: TextSection(date),
+              ),
+              Container(
+                padding: const EdgeInsets.fromLTRB(4.0, 0.0, _hPad, 4.0),
+                child: TextSection(eventType),
+              ),
+              Container(
+                padding: const EdgeInsets.fromLTRB(4.0, 0.0, _hPad, 1.0),
+                child: TextSection(creatorsID),
+              ),
+              Container(
+                padding: const EdgeInsets.fromLTRB(4.0, 1.0, 275, 4.0),
+                child: MaterialButton(
+                  color: Colors.blueAccent,
+                  highlightColor: Colors.blueGrey,
+                  height: 35,
+                  minWidth: 80.0,
+                  elevation: 8,
+                  shape: RoundedRectangleBorder(
+                      borderRadius: BorderRadius.circular(10)
+                  ),
+
+                  child:
+                  Text('Follow User', style: new TextStyle(fontSize: 15.0,
+                      fontWeight: FontWeight.bold),
+                  ),
+
+                  onPressed: () {
+                    //add to followed users here
+                  },
+                ),
+              ),
+              Container(
+                padding: const EdgeInsets.fromLTRB(4.0, 34.0, _hPad, 4.0),
+                child: TextSection("Descrption: \n" + description),
+              ),
+              Container(
+                padding: const EdgeInsets.fromLTRB(4.0, 14.0, _hPad, 4.0),
+                child: TextSection(widget.event.attendance.toString() +  " people attending"),
+              ),
 
               Container(
                 padding: const EdgeInsets.fromLTRB(4.0, 14.0, 205, 4.0),
@@ -116,38 +116,38 @@ class _FlyerState extends State<Flyer> {
                       fontWeight: FontWeight.bold),
                   ),
 
-                onPressed: () async{
-                  //increment attendance here
-                  DocumentSnapshot snapshot = await db.collection('events').document("2zbAdSpuL2bGYry8kPID").get();
-                  int attendance = snapshot.data['attendance'];
-                  attendance++;
-                  await db.collection('events').document("2zbAdSpuL2bGYry8kPID").updateData({'attendance': attendance});
+                  onPressed: () async{
+                    //increment attendance here
+                    DocumentSnapshot snapshot = await db.collection('events').document("2zbAdSpuL2bGYry8kPID").get();
+                    int attendance = snapshot.data['attendance'];
+                    attendance++;
+                    await db.collection('events').document("2zbAdSpuL2bGYry8kPID").updateData({'attendance': attendance});
 
-                },
+                  },
+                ),
               ),
-            ),
-            Container(
-              padding: const EdgeInsets.fromLTRB(4.0, 34.0, _hPad, 4.0),
-              alignment: Alignment.center,
-              child: TextSection("Rate This Event"),
-            ),
-            Container(
-              //padding: const EdgeInsets.fromLTRB(4.0, 8.0, _hPad, 4.0),
-              alignment: Alignment.center,
-              child: SmoothStarRating(
-                rating: rating,
-                size: 45,
-                starCount: 5,
-                spacing: 1.5,
-                onRatingChanged: (value) {
-                  //save rating here
-                  setState(() {
-                    rating = value;
-                  });
-                },
+              Container(
+                padding: const EdgeInsets.fromLTRB(4.0, 34.0, _hPad, 4.0),
+                alignment: Alignment.center,
+                child: TextSection("Rate This Event"),
+              ),
+              Container(
+                //padding: const EdgeInsets.fromLTRB(4.0, 8.0, _hPad, 4.0),
+                  alignment: Alignment.center,
+                  child: SmoothStarRating(
+                    rating: rating,
+                    size: 45,
+                    starCount: 5,
+                    spacing: 1.5,
+                    onRatingChanged: (value) {
+                      //save rating here
+                      setState(() {
+                        rating = value;
+                      });
+                    },
+                  )
               )
-            )
-          ]
+            ]
         ),
       ),
     );
