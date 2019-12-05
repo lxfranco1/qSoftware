@@ -28,7 +28,6 @@ class NewTripSubmitView extends StatelessWidget{
             ),
             Text("Title ${event.title}"),
             Text("description ${event.description}"),
-            Text("price ${event.price}"),
             Text("eventType ${event.eventType}"),
             Text("date ${event.date}"),
             Text("location ${event.location}"),
