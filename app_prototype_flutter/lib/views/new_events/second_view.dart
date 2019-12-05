@@ -13,6 +13,9 @@ class NewEventSecondView extends StatefulWidget {
   NewEventSecondViewState createState() => NewEventSecondViewState();
 }
 
+final selfKey = GlobalKey<ScaffoldState>();
+
+
 class NewEventSecondViewState extends State<NewEventSecondView> {
 
   final format = DateFormat("MM/dd/yyyy HH:mm");
@@ -26,6 +29,7 @@ class NewEventSecondViewState extends State<NewEventSecondView> {
 
 
     return Scaffold(
+      key: selfKey,
         appBar: AppBar(
           title: Text('Create Event - Date'),
         ),
@@ -82,10 +86,16 @@ class NewEventSecondViewState extends State<NewEventSecondView> {
                     child: RaisedButton(
                       child: Text("Continue"),
                       onPressed: () {
+                        if(widget.event.date == null){
+                          validateNotNull(selfKey.currentState, widget.event, "date");
+                        }
+                        else{
+                          Navigator.push(context,
+                              MaterialPageRoute(builder: (context) => NewTripThirdView(widget.event))
+                          );
+                        }
                         //event.date = DateTime.now();
-                        Navigator.push(context,
-                            MaterialPageRoute(builder: (context) => NewTripThirdView(widget.event))
-                        );
+
                       },
                     ),
                   ),
@@ -95,6 +105,11 @@ class NewEventSecondViewState extends State<NewEventSecondView> {
               ),
             )
         )
+    );
+  }
+  Future<Null> validateNotNull(ScaffoldState scaffold, Event event, String type) async{
+    scaffold.showSnackBar(
+      SnackBar(content: Text("Your $type can't be blank")),
     );
   }
 }

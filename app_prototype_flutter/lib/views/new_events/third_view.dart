@@ -66,10 +66,14 @@ class NewTripThirdViewState extends State<NewTripThirdView> {
                 child: RaisedButton(
                   child: Text("Continue"),
                   onPressed: () {
-                    //event.date = DateTime.now();
-                    Navigator.push(context,
-                        MaterialPageRoute(builder: (context) => NewTripSubmitView(event: widget.event))
-                    );
+                    if(widget.event.location == null){
+                      validateNotNull(selfKey.currentState, widget.event, "location");
+                    }
+                    else{
+                      Navigator.push(context,
+                          MaterialPageRoute(builder: (context) => NewTripSubmitView(event: widget.event))
+                      );
+                    }
                   },
                 ),
               ),
@@ -121,6 +125,11 @@ Future<Null> displayPrediction(Prediction p, ScaffoldState scaffold, Event event
 }
 
 
+Future<Null> validateNotNull(ScaffoldState scaffold, Event event, String type) async{
+  scaffold.showSnackBar(
+    SnackBar(content: Text("Your $type can't be blank")),
+  );
+}
 
 
 

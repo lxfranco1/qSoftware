@@ -12,6 +12,9 @@ class NewEvent extends StatefulWidget {
   NewEventState createState() => NewEventState();
 }
 
+final selfKey = GlobalKey<ScaffoldState>();
+
+
 class NewEventState extends State<NewEvent> {
 
   @override
@@ -27,6 +30,7 @@ class NewEventState extends State<NewEvent> {
 
 
     return Scaffold(
+      key: selfKey,
       appBar: AppBar(
         title: Text('Create  - Title'),
       ),
@@ -79,22 +83,34 @@ class NewEventState extends State<NewEvent> {
                     child: RaisedButton(
                       child: Text("Continue"),
                       onPressed: () {
-                        //event.date = DateTime.now();
                         widget.event.title = _titleControler.text;
                         widget.event.description = _descriptionControler.text;
-                        Navigator.push(context,
-                            MaterialPageRoute(builder: (context) => NewEventSecondView(widget.event))
-                        );
+                        //event.date = DateTime.now();
+                        if(widget.event.title == ''){
+                          validateNotNull(selfKey.currentState, widget.event, "title");
+                        }
+                        else if(widget.event.description == ''){
+                          validateNotNull(selfKey.currentState, widget.event, "description");
+                        }
+                        else{
+                          Navigator.push(context,
+                              MaterialPageRoute(builder: (context) => NewEventSecondView(widget.event))
+                          );
+                        }
                       },
                     ),
                   ),
-
                 ],
-
               ),
             )
         ),
     );
 
+  }
+
+  Future<Null> validateNotNull(ScaffoldState scaffold, Event event, String type) async{
+    scaffold.showSnackBar(
+      SnackBar(content: Text("Your $type can't be blank")),
+    );
   }
 }
