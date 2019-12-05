@@ -1,14 +1,12 @@
 class User{
-  String firstName;
-  String lastName;
+  String name;
   String userName;
   String email;
-  List followers = [];
-  List following = [];
+  List<String> followers = [];
+  List<String> following = [];
 
   User(
-      this.firstName,
-      this.lastName,
+      this.name,
       this.userName,
       this.email,
       this.followers,
@@ -16,8 +14,7 @@ class User{
       );
 
   Map<String, dynamic> toJson() => {
-    'firstName': firstName,
-    'lastName': lastName,
+    'firstName': name,
     'userName': userName,
     'email': email,
     'followers': followers,

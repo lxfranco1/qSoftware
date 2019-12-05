@@ -1,5 +1,10 @@
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:google_sign_in/google_sign_in.dart';
+import 'package:app_prototype_flutter/models/User.dart';
+import 'package:cloud_firestore/cloud_firestore.dart';
+
+final db = Firestore.instance;
+
 class AuthService{
   final FirebaseAuth _firebaseAuth = FirebaseAuth.instance;
   final GoogleSignIn _googleSignIn = GoogleSignIn();
@@ -24,10 +29,15 @@ class AuthService{
         email: email,
         password: password,
     );
+    final uid = await getCurrentUID();
 
+    //name, userName, email, following, followers
+    final user = new User (name, null, email, null, null);
+    db.collection("users").document(uid).collection("userData").add(user.toJson());
     //Update the username
     // Update the username
     await updateUserName(name, authResult.user);
+
     return authResult.user.uid;
   }
 

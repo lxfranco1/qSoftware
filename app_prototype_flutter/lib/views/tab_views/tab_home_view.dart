@@ -42,13 +42,12 @@ class HomeView extends StatelessWidget {
     return new Container(
       child: new InkWell(
         onTap: () {
-          print("I Clicked a event");
           final newEvent = new Event(
             event['title'],
             event['date'].toDate(),
             event['description'],
             event['eventType'],
-            event['location'],
+            Map<String,double>.from(event['location']),
             event['attendance'],
             event['followers'],
             event['following'],
