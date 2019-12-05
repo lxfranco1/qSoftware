@@ -28,7 +28,7 @@ class NewEventState extends State<NewEvent> {
 
     return Scaffold(
       appBar: AppBar(
-        title: Text('Create widget.event - Title'),
+        title: Text('Create  - Title'),
       ),
       body: SingleChildScrollView(
             child: Padding(
