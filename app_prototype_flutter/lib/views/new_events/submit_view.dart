@@ -2,6 +2,7 @@ import 'package:app_prototype_flutter/widgets/provider_widget.dart';
 import 'package:flutter/material.dart';
 import 'package:app_prototype_flutter/models/Event.dart';
 import 'package:cloud_firestore/cloud_firestore.dart';
+import 'package:firebase_auth/firebase_auth.dart';
 
 
 class NewTripSubmitView extends StatelessWidget{
@@ -55,7 +56,7 @@ class NewTripSubmitView extends StatelessWidget{
               // Save Data to Firebase
               onPressed: () async {
                 //final uid = await Provider.of(context).auth.getCurrentUID();
-
+                event.creatorsID = (await FirebaseAuth.instance.currentUser()).uid;
                 // SAVEING DATA
                 await db.collection("events").add(event.toJson());
 

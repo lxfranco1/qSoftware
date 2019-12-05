@@ -33,8 +33,12 @@ class MyApp extends StatelessWidget {
 }
 
 class HomeController extends StatelessWidget {
+
   @override
   Widget build(BuildContext context) {
+    ThemeData(
+
+    );
     final AuthService auth = Provider.of(context).auth;
     return StreamBuilder<String>(
       stream: auth.onAuthStateChanged,

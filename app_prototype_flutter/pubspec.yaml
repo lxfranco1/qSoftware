@@ -39,6 +39,7 @@ dependencies:
   place_picker: ^0.9.10
   geocoder: ^0.2.1
   flutter_google_places: ^0.2.3
+  marquee: ^1.3.1
 
 
 

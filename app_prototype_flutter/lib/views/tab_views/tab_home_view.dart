@@ -1,4 +1,5 @@
 import 'package:app_prototype_flutter/widgets/provider_widget.dart';
+import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:intl/intl.dart';
 import 'package:cloud_firestore/cloud_firestore.dart';
@@ -42,7 +43,16 @@ class HomeView extends StatelessWidget {
       child: new InkWell(
         onTap: () {
           print("I Clicked a event");
-          final newEvent = new Event(event['title'], event['date'].toDate(), event['description'], event['eventType'], event['location']);
+          final newEvent = new Event(
+            event['title'],
+            event['date'].toDate(),
+            event['description'],
+            event['eventType'],
+            event['location'],
+            event['followers'],
+            event['following'],
+            event['following'],
+          );
           Navigator.push(context,
               MaterialPageRoute(builder: (context) => Flyer(newEvent))
           );
