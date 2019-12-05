@@ -1,8 +1,11 @@
+import 'package:app_prototype_flutter/models/Event.dart';
+import 'package:app_prototype_flutter/widgets/provider_widget.dart';
+import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_share_me/flutter_share_me.dart';
+import 'package:share/share.dart';
 import 'text_section.dart';
 import 'package:smooth_star_rating/smooth_star_rating.dart';
-import 'package:app_prototype_flutter/models/Event.dart';
-
 
 class Flyer extends StatefulWidget {
   final Event event;
@@ -11,11 +14,11 @@ class Flyer extends StatefulWidget {
   @override
   State<StatefulWidget> createState() => _FlyerState();
 
-
 }
 
 class _FlyerState extends State<Flyer> {
   var rating = 3.2;
+  final db = Firestore.instance;
 
   static const double _hPad = 16.0;
   @override
@@ -125,4 +128,9 @@ class _FlyerState extends State<Flyer> {
       ),
     );
   }
+  void share(BuildContext context, Event event){
+    final String text = "Come to my event: ${event.title} at ${event.date.toString()}";
+    Share.share(text, subject: event.description);
+  }
 }
+
