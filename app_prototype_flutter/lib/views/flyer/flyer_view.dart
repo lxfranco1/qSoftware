@@ -1,34 +1,36 @@
 import 'package:flutter/material.dart';
 import 'text_section.dart';
 import 'package:smooth_star_rating/smooth_star_rating.dart';
+import 'package:app_prototype_flutter/models/Event.dart';
 
-void main() => runApp(MyApp());
 
-class MyApp extends StatefulWidget {
+class Flyer extends StatefulWidget {
+  final Event event;
+  const Flyer(this.event);
+
   @override
-  State<StatefulWidget> createState() => _MyAppState();
+  State<StatefulWidget> createState() => _FlyerState();
 
 
 }
-class _MyAppState extends State<MyApp> {
+
+class _FlyerState extends State<Flyer> {
   var rating = 3.2;
 
   static const double _hPad = 16.0;
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(
-      title: 'Welcome to Flutter',
-      home: Scaffold(
-        appBar: AppBar(
-          title: const Text('Event'),
-        ),
-        body: Column(
+    return Scaffold(
+      appBar: AppBar(
+        title: const Text('Event'),
+      ),
+      body: Column(
           mainAxisAlignment: MainAxisAlignment.start,
           crossAxisAlignment: CrossAxisAlignment.stretch,
           children: [
             Container(
               padding: const EdgeInsets.fromLTRB(4.0, 0.0, _hPad, 4.0),
-              child: TextSection("Title"),
+              child: TextSection(widget.event.title),
             ),
             Container(
               padding: const EdgeInsets.fromLTRB(4.0, 0.0, _hPad, 4.0),
@@ -106,21 +108,20 @@ class _MyAppState extends State<MyApp> {
             ),
             Container(
               //padding: const EdgeInsets.fromLTRB(4.0, 8.0, _hPad, 4.0),
-              alignment: Alignment.center,
-              child: SmoothStarRating(
-                rating: rating,
-                size: 45,
-                starCount: 5,
-                spacing: 1.5,
-                onRatingChanged: (value) {
-                  setState(() {
-                    rating = value;
-                  });
-                },
-              )
+                alignment: Alignment.center,
+                child: SmoothStarRating(
+                  rating: rating,
+                  size: 45,
+                  starCount: 5,
+                  spacing: 1.5,
+                  onRatingChanged: (value) {
+                    setState(() {
+                      rating = value;
+                    });
+                  },
+                )
             )
           ]
-        ),
       ),
     );
   }
