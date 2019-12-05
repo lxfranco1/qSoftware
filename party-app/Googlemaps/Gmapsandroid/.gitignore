@@ -1,9 +1,0 @@
-*.pyc
-*.pyo
-.*.swp
-.*.swo
-.buildozer
-bin
-gmaps/libs/android/google-play-services_lib/bin
-gmaps/libs/android/google-play-services_lib/gen
-gmaps/libs/android/google-play-services_lib/local.properties
