@@ -11,7 +11,7 @@ class MyApp extends StatefulWidget {
 
 }
 class _MyAppState extends State<MyApp> {
-  var rating = 3.0;
+  var rating = 3.2;
 
   static const double _hPad = 16.0;
   @override
@@ -43,11 +43,11 @@ class _MyAppState extends State<MyApp> {
               child: TextSection("Username"),
             ),
             Container(
-              padding: const EdgeInsets.fromLTRB(4.0, 5.0, _hPad, 4.0),
+              padding: const EdgeInsets.fromLTRB(4.0, 5.0, 205, 4.0),
               child: MaterialButton(
                 color: Colors.blueAccent,
                 highlightColor: Colors.blueGrey,
-                height: 55,
+                height: 48,
                 minWidth: 80.0,
                 elevation: 8,
                 shape: RoundedRectangleBorder(
@@ -70,21 +70,25 @@ class _MyAppState extends State<MyApp> {
               padding: const EdgeInsets.fromLTRB(4.0, 34.0, _hPad, 4.0),
               child: TextSection("Description"),
             ),
-
             Container(
               padding: const EdgeInsets.fromLTRB(4.0, 14.0, _hPad, 4.0),
+              child: TextSection("X people attending"),
+            ),
+
+            Container(
+              padding: const EdgeInsets.fromLTRB(4.0, 14.0, 205, 4.0),
               child: MaterialButton(
                 color: Colors.blueAccent,
                 highlightColor: Colors.blueGrey,
-                height: 55,
-                minWidth: 80.0,
+                height: 48.0,
+                minWidth: 30.0,
                 elevation: 8,
                 shape: RoundedRectangleBorder(
                     borderRadius: BorderRadius.circular(10)
                 ),
 
                 child:
-                Text('Attend', style: new TextStyle(fontSize: 20.0,
+                Text('Attend Event', style: new TextStyle(fontSize: 20.0,
                     fontWeight: FontWeight.bold),
                 ),
 
@@ -97,15 +101,17 @@ class _MyAppState extends State<MyApp> {
             ),
             Container(
               padding: const EdgeInsets.fromLTRB(4.0, 34.0, _hPad, 4.0),
+              alignment: Alignment.center,
               child: TextSection("Rate This Event"),
             ),
             Container(
-              padding: const EdgeInsets.fromLTRB(4.0, 8.0, _hPad, 4.0),
+              //padding: const EdgeInsets.fromLTRB(4.0, 8.0, _hPad, 4.0),
+              alignment: Alignment.center,
               child: SmoothStarRating(
                 rating: rating,
                 size: 45,
                 starCount: 5,
-                spacing: 2.0,
+                spacing: 1.5,
                 onRatingChanged: (value) {
                   setState(() {
                     rating = value;
