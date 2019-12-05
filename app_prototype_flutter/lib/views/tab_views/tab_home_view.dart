@@ -6,6 +6,8 @@ import 'package:cloud_firestore/cloud_firestore.dart';
 
 class HomeView extends StatelessWidget {
 
+
+
 /*
   final List<Event> eventList= [
     Event("Homecoming", DateTime.now(), 200.00, "This is a test party", "Club", {"52.2165157": 6.9437819}),
@@ -41,6 +43,7 @@ class HomeView extends StatelessWidget {
     yield* Firestore.instance.collection('events').snapshots();
   }
 
+
   //Widget for the Cards
   Widget buildEventCard(BuildContext context, DocumentSnapshot event){
     return new Container(
@@ -59,10 +62,11 @@ class HomeView extends StatelessWidget {
               Padding(
                 padding: EdgeInsets.only(top: 8.0, bottom: 8.0),
                 child: Row(children: <Widget>[
-                  Text("${(event['date'] == null )? "N/A" : DateFormat('MM/dd/yyyy').format(event['date'].toDate()).toString()} at ${DateFormat('jm').format(event['date'].toDate()).toString()}"),
+                  Text("${(event['date'] == null )? "N/A" : DateFormat('MM/dd/yyyy').format(event['date'].toDate()).toString()} at ${(event['date'] == null )? "N/A" : DateFormat('jm').format(event['date'].toDate()).toString()}"),
                   Spacer(),
                 ],),
               ),
+
               Padding(
                 padding: EdgeInsets.only(top: 8.0, bottom: 8.0),
                 child: Row(children: <Widget>[
@@ -73,17 +77,6 @@ class HomeView extends StatelessWidget {
               ),
 
 
-              /*
-              Padding(
-                padding: EdgeInsets.only(top: 8.0, bottom: 8.0),
-                child: Row(children: <Widget>[
-                  Text(event['eventType']),
-                  Spacer(),
-                  Icon(Icons.location_on),
-                  //Text(event.location.toString()),
-                ],),
-              ),
-               */
             ],
           ),
         ),

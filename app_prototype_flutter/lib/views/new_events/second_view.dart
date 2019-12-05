@@ -5,10 +5,16 @@ import 'package:datetime_picker_formfield/datetime_picker_formfield.dart';
 import 'third_view.dart';
 
 
-
-class NewEventSecondView extends StatelessWidget{
+class NewEventSecondView extends StatefulWidget {
   final Event event;
-  NewEventSecondView({Key key, @required this.event}) : super(key: key);
+  const NewEventSecondView(this.event);
+
+  @override
+  NewEventSecondViewState createState() => NewEventSecondViewState();
+}
+
+class NewEventSecondViewState extends State<NewEventSecondView> {
+
   final format = DateFormat("MM/dd/yyyy HH:mm");
 
 
@@ -57,7 +63,7 @@ class NewEventSecondView extends StatelessWidget{
                             initialTime:
                             TimeOfDay.fromDateTime(currentValue ?? DateTime.now()),
                           );
-                          event.date = DateTimeField.combine(date, time);
+                          widget.event.date = DateTimeField.combine(date, time);
                           return DateTimeField.combine(date, time);
                         } else {
                           return currentValue;
@@ -78,7 +84,7 @@ class NewEventSecondView extends StatelessWidget{
                       onPressed: () {
                         //event.date = DateTime.now();
                         Navigator.push(context,
-                            MaterialPageRoute(builder: (context) => NewTripThirdView(event: event))
+                            MaterialPageRoute(builder: (context) => NewTripThirdView(widget.event))
                         );
                       },
                     ),

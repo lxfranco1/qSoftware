@@ -75,11 +75,11 @@ class _HomeState extends State<Home>{
       onPressed: ()  {
         Navigator.push(
           context,
-          MaterialPageRoute(builder: (context) => NewTripFirstView(event: newEvent,)),
+          MaterialPageRoute(builder: (context) => NewEvent(newEvent,)),
         );
       },
       label: Text("New Event"),
-      icon: Icon(Icons.playlist_add),
+      icon: Icon(Icons.add),
     ) : null;
   }
 }

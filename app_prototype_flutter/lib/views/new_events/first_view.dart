@@ -4,26 +4,31 @@ import 'package:app_prototype_flutter/models/Event.dart';
 import 'second_view.dart';
 
 
-
-class NewTripFirstView extends StatelessWidget{
+class NewEvent extends StatefulWidget {
   final Event event;
-  NewTripFirstView({Key key, @required this.event}) : super(key: key);
+  const NewEvent(this.event);
+
+  @override
+  NewEventState createState() => NewEventState();
+}
+
+class NewEventState extends State<NewEvent> {
 
   @override
   Widget build(BuildContext context) {
     final TextEditingController _titleControler = new TextEditingController();
-    _titleControler.text = event.title;
+    _titleControler.text = widget.event.title;
 
 
     final TextEditingController _descriptionControler = new TextEditingController();
-    _descriptionControler.text = event.description;
+    _descriptionControler.text = widget.event.description;
 
 
 
 
     return Scaffold(
       appBar: AppBar(
-        title: Text('Create Event - Title'),
+        title: Text('Create widget.event - Title'),
       ),
       body: SingleChildScrollView(
             child: Padding(
@@ -75,10 +80,10 @@ class NewTripFirstView extends StatelessWidget{
                       child: Text("Continue"),
                       onPressed: () {
                         //event.date = DateTime.now();
-                        event.title = _titleControler.text;
-                        event.description = _descriptionControler.text;
+                        widget.event.title = _titleControler.text;
+                        widget.event.description = _descriptionControler.text;
                         Navigator.push(context,
-                            MaterialPageRoute(builder: (context) => NewEventSecondView(event: event))
+                            MaterialPageRoute(builder: (context) => NewEventSecondView(widget.event))
                         );
                       },
                     ),
