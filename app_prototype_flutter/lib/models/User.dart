@@ -3,7 +3,6 @@ class User{
   String lastName;
   String userName;
   String email;
-  int attendance = 0;
   List followers = [];
   List following = [];
 
@@ -12,7 +11,6 @@ class User{
       this.lastName,
       this.userName,
       this.email,
-      this.attendance,
       this.followers,
       this.following,
       );
@@ -22,7 +20,6 @@ class User{
     'lastName': lastName,
     'userName': userName,
     'email': email,
-    'attendance': attendance,
     'followers': followers,
     'following': following,
   };
