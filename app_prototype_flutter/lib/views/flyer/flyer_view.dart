@@ -17,7 +17,7 @@ class Flyer extends StatefulWidget {
 }
 
 class _FlyerState extends State<Flyer> {
-  var rating = 3.2;
+  var rating = 2.0;
   final db = Firestore.instance;
 
   static const double _hPad = 16.0;
@@ -39,6 +39,8 @@ class _FlyerState extends State<Flyer> {
     }
     String description = widget.event.description;
     int attendance = widget.event.attendance;
+
+
 
     return Scaffold(
       appBar: AppBar(
@@ -83,9 +85,7 @@ class _FlyerState extends State<Flyer> {
                   ),
 
                   onPressed: () {
-  //                  Navigator.push(
-  //                    context,
-  //                    MaterialPageRoute(builder: (context) => SecondRoute()),);
+                    //
                   },
                 ),
               ),
@@ -116,9 +116,9 @@ class _FlyerState extends State<Flyer> {
                   ),
 
                   onPressed: () {
-  //                  Navigator.push(
-  //                    context,
-  //                    MaterialPageRoute(builder: (context) => SecondRoute()),);
+                    setState(() {
+                      widget.event.attendance++;
+                    });
                   },
                 ),
               ),
