@@ -114,15 +114,29 @@ class _FlyerState extends State<Flyer> {
                         userID = list[j].data['creatorsID'];
                       }
                     }
+                    QuerySnapshot follow;
+                    String getname;
                     for(int r = 0; r < list2.length; r++)
                     {
                       if(list[r].documentID == userID)
                       {
-//                            list[r].documentID.userData.documentID.followers.add(uid);
+                        follow = await (db.collection('users').document(userID).collection('userData').getDocuments());
+                        list2 = follow.documents;
+                        getname = list2[0].data['firstName'];
+//                        getname = follow[i].data['firstName'];
+//                        list[r].documentID.collection('userData')userData.documentID.followers.add(uid);
+//                            list[r].collection('userData').documentID.followers.add(uid);
                       }
                     }
+//                    list2 = follow.documents;
+//                    for(int b = 0; b <list2.length; b++)
+//                      {
+//                        if(list[b].documentID. == )
+//                      }
                     print("creator: ");
                     print(userID); //creatorID
+                    print("name: ");
+                    print(getname);
                   },
                 ),
               ),
