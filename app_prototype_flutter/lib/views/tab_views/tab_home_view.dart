@@ -1,4 +1,5 @@
 import 'package:app_prototype_flutter/widgets/provider_widget.dart';
+import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:intl/intl.dart';
@@ -9,7 +10,7 @@ import 'package:app_prototype_flutter/views/flyer/flyer_view.dart';
 
 class HomeView extends StatelessWidget {
 
-
+  bool visible = true;
   @override
   Widget build(BuildContext context) {
     return Container(
@@ -39,6 +40,24 @@ class HomeView extends StatelessWidget {
 
   //Widget for the Cards
   Widget buildEventCard(BuildContext context, DocumentSnapshot event){
+
+    String adminUser = 'F3KjUWbxDEYTJMA8gTDuHX8bsvo1';
+
+    String currUserID;
+    FirebaseAuth _auth = FirebaseAuth.instance;
+    getCurrentUser () async {
+      final FirebaseUser user = await auth.currentUser();
+       currUserID = user.uid;
+      if (currUserID == adminUser){
+        visible = true;
+        return;
+      } else {
+        visible = false;
+      }
+    }
+    getCurrentUser();
+
+
     return new Container(
       child: new InkWell(
         onTap: () async {
@@ -91,6 +110,39 @@ class HomeView extends StatelessWidget {
                     Spacer(),
                     //Text("\$${event.price.toStringAsFixed(2)}", style: new TextStyle(fontSize: 20.0)),
                   ],),
+                ),
+                Visibility(
+                    visible: visible,
+                    child: MaterialButton(
+                      color: Colors.redAccent,
+                      highlightColor: Colors.blueGrey,
+                      height: 48.0,
+                      minWidth: 30.0,
+                      elevation: 8,
+                      shape: RoundedRectangleBorder(
+                          borderRadius: BorderRadius.circular(10)
+                      ),
+
+                      child:
+                      Text('Delete Event', style: new TextStyle(fontSize: 20.0,
+                          fontWeight: FontWeight.bold),
+                      ),
+
+                      onPressed: () async {
+                          //remove event from db
+                          String eventID;
+                          QuerySnapshot events = await (Firestore.instance.collection('events').getDocuments());
+                          var list = events.documents;
+                          for(int i = 0; i < list.length; i++) {
+                            if (list[i].data['title'] == event['title']) {
+                              eventID = list[i].documentID;
+                            }
+                          }
+                          Firestore.instance.collection('events').document(eventID).delete();
+
+                      },
+                    ),
+
                 ),
 
 
