@@ -6,6 +6,8 @@ import 'package:flutter_share_me/flutter_share_me.dart';
 import 'package:share/share.dart';
 import 'text_section.dart';
 import 'package:smooth_star_rating/smooth_star_rating.dart';
+import 'package:maps_launcher/maps_launcher.dart';
+import 'package:url_launcher_platform_interface/url_launcher_platform_interface.dart';
 
 class Flyer extends StatefulWidget {
   final Event event;
@@ -41,7 +43,8 @@ class _FlyerState extends State<Flyer> {
     String description = widget.event.description;
     int attendance = widget.event.attendance;
     String eventID = "id";
-
+    double latitude = widget.event.latitude;
+    double longitude = widget.event.longitude;
 
 
     return Scaffold(
@@ -133,6 +136,32 @@ class _FlyerState extends State<Flyer> {
                   },
                 ),
               ),
+              //RaisedButton.icon(onPressed: null, icon: null, label: null);
+
+
+              Padding(
+                padding: EdgeInsets.only(top: 16.0,),
+                child:
+                new MaterialButton(
+                  color: Colors.redAccent,
+                  highlightColor: Colors.blueGrey,
+                  height: 75,
+                  minWidth: MediaQuery.of(context).size.width,
+                  elevation: 8,
+                  shape: RoundedRectangleBorder(
+                      borderRadius: BorderRadius.circular(10)),
+                  child: Text('Location', style: new TextStyle(
+                      fontSize: 20.0,
+                      fontWeight: FontWeight.bold),
+                  ),
+                  onPressed: () => MapsLauncher.launchCoordinates(latitude, longitude),
+
+
+                ),
+
+              ),
+
+
               Container(
                 padding: const EdgeInsets.fromLTRB(4.0, 34.0, _hPad, 4.0),
                 alignment: Alignment.center,

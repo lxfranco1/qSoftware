@@ -66,7 +66,7 @@ class NewTripThirdViewState extends State<NewTripThirdView> {
                 child: RaisedButton(
                   child: Text("Continue"),
                   onPressed: () {
-                    if(widget.event.location == null){
+                    if(widget.event.latitude == null || widget.event.longitude == null){
                       validateNotNull(selfKey.currentState, widget.event, "location");
                     }
                     else{
@@ -111,10 +111,11 @@ Future<Null> displayPrediction(Prediction p, ScaffoldState scaffold, Event event
   if (p != null) {
     // get detail (lat/lng)
     PlacesDetailsResponse detail = await _places.getDetailsByPlaceId(p.placeId);
-    final lat = detail.result.geometry.location.lat;
-    final lng = detail.result.geometry.location.lng;
+    final lat = detail.result.geometry.location.lat.toDouble();
+    final lng = detail.result.geometry.location.lng.toDouble();
 
-    event.location = {detail.result.geometry.location.lat.toString() : detail.result.geometry.location.lng};
+    event.latitude = lat;
+    event.longitude = lng;
 
     scaffold.showSnackBar(
       SnackBar(content: Text("Your Location was Saved! "

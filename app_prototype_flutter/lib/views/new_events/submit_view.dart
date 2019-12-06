@@ -31,7 +31,7 @@ class NewTripSubmitView extends StatelessWidget{
             Text("description ${event.description}"),
             Text("eventType ${event.eventType}"),
             Text("date ${event.date}"),
-            Text("location ${event.location}"),
+            Text("location ${event.longitude} : ${event.longitude}"),
 
 
             RaisedButton(
