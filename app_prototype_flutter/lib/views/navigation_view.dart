@@ -4,6 +4,12 @@ import 'package:flutter/material.dart';
 import 'package:app_prototype_flutter/views/new_events/first_view.dart';
 import 'package:app_prototype_flutter/views/tab_views/tab_profile.dart';
 import 'package:app_prototype_flutter/views/tab_views/tab_home_view.dart';
+import 'package:cloud_firestore/cloud_firestore.dart';
+import 'package:firebase_auth/firebase_auth.dart';
+import 'package:flutter/material.dart';
+import 'package:app_prototype_flutter/views/tab_views/test.dart';
+import 'package:app_prototype_flutter/services/auth_service.dart';
+
 
 class Home extends StatefulWidget {
   @override
@@ -17,6 +23,20 @@ class _HomeState extends State<Home>{
   int _currentIndex = 0;
   final List<Widget> _children = [HomeView(), Chat(), ProfileView()];
 
+  final FirebaseAuth _auth = FirebaseAuth.instance;
+
+  Future<void> chat() async {
+    FirebaseUser user = await FirebaseAuth.instance.currentUser();
+
+    Navigator.push(
+      context,
+      MaterialPageRoute(
+        builder: (context) => Test(
+          user: user,
+        ),
+      ),
+    );
+  }
   @override
   Widget build(BuildContext context) {
 
@@ -33,6 +53,13 @@ class _HomeState extends State<Home>{
               Navigator.of(context).pushNamed('/convertUser');
             },
           ),
+
+          IconButton(
+            icon: Icon(Icons.chat),
+              onPressed: () async {
+                await chat();
+              }
+          )
         ],
       ),
       body: _children[_currentIndex],
