@@ -23,7 +23,6 @@ class _FlyerState extends State<Flyer> {
   static const double _hPad = 16.0;
   @override
   Widget build(BuildContext context) {
-
     double rating = widget.event.rating;
     String title = widget.event.title;
     String date = widget.event.date.toString();
