@@ -15,7 +15,7 @@ class _ChatState extends State<Chat> {
 
   final FirebaseAuth _auth = FirebaseAuth.instance;
 
-  Future<void> loginUser() async {
+  Future<void> inputUser() async {
     FirebaseUser user = await  FirebaseAuth.instance.currentUser();
 
     Navigator.push(
@@ -57,7 +57,7 @@ class _ChatState extends State<Chat> {
                   ),
 
                   onPressed: () async {
-                    await loginUser();
+                    await inputUser();
                   },
                 ),
               ),

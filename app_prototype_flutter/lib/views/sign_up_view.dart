@@ -6,7 +6,7 @@ import 'package:flutter/material.dart';
 import "package:auto_size_text/auto_size_text.dart";
 import 'package:flutter_auth_buttons/flutter_auth_buttons.dart';
 
-final primaryColor = const Color(0xFF75A2EA);
+final primaryColor = const Color(0xFF700000);
 
 enum AuthFormType {signIn, signUp, reset, anonymous, convert}
 
