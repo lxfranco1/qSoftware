@@ -17,12 +17,14 @@ class Flyer extends StatefulWidget {
 }
 
 class _FlyerState extends State<Flyer> {
-  var rating = 2.0;
+
   final db = Firestore.instance;
 
   static const double _hPad = 16.0;
   @override
   Widget build(BuildContext context) {
+
+    double rating = widget.event.rating;
     String title = widget.event.title;
     String date = widget.event.date.toString();
     String eventType;
@@ -39,6 +41,7 @@ class _FlyerState extends State<Flyer> {
     }
     String description = widget.event.description;
     int attendance = widget.event.attendance;
+    String eventID = "id";
 
 
 
@@ -65,7 +68,7 @@ class _FlyerState extends State<Flyer> {
               ),
               Container(
                 padding: const EdgeInsets.fromLTRB(4.0, 0.0, _hPad, 4.0),
-                child: TextSection(creatorID),
+                child: TextSection(eventID),
               ),
               Container(
                 padding: const EdgeInsets.fromLTRB(4.0, 5.0, 205, 4.0),
@@ -115,9 +118,18 @@ class _FlyerState extends State<Flyer> {
                       fontWeight: FontWeight.bold),
                   ),
 
-                  onPressed: () {
+                  onPressed: () async {
+                    QuerySnapshot events = await (db.collection('events').getDocuments());
+                    var list = events.documents;
+                    for(int i = 0; i < list.length; i++) {
+                      if (list[i].data['title'] == widget.event.title) {
+                        eventID = list[i].documentID;
+                      }
+                    }
+
                     setState(() {
                       widget.event.attendance++;
+                      db.collection('events').document(eventID).updateData({'attendance' : widget.event.attendance});
                     });
                   },
                 ),
@@ -135,9 +147,18 @@ class _FlyerState extends State<Flyer> {
                     size: 45,
                     starCount: 5,
                     spacing: 1.5,
-                    onRatingChanged: (value) {
+                    onRatingChanged: (value) async {
+                      QuerySnapshot events = await (db.collection('events').getDocuments());
+                      var list = events.documents;
+                      for(int i = 0; i < list.length; i++) {
+                        if (list[i].data['title'] == widget.event.title) {
+                          eventID = list[i].documentID;
+                        }
+                      }
                       setState(() {
                         rating = value;
+                        widget.event.rating = value;
+                        db.collection('events').document(eventID).updateData({'rating' : rating});
                       });
                     },
                   )

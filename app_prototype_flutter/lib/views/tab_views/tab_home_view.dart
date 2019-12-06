@@ -49,6 +49,7 @@ class HomeView extends StatelessWidget {
             event['eventType'],
             Map<String,double>.from(event['location']),
             event['attendance'],
+            event['rating'],
             event['followers'],
             event['following'],
             event['following'],
