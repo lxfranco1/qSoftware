@@ -21,7 +21,7 @@ class Home extends StatefulWidget {
 
 class _HomeState extends State<Home>{
   int _currentIndex = 0;
-  final List<Widget> _children = [HomeView(), Chat(), ProfileView()];
+  final List<Widget> _children = [HomeView(), ProfileView()];
 
   final FirebaseAuth _auth = FirebaseAuth.instance;
 
@@ -47,12 +47,6 @@ class _HomeState extends State<Home>{
         actions: <Widget>[
 
 
-          IconButton(
-            icon: Icon(Icons.account_circle),
-            onPressed: ()  {
-              Navigator.of(context).pushNamed('/convertUser');
-            },
-          ),
 
           IconButton(
             icon: Icon(Icons.chat),
@@ -71,10 +65,6 @@ class _HomeState extends State<Home>{
           BottomNavigationBarItem(
             icon: new Icon(Icons.home),
             title: new Text('Home'),
-          ),
-          BottomNavigationBarItem(
-            icon: new Icon(Icons.chat),
-            title: new Text('Chat'),
           ),
           BottomNavigationBarItem(
             icon: new Icon(Icons.person_outline),
