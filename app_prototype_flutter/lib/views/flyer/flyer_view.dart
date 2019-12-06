@@ -44,7 +44,7 @@ class _FlyerState extends State<Flyer> {
     String description = widget.event.description;
     int attendance = widget.event.attendance;
     String eventID = "id";
-
+    String username = widget.event.username;
 
 
     return Scaffold(
@@ -70,7 +70,7 @@ class _FlyerState extends State<Flyer> {
               ),
               Container(
                 padding: const EdgeInsets.fromLTRB(4.0, 0.0, _hPad, 4.0),
-                child: TextSection(eventID),
+                child: TextSection(username),
               ),
               Container(
                 padding: const EdgeInsets.fromLTRB(4.0, 5.0, 205, 4.0),
