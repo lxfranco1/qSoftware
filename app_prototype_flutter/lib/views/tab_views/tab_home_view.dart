@@ -56,9 +56,10 @@ class HomeView extends StatelessWidget {
             event['followers'],
             event['following'],
             event['creatorsID'],
+            name,
             event['latitude'],
             event['longitude'],
-            name
+
           );
           Navigator.push(context,
               MaterialPageRoute(builder: (context) => Flyer(newEvent))

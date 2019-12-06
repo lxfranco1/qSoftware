@@ -8,9 +8,10 @@ import 'text_section.dart';
 import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:smooth_star_rating/smooth_star_rating.dart';
-FirebaseAuth auth = FirebaseAuth.instance;
 import 'package:maps_launcher/maps_launcher.dart';
 import 'package:url_launcher_platform_interface/url_launcher_platform_interface.dart';
+
+FirebaseAuth auth = FirebaseAuth.instance;
 
 class Flyer extends StatefulWidget {
   final Event event;

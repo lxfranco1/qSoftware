@@ -85,7 +85,7 @@ class _HomeState extends State<Home>{
 
 
   Widget _bottomButtons(){
-    final newEvent = new Event(null, null, null, null, null, 0, 0.1, null, null, null, null);
+    final newEvent = new Event(null, null, null, null, null, 0, null, null, null, null, null, null);
 
 
     return _currentIndex == 0 ? FloatingActionButton.extended(
