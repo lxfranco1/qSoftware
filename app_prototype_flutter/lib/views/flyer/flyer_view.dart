@@ -37,11 +37,13 @@ class _FlyerState extends State<Flyer> {
       creatorID = "ID";
     } else {
       creatorID = widget.event.creatorsID;
+
+
     }
     String description = widget.event.description;
     int attendance = widget.event.attendance;
     String eventID = "id";
-
+    String username = widget.event.username;
 
 
     return Scaffold(
@@ -67,13 +69,13 @@ class _FlyerState extends State<Flyer> {
               ),
               Container(
                 padding: const EdgeInsets.fromLTRB(4.0, 0.0, _hPad, 4.0),
-                child: TextSection(eventID),
+                child: TextSection(username),
               ),
               Container(
                 padding: const EdgeInsets.fromLTRB(4.0, 5.0, 205, 4.0),
                 child: MaterialButton(
-                  color: Colors.blueAccent,
-                  highlightColor: Colors.blueGrey,
+                  color: Colors.redAccent,
+                  highlightColor: Colors.red,
                   height: 48,
                   minWidth: 80.0,
                   elevation: 8,
@@ -103,8 +105,8 @@ class _FlyerState extends State<Flyer> {
               Container(
                 padding: const EdgeInsets.fromLTRB(4.0, 14.0, 205, 4.0),
                 child: MaterialButton(
-                  color: Colors.blueAccent,
-                  highlightColor: Colors.blueGrey,
+                  color: Colors.redAccent,
+                  highlightColor: Colors.red,
                   height: 48.0,
                   minWidth: 30.0,
                   elevation: 8,
@@ -165,8 +167,8 @@ class _FlyerState extends State<Flyer> {
               Container(
                 padding: const EdgeInsets.fromLTRB(4.0, 14.0, 205, 4.0),
                 child: MaterialButton(
-                  color: Colors.blueAccent,
-                  highlightColor: Colors.blueGrey,
+                    color: Colors.redAccent,
+                    highlightColor: Colors.red,
                   height: 48.0,
                   minWidth: 30.0,
                   elevation: 8,
@@ -185,8 +187,8 @@ class _FlyerState extends State<Flyer> {
               Container(
                 padding: const EdgeInsets.fromLTRB(4.0, 14.0, 205, 4.0),
                 child: MaterialButton(
-                  color: Colors.blueAccent,
-                  highlightColor: Colors.blueGrey,
+                  color: Colors.redAccent,
+                  highlightColor: Colors.red,
                   height: 48.0,
                   minWidth: 30.0,
                   elevation: 8,

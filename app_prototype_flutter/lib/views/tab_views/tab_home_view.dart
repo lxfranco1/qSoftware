@@ -41,7 +41,11 @@ class HomeView extends StatelessWidget {
   Widget buildEventCard(BuildContext context, DocumentSnapshot event){
     return new Container(
       child: new InkWell(
-        onTap: () {
+        onTap: () async {
+          final db = Firestore.instance;
+          QuerySnapshot snapshot = await db.collection('users').document(event['creatorsID']).collection('userData').getDocuments();
+          String name = snapshot.documents[0].data['firstName'];
+          //event['username'] = name;
           final newEvent = new Event(
             event['title'],
             event['date'].toDate(),
@@ -53,6 +57,7 @@ class HomeView extends StatelessWidget {
             event['followers'],
             event['following'],
             event['creatorsID'],
+            name
           );
           Navigator.push(context,
               MaterialPageRoute(builder: (context) => Flyer(newEvent))

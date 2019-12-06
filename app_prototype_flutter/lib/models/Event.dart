@@ -9,6 +9,7 @@ class Event{
   List<String> followers = [];
   List<String> following = [];
   String creatorsID;
+  String username;
 
   Event(
       this.title,
@@ -21,6 +22,7 @@ class Event{
       this.followers,
       this.following,
       this.creatorsID,
+      this.username,
       );
 
   Map<String, dynamic> toJson() => {
@@ -34,5 +36,6 @@ class Event{
     'followers': followers,
     'following': following,
     'creatorsID': creatorsID,
+    'username': username,
   };
 }
