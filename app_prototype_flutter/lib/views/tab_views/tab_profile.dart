@@ -2,6 +2,9 @@ import 'package:app_prototype_flutter/views/navigation_view.dart';
 import 'package:app_prototype_flutter/services/auth_service.dart';
 import 'package:app_prototype_flutter/widgets/provider_widget.dart';
 import 'package:app_prototype_flutter/views/tab_views/profile_views/followers_view.dart';
+import 'package:app_prototype_flutter/views/tab_views/profile_views/following_view.dart';
+import 'package:app_prototype_flutter/views/tab_views/profile_views/events_view.dart';
+
 
 import 'package:flutter/material.dart';
 
@@ -100,9 +103,7 @@ class ProfileView extends StatelessWidget {
                     ),
 
                   onPressed: () {
-                    Navigator.push(
-                      context,
-                      MaterialPageRoute(builder: (context) => followers_view()),);
+                    Navigator.push(context, MaterialPageRoute(builder: (context) => followers_view()),);
                   },
                 ),
               ),
@@ -124,7 +125,9 @@ class ProfileView extends StatelessWidget {
                   child: Text('Following', style: new TextStyle(fontSize: 20.0,
                       fontWeight: FontWeight.bold)),
                   onPressed: (){
-
+                      Navigator.push(
+                        context,
+                        MaterialPageRoute(builder: (context) => following_view()),);
                   },
                 ),
               ),
@@ -148,7 +151,7 @@ class ProfileView extends StatelessWidget {
                   onPressed: () {
                     Navigator.push(
                       context,
-                      MaterialPageRoute(builder: (context) => Home()),);
+                      MaterialPageRoute(builder: (context) => events_view()),);
                   },
 
                 ),
@@ -157,28 +160,28 @@ class ProfileView extends StatelessWidget {
 
 
 
-              Padding(
-                padding: EdgeInsets.only(top: 16.0,),
-                child:
-                new MaterialButton(
-                  color: Colors.blueAccent,
-                  highlightColor: Colors.blueGrey,
-                  height: 75,
-                  // the width of this button
-                  minWidth: MediaQuery.of(context).size.width,
-                  elevation: 8,
-                  shape: RoundedRectangleBorder(
-                      borderRadius: BorderRadius.circular(10)
-                  ),
-
-                  child: Text('Settings', style: new TextStyle(fontSize: 20.0,
-                      fontWeight: FontWeight.bold),
-                  ),
-                  onPressed: (){
-
-                  },
-                ),
-              ),
+//              Padding(
+//                padding: EdgeInsets.only(top: 16.0,),
+//                child:
+//                new MaterialButton(
+//                  color: Colors.blueAccent,
+//                  highlightColor: Colors.blueGrey,
+//                  height: 75,
+//                  // the width of this button
+//                  minWidth: MediaQuery.of(context).size.width,
+//                  elevation: 8,
+//                  shape: RoundedRectangleBorder(
+//                      borderRadius: BorderRadius.circular(10)
+//                  ),
+//
+//                  child: Text('Settings', style: new TextStyle(fontSize: 20.0,
+//                      fontWeight: FontWeight.bold),
+//                  ),
+//                  onPressed: (){
+//
+//                  },
+//                ),
+//              ),
 
 
 

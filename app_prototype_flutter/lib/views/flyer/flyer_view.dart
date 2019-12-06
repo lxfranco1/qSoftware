@@ -5,8 +5,10 @@ import 'package:flutter/material.dart';
 import 'package:flutter_share_me/flutter_share_me.dart';
 import 'package:share/share.dart';
 import 'text_section.dart';
+import 'package:cloud_firestore/cloud_firestore.dart';
+import 'package:firebase_auth/firebase_auth.dart';
 import 'package:smooth_star_rating/smooth_star_rating.dart';
-
+FirebaseAuth auth = FirebaseAuth.instance;
 class Flyer extends StatefulWidget {
   final Event event;
   const Flyer(this.event);
@@ -19,6 +21,7 @@ class Flyer extends StatefulWidget {
 class _FlyerState extends State<Flyer> {
 
   final db = Firestore.instance;
+  bool _isButtonDisabled;
 
   static const double _hPad = 16.0;
   @override
@@ -86,9 +89,35 @@ class _FlyerState extends State<Flyer> {
                   Text('Follow User', style: new TextStyle(fontSize: 20.0,
                       fontWeight: FontWeight.bold),
                   ),
+                  onPressed: () async {
+                    String userID;
+                    final uid = await Provider.of(context).auth.getCurrentUID();
+                    print(uid); //current user
+                    print("Followed");
 
-                  onPressed: () {
-                    //
+                    QuerySnapshot events = await (db.collection('events').getDocuments());
+//                    print(widget.event.documentID);
+
+                    var list = events.documents;
+                    for(int i = 0; i < list.length; i++) {
+                      if (list[i].data['title'] == widget.event.title) {
+                        eventID = list[i].documentID;
+                      }
+                    }
+                    print(eventID); //event ID
+                    for(int j = 0; j < list.length; j++) {
+                      if (list[j].documentID == eventID) {
+                         userID = list[j].data['creatorsID'];
+                      }
+                    }
+                    print(userID); //creatorID
+
+//                    setState(() {
+//                      rating = value;
+//                      widget.event.rating = value;
+//                      db.collection('events').document(eventID).updateData({'rating' : rating});
+//                    });
+
                   },
                 ),
               ),
@@ -215,5 +244,10 @@ class _FlyerState extends State<Flyer> {
     final String text = "Come to my event: ${event.title} at ${event.date.toString()}";
     Share.share(text, subject: event.description);
   }
+  Future<String> getCurrentUser() async {
+    FirebaseUser user = await auth.currentUser();
+    return user.uid;
+  }
+
 }
 
