@@ -4,7 +4,7 @@ import 'package:app_prototype_flutter/widgets/custom_dialog.dart';
 
 
 class FirstView extends StatelessWidget {
-  final primaryColor = const Color(0xFF75A2EA);
+  final primaryColor = const Color(0xFF700000);
 
   @override
   Widget build(BuildContext context) {
@@ -23,12 +23,12 @@ class FirstView extends StatelessWidget {
               children: <Widget>[
                 SizedBox(height: _height * 0.10),
                 Text(
-                  "Welcome",
+                  "Welcome To The ",
                   style: TextStyle(fontSize: 44, color: Colors.white),
                 ),
                 SizedBox(height: _height * 0.10),
                 AutoSizeText(
-                  "Let’s Start a Party!",
+                  "A-List",
                   maxLines: 2,
                   textAlign: TextAlign.center,
                   style: TextStyle(

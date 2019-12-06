@@ -85,7 +85,7 @@ class ProfileView extends StatelessWidget {
                 padding: EdgeInsets.only(top: 0.0,),
                 child:
                 new MaterialButton(
-                  color: Colors.blueAccent,
+                  color: Colors.redAccent,
                   highlightColor: Colors.blueGrey,
                   height: 75,
                   minWidth: MediaQuery.of(context).size.width,
@@ -113,7 +113,7 @@ class ProfileView extends StatelessWidget {
                 padding: EdgeInsets.only(top: 16.0,),
                 child:
                 new MaterialButton(
-                  color: Colors.blueAccent,
+                  color: Colors.redAccent,
                   highlightColor: Colors.blueGrey,
                   height: 75,
                   minWidth: MediaQuery.of(context).size.width,
@@ -134,7 +134,7 @@ class ProfileView extends StatelessWidget {
                 padding: EdgeInsets.only(top: 16.0,),
                 child:
                 new MaterialButton(
-                  color: Colors.blueAccent,
+                  color: Colors.redAccent,
                   highlightColor: Colors.blueGrey,
                   height: 75,
                   minWidth: MediaQuery.of(context).size.width,
@@ -161,7 +161,7 @@ class ProfileView extends StatelessWidget {
                 padding: EdgeInsets.only(top: 16.0,),
                 child:
                 new MaterialButton(
-                  color: Colors.blueAccent,
+                  color: Colors.redAccent,
                   highlightColor: Colors.blueGrey,
                   height: 75,
                   // the width of this button
@@ -185,7 +185,7 @@ class ProfileView extends StatelessWidget {
               Padding(
                 padding: EdgeInsets.only(top: 16.0),
                 child: new MaterialButton(
-                  color: Colors.blueAccent,
+                  color: Colors.redAccent,
                   highlightColor: Colors.blueGrey,
                   height: 75,
                   minWidth: MediaQuery.of(context).size.width,
