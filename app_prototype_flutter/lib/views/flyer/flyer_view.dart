@@ -5,7 +5,10 @@ import 'package:flutter/material.dart';
 import 'package:flutter_share_me/flutter_share_me.dart';
 import 'package:share/share.dart';
 import 'text_section.dart';
+import 'package:cloud_firestore/cloud_firestore.dart';
+import 'package:firebase_auth/firebase_auth.dart';
 import 'package:smooth_star_rating/smooth_star_rating.dart';
+FirebaseAuth auth = FirebaseAuth.instance;
 import 'package:maps_launcher/maps_launcher.dart';
 import 'package:url_launcher_platform_interface/url_launcher_platform_interface.dart';
 
@@ -21,6 +24,7 @@ class Flyer extends StatefulWidget {
 class _FlyerState extends State<Flyer> {
 
   final db = Firestore.instance;
+  bool _isButtonDisabled;
 
   static const double _hPad = 16.0;
   @override
@@ -45,6 +49,7 @@ class _FlyerState extends State<Flyer> {
     String eventID = "id";
     double latitude = widget.event.latitude;
     double longitude = widget.event.longitude;
+    String username = widget.event.username;
 
 
     return Scaffold(
@@ -52,7 +57,7 @@ class _FlyerState extends State<Flyer> {
         title: const Text('Event'),
       ),
       body: SingleChildScrollView(
-          child: Column(
+        child: Column(
             mainAxisAlignment: MainAxisAlignment.start,
             crossAxisAlignment: CrossAxisAlignment.stretch,
             children: [
@@ -70,12 +75,12 @@ class _FlyerState extends State<Flyer> {
               ),
               Container(
                 padding: const EdgeInsets.fromLTRB(4.0, 0.0, _hPad, 4.0),
-                child: TextSection(eventID),
+                child: TextSection(username),
               ),
               Container(
                 padding: const EdgeInsets.fromLTRB(4.0, 5.0, 205, 4.0),
                 child: MaterialButton(
-                  color: Colors.blueAccent,
+                  color: Colors.redAccent,
                   highlightColor: Colors.blueGrey,
                   height: 48,
                   minWidth: 80.0,
@@ -88,9 +93,45 @@ class _FlyerState extends State<Flyer> {
                   Text('Follow User', style: new TextStyle(fontSize: 20.0,
                       fontWeight: FontWeight.bold),
                   ),
+                  onPressed: () async {
+                    String userID;
+                    final uid = await Provider.of(context).auth.getCurrentUID();
+                    print("current user: ");
+                    print(uid); //current user
+//                    print("Followed");
 
-                  onPressed: () {
-                    //
+                    QuerySnapshot events = await (db.collection('events').getDocuments());
+                    QuerySnapshot users = await (db.collection('users').getDocuments());
+//                    QuerySnapshot userdata = await (db.collection(users).getDocuments());
+//                    print(widget.event.documentID);
+
+                    var list = events.documents;
+                    var list2 = users.documents;
+
+                    for(int i = 0; i < list.length; i++) {
+                      if (list[i].data['title'] == widget.event.title) {
+                        eventID = list[i].documentID;
+                      }
+                    }
+//                    print(eventID); //event ID
+                    for(int j = 0; j < list.length; j++) {
+                      if (list[j].documentID == eventID) {
+                        userID = list[j].data['creatorsID'];
+                      }
+                    }
+
+                    //name of event user
+                    QuerySnapshot snapshot = await db.collection('users').document(userID).collection('userData').getDocuments();
+                    String getname = snapshot.documents[0].data['firstName'];
+
+                    //put name under my following;
+                    snapshot = await db.collection('users').document(uid).collection('userData').getDocuments();
+                    snapshot.documents[0].data['followers'].add(getname);
+
+                    print("creator: ");
+                    print(userID); //creatorID
+                    print("name: ");
+                    print(getname);
                   },
                 ),
               ),
@@ -106,7 +147,7 @@ class _FlyerState extends State<Flyer> {
               Container(
                 padding: const EdgeInsets.fromLTRB(4.0, 14.0, 205, 4.0),
                 child: MaterialButton(
-                  color: Colors.blueAccent,
+                  color: Colors.redAccent,
                   highlightColor: Colors.blueGrey,
                   height: 48.0,
                   minWidth: 30.0,
@@ -194,27 +235,27 @@ class _FlyerState extends State<Flyer> {
               Container(
                 padding: const EdgeInsets.fromLTRB(4.0, 14.0, 205, 4.0),
                 child: MaterialButton(
-                  color: Colors.blueAccent,
-                  highlightColor: Colors.blueGrey,
-                  height: 48.0,
-                  minWidth: 30.0,
-                  elevation: 8,
-                  shape: RoundedRectangleBorder(
-                      borderRadius: BorderRadius.circular(10)
-                  ),
+                    color: Colors.redAccent,
+                    highlightColor: Colors.blueGrey,
+                    height: 48.0,
+                    minWidth: 30.0,
+                    elevation: 8,
+                    shape: RoundedRectangleBorder(
+                        borderRadius: BorderRadius.circular(10)
+                    ),
 
-                  child:
-                  Text('Share with email/SMS', style: new TextStyle(fontSize: 20.0,
-                      fontWeight: FontWeight.bold),
-                  ),
+                    child:
+                    Text('Share with email/SMS', style: new TextStyle(fontSize: 20.0,
+                        fontWeight: FontWeight.bold),
+                    ),
 
-                  onPressed: () => share(context, widget.event)
+                    onPressed: () => share(context, widget.event)
                 ),
               ),
               Container(
                 padding: const EdgeInsets.fromLTRB(4.0, 14.0, 205, 4.0),
                 child: MaterialButton(
-                  color: Colors.blueAccent,
+                  color: Colors.redAccent,
                   highlightColor: Colors.blueGrey,
                   height: 48.0,
                   minWidth: 30.0,
@@ -235,13 +276,18 @@ class _FlyerState extends State<Flyer> {
                 ),
               ),
             ]
+        ),
       ),
-    ),
     );
   }
   void share(BuildContext context, Event event){
     final String text = "Come to my event: ${event.title} at ${event.date.toString()}";
     Share.share(text, subject: event.description);
   }
+  Future<String> getCurrentUser() async {
+    FirebaseUser user = await auth.currentUser();
+    return user.uid;
+  }
+
 }
 

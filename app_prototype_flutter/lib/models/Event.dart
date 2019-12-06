@@ -10,6 +10,7 @@ class Event{
   String creatorsID;
   double latitude;
   double longitude;
+  String username;
 
   Event(
       this.title,
@@ -21,6 +22,7 @@ class Event{
       this.followers,
       this.following,
       this.creatorsID,
+      this.username,
       this.latitude,
       this.longitude,
       );
