@@ -5,6 +5,7 @@ class Event{
   String eventType;
   Map<String, double> location;
   int attendance = 0;
+  double rating = 0.0;
   List<String> followers = [];
   List<String> following = [];
   String creatorsID;
@@ -16,6 +17,7 @@ class Event{
       this.eventType,
       this.location,
       this.attendance,
+      this.rating,
       this.followers,
       this.following,
       this.creatorsID,
@@ -28,6 +30,7 @@ class Event{
     'eventType': eventType,
     'location': location,
     'attendance': attendance,
+    'rating': rating,
     'followers': followers,
     'following': following,
     'creatorsID': creatorsID,
