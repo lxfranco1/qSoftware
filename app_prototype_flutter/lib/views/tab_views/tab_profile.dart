@@ -1,6 +1,7 @@
 import 'package:app_prototype_flutter/views/navigation_view.dart';
 import 'package:app_prototype_flutter/services/auth_service.dart';
 import 'package:app_prototype_flutter/widgets/provider_widget.dart';
+import 'package:app_prototype_flutter/views/tab_views/profile_views/followers_view.dart';
 
 import 'package:flutter/material.dart';
 
@@ -53,29 +54,7 @@ import 'package:flutter/material.dart';
 //  }
 //}
 
-class SecondRoute extends StatelessWidget {
-  @override
-  Widget build(BuildContext context) {
-    return Scaffold(
-      appBar: AppBar(
-        title: Text("Followers"),
-      ),
-      body: Center(
-        child: RaisedButton(
-//          onPressed: () {
-//            Navigator.pop(context);
-//          },
 
-          onPressed: () {
-            // TODO: Make this go back to the Profile part of the page and not the home
-            Navigator.of(context).popUntil((route) => route.isFirst);
-          },
-          child: Text('Go back!'),
-        ),
-      ),
-    );
-  }
-}
 
 
 void main() {
@@ -123,7 +102,7 @@ class ProfileView extends StatelessWidget {
                   onPressed: () {
                     Navigator.push(
                       context,
-                      MaterialPageRoute(builder: (context) => SecondRoute()),);
+                      MaterialPageRoute(builder: (context) => followers_view()),);
                   },
                 ),
               ),
