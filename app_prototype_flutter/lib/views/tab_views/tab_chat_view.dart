@@ -1,29 +1,9 @@
 import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
-import 'package:firebase_auth/firebase_auth.dart';
 
-void main() => runApp(MyApp());
-FirebaseAuth auth = FirebaseAuth.instance;
 
-class MyApp extends StatelessWidget {
-  @override
-  Widget build(BuildContext context) {
-    return MaterialApp(
-      debugShowCheckedModeBanner: false,
-      title: 'Flutter Demo',
-      theme: ThemeData.dark(),
-      initialRoute: MyHomePage.id,
-      routes: {
-        MyHomePage.id: (context) => MyHomePage(),
-        Registration.id: (context) => Registration(),
-        Login.id: (context) => Login(),
-        Chat.id: (context) => Chat(),
-      },
-    );
-  }
-}
-
+/*
 class MyHomePage extends StatelessWidget {
   static const String id = "HOMESCREEN";
 
@@ -73,6 +53,8 @@ class MyHomePage extends StatelessWidget {
   }
 }
 
+ */
+
 class CustomButton extends StatelessWidget {
   final VoidCallback callback;
   final String text;
@@ -97,186 +79,21 @@ class CustomButton extends StatelessWidget {
   }
 }
 
-class Registration extends StatefulWidget {
-  static const String id = "REGISTRATION";
-  @override
-  _RegistrationState createState() => _RegistrationState();
-}
 
-class _RegistrationState extends State<Registration> {
-  String email;
-  String password;
-
-  final FirebaseAuth _auth = FirebaseAuth.instance;
-
-  Future<void> registerUser() async {
-    FirebaseUser user = await auth.currentUser();
-
-
-    Navigator.push(
-      context,
-      MaterialPageRoute(
-        builder: (context) => Chat(
-          user: user,
-        ),
-      ),
-    );
-  }
-
-  @override
-  Widget build(BuildContext context) {
-    return Scaffold(
-
-      body: Column(
-        mainAxisAlignment: MainAxisAlignment.center,
-        crossAxisAlignment: CrossAxisAlignment.stretch,
-        children: <Widget>[
-          Expanded(
-            child: Hero(
-              tag: 'logo',
-              child: Container(
-                child: Image.asset(
-                  "assets/images/logo.png",
-                ),
-              ),
-            ),
-          ),
-          SizedBox(
-            height: 40.0,
-          ),
-          TextField(
-            keyboardType: TextInputType.emailAddress,
-            onChanged: (value) => email = value,
-            decoration: InputDecoration(
-              hintText: "Enter Your Email...",
-              border: const OutlineInputBorder(),
-            ),
-          ),
-          SizedBox(
-            height: 40.0,
-          ),
-          TextField(
-            autocorrect: false,
-            obscureText: true,
-            onChanged: (value) => password = value,
-            decoration: InputDecoration(
-              hintText: "Enter Your Password...",
-              border: const OutlineInputBorder(),
-            ),
-          ),
-          CustomButton(
-            text: "Register",
-            callback: () async {
-              await registerUser();
-            },
-          )
-        ],
-      ),
-    );
-  }
-}
-
-class Login extends StatefulWidget {
-  static const String id = "LOGIN";
-  @override
-  _LoginState createState() => _LoginState();
-}
-
-class _LoginState extends State<Login> {
-  String email;
-  String password;
-
-  final FirebaseAuth _auth = FirebaseAuth.instance;
-
-  Future<void> loginUser() async {
-    FirebaseUser user = await auth.currentUser();
-
-    Navigator.push(
-      context,
-      MaterialPageRoute(
-        builder: (context) => Chat(
-          user: user,
-        ),
-      ),
-    );
-  }
-
-  @override
-  Widget build(BuildContext context) {
-    return Scaffold(
-      appBar: AppBar(
-        title: Text("Tensor Chat"),
-      ),
-      body: Column(
-        mainAxisAlignment: MainAxisAlignment.center,
-        crossAxisAlignment: CrossAxisAlignment.stretch,
-        children: <Widget>[
-          Expanded(
-            child: Hero(
-              tag: 'logo',
-              child: Container(
-                child: Image.asset(
-                  "assets/images/logo.png",
-                ),
-              ),
-            ),
-          ),
-          SizedBox(
-            height: 40.0,
-          ),
-          TextField(
-            keyboardType: TextInputType.emailAddress,
-            onChanged: (value) => email = value,
-            decoration: InputDecoration(
-              hintText: "Enter Your Email...",
-              border: const OutlineInputBorder(),
-            ),
-          ),
-          SizedBox(
-            height: 40.0,
-          ),
-          TextField(
-            autocorrect: false,
-            obscureText: true,
-            onChanged: (value) => password = value,
-            decoration: InputDecoration(
-              hintText: "Enter Your Password...",
-              border: const OutlineInputBorder(),
-            ),
-          ),
-          CustomButton(
-            text: "Log In",
-            callback: () async {
-              await loginUser();
-            },
-          )
-        ],
-      ),
-    );
-  }
-}
-
-class Chat extends StatefulWidget {
-  static const String id = "CHAT";
-  final FirebaseUser user;
-
-  const Chat({Key key, this.user}) : super(key: key);
-  @override
-  _ChatState createState() => _ChatState();
-}
-
-class _ChatState extends State<Chat> {
+class Chat extends StatelessWidget {
   final FirebaseAuth _auth = FirebaseAuth.instance;
   final Firestore _firestore = Firestore.instance;
+
 
   TextEditingController messageController = TextEditingController();
   ScrollController scrollController = ScrollController();
 
   Future<void> callback() async {
+    final email = inputData();
     if (messageController.text.length > 0) {
       await _firestore.collection('messages').add({
         'text': messageController.text,
-        'from': widget.user.email,
+        'from': email,
         'date': DateTime.now().toIso8601String().toString(),
       });
       messageController.clear();
@@ -290,8 +107,28 @@ class _ChatState extends State<Chat> {
 
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
+    final _email = inputData();
 
+    return Scaffold(
+      appBar: AppBar(
+        leading: Hero(
+          tag: 'logo',
+          child: Container(
+            height: 40.0,
+            child: Image.asset("assets/images/logo.png"),
+          ),
+        ),
+        title: Text("Tensor Chat"),
+        actions: <Widget>[
+          IconButton(
+            icon: Icon(Icons.close),
+            onPressed: () {
+              _auth.signOut();
+              Navigator.of(context).popUntil((route) => route.isFirst);
+            },
+          )
+        ],
+      ),
       body: SafeArea(
         child: Column(
           mainAxisAlignment: MainAxisAlignment.spaceBetween,
@@ -312,9 +149,10 @@ class _ChatState extends State<Chat> {
 
                   List<Widget> messages = docs
                       .map((doc) => Message(
+
                     from: doc.data['from'],
                     text: doc.data['text'],
-                    me: widget.user.email == doc.data['from'],
+                    me: _email == doc.data['from'],
                   ))
                       .toList();
 
@@ -351,6 +189,12 @@ class _ChatState extends State<Chat> {
         ),
       ),
     );
+  }
+
+  Future<String> inputData() async {
+    final FirebaseUser user = await FirebaseAuth.instance.currentUser();
+    final String email = user.email.toString();
+    return email;
   }
 }
 
@@ -403,3 +247,4 @@ class Message extends StatelessWidget {
     );
   }
 }
+
