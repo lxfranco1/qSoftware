@@ -32,8 +32,10 @@ class AuthService{
     final uid = await getCurrentUID();
 
     //name, userName, email, following, followers
-    List<String> followers = [];
-    List<String> following = [];
+    List<String> followers = new List();
+    List<String> following = new List();
+//    List<String> followers = [];
+//    List<String> following = [];
     final user = new User (name, null, email, followers, following, uid);
     db.collection("users").document(uid).collection("userData").add(user.toJson());
     //Update the username
