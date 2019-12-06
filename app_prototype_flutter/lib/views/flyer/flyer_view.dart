@@ -52,7 +52,7 @@ class _FlyerState extends State<Flyer> {
         title: const Text('Event'),
       ),
       body: SingleChildScrollView(
-          child: Column(
+        child: Column(
             mainAxisAlignment: MainAxisAlignment.start,
             crossAxisAlignment: CrossAxisAlignment.stretch,
             children: [
@@ -75,7 +75,7 @@ class _FlyerState extends State<Flyer> {
               Container(
                 padding: const EdgeInsets.fromLTRB(4.0, 5.0, 205, 4.0),
                 child: MaterialButton(
-                  color: Colors.blueAccent,
+                  color: Colors.redAccent,
                   highlightColor: Colors.blueGrey,
                   height: 48,
                   minWidth: 80.0,
@@ -91,32 +91,38 @@ class _FlyerState extends State<Flyer> {
                   onPressed: () async {
                     String userID;
                     final uid = await Provider.of(context).auth.getCurrentUID();
+                    print("current user: ");
                     print(uid); //current user
-                    print("Followed");
+//                    print("Followed");
 
                     QuerySnapshot events = await (db.collection('events').getDocuments());
+                    QuerySnapshot users = await (db.collection('users').getDocuments());
+//                    QuerySnapshot userdata = await (db.collection(users).getDocuments());
 //                    print(widget.event.documentID);
 
                     var list = events.documents;
+                    var list2 = users.documents;
+
                     for(int i = 0; i < list.length; i++) {
                       if (list[i].data['title'] == widget.event.title) {
                         eventID = list[i].documentID;
                       }
                     }
-                    print(eventID); //event ID
+//                    print(eventID); //event ID
                     for(int j = 0; j < list.length; j++) {
                       if (list[j].documentID == eventID) {
-                         userID = list[j].data['creatorsID'];
+                        userID = list[j].data['creatorsID'];
                       }
                     }
+                    for(int r = 0; r < list2.length; r++)
+                    {
+                      if(list[r].documentID == userID)
+                      {
+//                            list[r].documentID.userData.documentID.followers.add(uid);
+                      }
+                    }
+                    print("creator: ");
                     print(userID); //creatorID
-
-//                    setState(() {
-//                      rating = value;
-//                      widget.event.rating = value;
-//                      db.collection('events').document(eventID).updateData({'rating' : rating});
-//                    });
-
                   },
                 ),
               ),
@@ -132,7 +138,7 @@ class _FlyerState extends State<Flyer> {
               Container(
                 padding: const EdgeInsets.fromLTRB(4.0, 14.0, 205, 4.0),
                 child: MaterialButton(
-                  color: Colors.blueAccent,
+                  color: Colors.redAccent,
                   highlightColor: Colors.blueGrey,
                   height: 48.0,
                   minWidth: 30.0,
@@ -194,27 +200,27 @@ class _FlyerState extends State<Flyer> {
               Container(
                 padding: const EdgeInsets.fromLTRB(4.0, 14.0, 205, 4.0),
                 child: MaterialButton(
-                  color: Colors.blueAccent,
-                  highlightColor: Colors.blueGrey,
-                  height: 48.0,
-                  minWidth: 30.0,
-                  elevation: 8,
-                  shape: RoundedRectangleBorder(
-                      borderRadius: BorderRadius.circular(10)
-                  ),
+                    color: Colors.redAccent,
+                    highlightColor: Colors.blueGrey,
+                    height: 48.0,
+                    minWidth: 30.0,
+                    elevation: 8,
+                    shape: RoundedRectangleBorder(
+                        borderRadius: BorderRadius.circular(10)
+                    ),
 
-                  child:
-                  Text('Share with email/SMS', style: new TextStyle(fontSize: 20.0,
-                      fontWeight: FontWeight.bold),
-                  ),
+                    child:
+                    Text('Share with email/SMS', style: new TextStyle(fontSize: 20.0,
+                        fontWeight: FontWeight.bold),
+                    ),
 
-                  onPressed: () => share(context, widget.event)
+                    onPressed: () => share(context, widget.event)
                 ),
               ),
               Container(
                 padding: const EdgeInsets.fromLTRB(4.0, 14.0, 205, 4.0),
                 child: MaterialButton(
-                  color: Colors.blueAccent,
+                  color: Colors.redAccent,
                   highlightColor: Colors.blueGrey,
                   height: 48.0,
                   minWidth: 30.0,
@@ -235,8 +241,8 @@ class _FlyerState extends State<Flyer> {
                 ),
               ),
             ]
+        ),
       ),
-    ),
     );
   }
   void share(BuildContext context, Event event){
